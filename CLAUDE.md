@@ -86,3 +86,13 @@ writer·image-maker 에이전트는 작업 시작 전에 **직전 며칠치 `out
 **대신 적용한 완화책**: "ID 안전 조치"가 반복 로그인 자체 때문이었을 가능성이 높으므로, `--login`을 짧은 기간에 여러 번 실행하지 않도록 `agents/publisher.md`와 스크립트 상단 docstring에 "하루 한 번 정도로 아껴 쓸 것"이라는 주의를 추가했다. 세션 만료 에러가 나도 바로 재로그인을 반복하지 말고, 먼저 발행을 다시 시도해보거나 사람에게 안내하는 쪽으로 처리한다.
 
 **다른 대안이 필요해지면**: 사용자 실제 브라우저를 쓰는 다른 방법(예: Claude Desktop 앱의 "Claude in Chrome" 확장, `mcp__claude-in-chrome__*` 도구)이 있는데, 이건 VSCode/CLI 세션에는 연결되어 있지 않다 — Claude Desktop 앱 세션에서 다시 시도해볼 수는 있지만, 이 스크립트의 Playwright locator 기반 로직(선택자, iframe 처리, 파일 업로드 등)을 그 도구 체계로 전부 새로 짜야 해서 상당한 재작업이 필요하다.
+
+## git 자동 push (2026-10-30 추가)
+
+이 저장소는 2026-07-25 초기 커밋 이후 3개월간 한 번도 커밋/푸시되지 않고 있었다(원격은 `https://github.com/eomzic/blog-automation.git`) — 사용자가 발견해서 그 시점까지의 작업을 전부 한 커밋으로 몰아 push했다. 앞으로는 매번 쌓이지 않도록, `auto_publish.sh`(국장/미장)와 `auto_earnings.sh`(실적발표 감지) 각각의 launchd 실행 끝에 자동 커밋·푸시 단계를 추가했다:
+
+- `claude -p` 호출이 끝난 뒤(성공이든 실패든 상관없이), `blog/` 안에 변경사항이 있으면(`git status --porcelain`) `git add -A` → `git commit` → `git push origin master`를 수행한다.
+- 발행이 실패해서 글이 끝까지 안 나온 경우에도, 그때까지 만들어진 `research.md`/`draft.md` 등은 백업해둘 가치가 있으므로 커밋 대상에서 제외하지 않는다.
+- `git push`가 실패해도(네트워크 등) 스크립트 전체를 중단시키지 않는다 — 로그에만 남기고, 커밋 자체는 로컬에 남아있어서 다음 실행 때 쌓인 변경사항과 함께 다시 push를 시도하게 된다(그 사이 변경사항이 더 쌓여도 한 커밋에 다 들어가니 문제 없음).
+- `.gitignore`에 `logs/`와 `--inspect` 진단용 임시 파일(`scripts/editor_dump.json`, `scripts/editor_screenshot.png`, `scripts/last_fill_screenshot.png`)을 추가해서, 자동 커밋 때 이런 운영 잡동사니가 매번 같이 올라가지 않게 했다.
+- `.auth/`(로그인 세션)는 원래부터 `.gitignore`에 있어서 그대로 제외된다 — 자동 커밋이 추가됐다고 이 파일이 올라갈 일은 없다.

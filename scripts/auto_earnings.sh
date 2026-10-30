@@ -44,4 +44,21 @@ PROMPT="이 요청은 launchd로 자동 실행된 무인(비대화형) 실행이
     --allowedTools "Bash Read Write Edit WebSearch WebFetch Agent PushNotification" \
     --add-dir "$PROJECT_DIR"
   echo "=== $(date '+%Y-%m-%d %H:%M:%S') auto_earnings.sh end (exit=$?) ==="
+
+  # 산출물이 생겼으면 자동으로 커밋·푸시한다 (auto_publish.sh와 동일한 방식).
+  cd "$PROJECT_DIR/blog" || exit 1
+  if [ -n "$(git status --porcelain)" ]; then
+    git add -A
+    if git commit -m "auto: 실적발표 감지 ($(date '+%Y-%m-%d %H:%M'))" --quiet; then
+      if git push origin master --quiet; then
+        echo "git push 완료"
+      else
+        echo "git push 실패 (네트워크/인증 문제일 수 있음) — 커밋은 로컬에 남아있고 다음 실행 때 같이 올라감"
+      fi
+    else
+      echo "git commit 실패"
+    fi
+  else
+    echo "git에 새로 반영할 변경 없음"
+  fi
 } >> "$LOGFILE" 2>&1
