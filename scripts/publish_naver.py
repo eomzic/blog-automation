@@ -181,17 +181,15 @@ def ensure_login(playwright, interactive: bool):
     # 수준으로 악화됐다 — Playwright 기본 Chromium이 navigator.webdriver=true를
     # 그대로 노출하고, 버전도 사용자의 실제 Chrome(156)보다 한참 뒤(148, "for Testing"
     # 빌드)라서 네이버가 "자동화된 낯선 브라우저"로 더 강하게 의심했을 가능성이 있다.
-    # 자동화 흔적(navigator.webdriver)을 지우고, 실제 쓰는 Chrome과 비슷한 User-Agent를
-    # 줘서 최대한 평범한 브라우저처럼 보이게 한다. (CDP로 실제 Chrome에 붙는 방식은
-    # Chrome 자체의 보안 정책으로 막혀서 이미 시도 후 되돌렸다 — 위 docstring 참고.)
+    # 자동화 흔적(navigator.webdriver)만 지운다. User-Agent는 건드리지 않는다 —
+    # 처음엔 실제 Chrome(156) 버전으로 꾸며봤는데, 실제 Playwright 엔진(148)과 버전이
+    # 안 맞으니 네이버 에디터가 아예 깨지는 걸 직접 겪었다(제목 입력창 자체가 안 뜸).
+    # Playwright 기본 UA 문자열도 "HeadlessChrome"이나 "Testing" 같은 표시 없이 이미
+    # 평범하게 나온다(직접 확인함) — 굳이 바꿀 필요가 없었다.
     context = playwright.chromium.launch_persistent_context(
         user_data_dir=str(PROFILE_DIR),
         headless=False,
         args=["--disable-blink-features=AutomationControlled"],
-        user_agent=(
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
-        ),
     )
     context.add_init_script(
         "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"
