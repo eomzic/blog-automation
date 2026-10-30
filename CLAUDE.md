@@ -87,6 +87,14 @@ writer·image-maker 에이전트는 작업 시작 전에 **직전 며칠치 `out
 
 **다른 대안이 필요해지면**: 사용자 실제 브라우저를 쓰는 다른 방법(예: Claude Desktop 앱의 "Claude in Chrome" 확장, `mcp__claude-in-chrome__*` 도구)이 있는데, 이건 VSCode/CLI 세션에는 연결되어 있지 않다 — Claude Desktop 앱 세션에서 다시 시도해볼 수는 있지만, 이 스크립트의 Playwright locator 기반 로직(선택자, iframe 처리, 파일 업로드 등)을 그 도구 체계로 전부 새로 짜야 해서 상당한 재작업이 필요하다.
 
+## 네이버 보안 조치 악화 — 자동화 흔적 제거 시도 (2026-10-30, 같은 날 늦게 추가)
+
+사용자가 "로그인할 때마다 보안 조치가 걸려서 매번 비밀번호를 바꿔야 한다"고 보고했다 — 위에서 기록한 "ID 안전 조치"보다 더 심해진 상태. 가설: Playwright 기본 Chromium이 `navigator.webdriver=true`를 그대로 노출하고, 버전도 사용자의 실제 Chrome(156)보다 한참 뒤(148, `Google Chrome for Testing` 빌드명)라서 네이버가 "자동화된 낯선 브라우저"로 점점 더 강하게 의심하는 것으로 추정된다(확정은 아님).
+
+**조치**: `ensure_login`의 `launch_persistent_context` 호출에 `--disable-blink-features=AutomationControlled` 플래그와 사용자의 실제 Chrome과 비슷한 User-Agent(156.0.0.0)를 추가했고, `context.add_init_script()`로 `navigator.webdriver`를 숨겼다. 격리된 테스트 프로필로 `navigator.webdriver`가 실제로 `undefined`가 되고 UA도 바뀌는 건 확인했다.
+
+**아직 검증되지 않음**: 이게 실제로 네이버 보안 조치 빈도를 줄이는지는 다음 실제 로그인에서 확인해야 한다 — 오늘 이미 로그인을 2번 했어서(하루 한 번 제한을 지키려고) 이 조치를 넣고 바로 다시 로그인해서 테스트하지는 않았다. 다음에 `--login`을 쓸 때(자동 실행이든 사람이 직접이든) 보안 조치가 또 뜨는지 지켜볼 것 — 뜨면 이 가설은 틀린 것이고, 네이버 쪽에서 이 계정 자체를 이미 "고위험"으로 분류해서 브라우저 핑거프린트와 무관하게 비밀번호 변경을 강제하고 있을 가능성을 고려해야 한다(그 경우 기술적으로 더 손쓸 방법이 많지 않다 — 로그인 자동화 빈도를 아예 줄이거나, 완전히 수동 발행으로 돌아가는 것도 옵션으로 열어둘 것).
+
 ## git 자동 push (2026-10-30 추가)
 
 이 저장소는 2026-07-25 초기 커밋 이후 3개월간 한 번도 커밋/푸시되지 않고 있었다(원격은 `https://github.com/eomzic/blog-automation.git`) — 사용자가 발견해서 그 시점까지의 작업을 전부 한 커밋으로 몰아 push했다. 앞으로는 매번 쌓이지 않도록, `auto_publish.sh`(국장/미장)와 `auto_earnings.sh`(실적발표 감지) 각각의 launchd 실행 끝에 자동 커밋·푸시 단계를 추가했다:

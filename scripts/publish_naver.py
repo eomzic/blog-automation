@@ -177,8 +177,24 @@ def ensure_login(playwright, interactive: bool):
     AUTH_DIR.mkdir(exist_ok=True)
     profile_existed = PROFILE_DIR.exists()
 
+    # 2026-10-30: "ID 안전 조치"가 반복되다가 로그인마다 비밀번호 변경을 요구하는
+    # 수준으로 악화됐다 — Playwright 기본 Chromium이 navigator.webdriver=true를
+    # 그대로 노출하고, 버전도 사용자의 실제 Chrome(156)보다 한참 뒤(148, "for Testing"
+    # 빌드)라서 네이버가 "자동화된 낯선 브라우저"로 더 강하게 의심했을 가능성이 있다.
+    # 자동화 흔적(navigator.webdriver)을 지우고, 실제 쓰는 Chrome과 비슷한 User-Agent를
+    # 줘서 최대한 평범한 브라우저처럼 보이게 한다. (CDP로 실제 Chrome에 붙는 방식은
+    # Chrome 자체의 보안 정책으로 막혀서 이미 시도 후 되돌렸다 — 위 docstring 참고.)
     context = playwright.chromium.launch_persistent_context(
-        user_data_dir=str(PROFILE_DIR), headless=False
+        user_data_dir=str(PROFILE_DIR),
+        headless=False,
+        args=["--disable-blink-features=AutomationControlled"],
+        user_agent=(
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+        ),
+    )
+    context.add_init_script(
+        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});"
     )
 
     if profile_existed:
