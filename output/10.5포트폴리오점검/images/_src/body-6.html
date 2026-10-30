@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #241330 0%, #32184a 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 30px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #c3aef5;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .summary {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 32px;
+  }
+  .summary .cell { flex: 1; padding: 24px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+  .summary .cell:last-child { border-right: none; }
+  .summary .label { font-size: 17px; color: rgba(255,255,255,0.5); font-weight: 500; margin-bottom: 10px; }
+  .summary .value { font-size: 24px; font-weight: 800; }
+  .summary .loss { color: #8fa8ff; }
+  .summary .big { font-size: 30px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: center; padding: 16px 8px; font-size: 18px; }
+  thead th {
+    font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.45);
+    border-bottom: 1px solid rgba(255,255,255,0.12); padding-bottom: 12px;
+  }
+  tbody td { border-bottom: 1px solid rgba(255,255,255,0.07); font-weight: 600; }
+  tbody tr:last-child td { border-bottom: none; }
+  .name { text-align: left; font-weight: 800; font-size: 19px; }
+  .neutral { color: rgba(255,255,255,0.5); }
+  .up { color: #ff8080; }
+  .loss { color: #8fa8ff; font-weight: 800; }
+  .small { font-size: 14px; font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">보유 6종목 전체 결산</div>
+      <h2>9/27 -38.1% → 10/5 -39.1%, 손실 확대</h2>
+    </div>
+
+    <div class="summary">
+      <div class="cell">
+        <div class="label">평가액</div>
+        <div class="value">22,067,732원</div>
+      </div>
+      <div class="cell">
+        <div class="label">누적 평가손익</div>
+        <div class="value loss">-14,140,230원</div>
+      </div>
+      <div class="cell">
+        <div class="label">전체 수익률</div>
+        <div class="value loss big">-39.1%</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left;">종목</th>
+          <th>보유수량</th>
+          <th>평단가</th>
+          <th>마감가</th>
+          <th>당일등락</th>
+          <th>평가손익(수익률)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">삼성전자</td>
+          <td>25주</td>
+          <td>371,500원</td>
+          <td>276,000원</td>
+          <td class="neutral">0.00%</td>
+          <td class="loss">-2,387,500원<span class="small"><br>(-25.7%)</span></td>
+        </tr>
+        <tr>
+          <td class="name">두산로보틱스</td>
+          <td>34주</td>
+          <td>134,674원</td>
+          <td>73,100원</td>
+          <td class="up">+1.81%</td>
+          <td class="loss">-2,093,516원<span class="small"><br>(-45.7%)</span></td>
+        </tr>
+        <tr>
+          <td class="name">PL</td>
+          <td>209주</td>
+          <td>$42.64</td>
+          <td>$16.36</td>
+          <td class="up">+1.36%</td>
+          <td class="loss">-$5,492.52<span class="small"><br>(-61.6%)</span></td>
+        </tr>
+        <tr>
+          <td class="name">ORCL</td>
+          <td>42.51주</td>
+          <td>$178.75</td>
+          <td>$140.12</td>
+          <td class="up">+1.48%</td>
+          <td class="loss">-$1,642.16<span class="small"><br>(-21.6%)</span></td>
+        </tr>
+        <tr>
+          <td class="name">RDW</td>
+          <td>5주</td>
+          <td>$21.60대</td>
+          <td>$10.72</td>
+          <td class="up">+1.40%</td>
+          <td class="loss">-$54.41<span class="small"><br>(-50.4%)</span></td>
+        </tr>
+        <tr>
+          <td class="name">NASA</td>
+          <td>1주</td>
+          <td>$35.11</td>
+          <td>$24.16</td>
+          <td class="up">+1.21%</td>
+          <td class="loss">-$10.95<span class="small"><br>(-31.2%)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

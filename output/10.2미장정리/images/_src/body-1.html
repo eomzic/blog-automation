@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #140404;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #3a1010 0%, #210606 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffb17a;
+    background: rgba(255,177,122,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fdf3ee;
+    letter-spacing: -1px;
+    line-height: 1.38;
+    margin-bottom: 40px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    text-align: center;
+    padding: 24px 12px;
+    font-size: 26px;
+  }
+  thead th {
+    color: #d8ab98;
+    font-weight: 600;
+    font-size: 23px;
+    border-bottom: 2px solid rgba(255,255,255,0.12);
+  }
+  thead th:first-child { text-align: left; }
+  tbody td:first-child {
+    text-align: left;
+    color: #ffd9bd;
+    font-weight: 700;
+  }
+  tbody tr { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody td { color: #f3e4dc; font-weight: 600; }
+  .miss {
+    display: inline-block;
+    color: #ffb17a;
+    font-weight: 800;
+  }
+  .down { color: #6ea8ff; font-weight: 800; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #d8ab98;
+    line-height: 1.6;
+  }
+  .note b { color: #ffb17a; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">9월 비농업고용 · 쇼크</div>
+    <h2>예상 8만~9만 건 전망에 실제는 2만 9천 건 그쳐</h2>
+    <table>
+      <thead>
+        <tr><th>지표</th><th>실제치</th><th>시장 예상치</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9월 신규 고용</td><td class="miss">2만 9천 건</td><td>8만 4천~9만 건</td></tr>
+        <tr><td>실업률</td><td>4.2%</td><td>4.1% 유지 전망</td></tr>
+        <tr><td>10월 FOMC 인상 확률</td><td class="down">16~21%</td><td>64~70%(전날 기준)</td></tr>
+      </tbody>
+    </table>
+    <div class="note">고용이 확 꺾이자 연준 인사들도 <b>"서두를 필요 없다"</b> 쪽으로 돌아섰고, 인상 확률은 하루 만에 70%대에서 20%도 안 되는 수준으로 급락했다</div>
+  </div>
+</body>
+</html>

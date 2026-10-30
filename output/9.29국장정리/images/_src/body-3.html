@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0a1614;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #0f2027 0%, #16332e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5eead4;
+    background: rgba(94,234,212,0.13);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f2faf7;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .flow { position: relative; }
+  .step {
+    position: relative;
+    display: flex;
+    gap: 26px;
+    padding-bottom: 40px;
+  }
+  .step:last-child { padding-bottom: 0; }
+  .step .line {
+    position: absolute;
+    left: 23px;
+    top: 50px;
+    bottom: 0;
+    width: 2px;
+    background: rgba(94,234,212,0.25);
+  }
+  .step:last-child .line { display: none; }
+  .num {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(94,234,212,0.15);
+    border: 1px solid rgba(94,234,212,0.4);
+    color: #5eead4;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .body {
+    padding-top: 4px;
+  }
+  .body .h {
+    font-size: 30px;
+    font-weight: 700;
+    color: #f2faf7;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .body .d {
+    font-size: 24px;
+    color: #9fc4b9;
+    line-height: 1.5;
+  }
+  .body .d b { color: #6ea8ff; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">금리發 하락 · 흐름도</div>
+    <h2>美 10년물 5.241%, 국내 증시까지 이어진 길</h2>
+    <div class="flow">
+      <div class="step">
+        <div class="line"></div>
+        <div class="num">1</div>
+        <div class="body">
+          <div class="h">트럼프, 이란 호르무즈 재개방 제안 거부</div>
+          <div class="d">지정학 긴장 재부각 → 국제 유가 상승</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="line"></div>
+        <div class="num">2</div>
+        <div class="body">
+          <div class="h">국채 매도 압력 확산</div>
+          <div class="d">美 10년물 금리 장중 <b>5.241%</b>, 2007년 6월 이후 최고치</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="line"></div>
+        <div class="num">3</div>
+        <div class="body">
+          <div class="h">오픈AI, GPT-6.1 출시 취소</div>
+          <div class="d">"AI 투자 속도조절 아니냐" 우려 겹침</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="body">
+          <div class="h">국내 증시 반영, 그래도 어제보다 완화</div>
+          <div class="d">코스피 <b>-0.27%</b>로 마감, 어제(-2.70%)보다 낙폭 크게 줄어</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

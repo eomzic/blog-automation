@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #232526 0%, #2f3234 55%, #3a3d40 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 34px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb3d9;
+    margin-bottom: 10px; letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.6px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  thead th {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.45);
+    padding: 0 20px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  thead th:not(:first-child), tbody td:not(:first-child) { text-align: right; }
+  tbody td {
+    font-size: 21px;
+    font-weight: 700;
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td.label { color: rgba(255,255,255,0.8); font-weight: 600; font-size: 19px; }
+  tbody tr.app td.chg { color: #7c93ef; }
+  tbody tr.real td.chg { color: #ff8585; }
+  tbody tr.real { background: rgba(255,255,255,0.03); }
+  tbody tr.real td:first-child { border-radius: 14px 0 0 14px; }
+  tbody tr.real td:last-child { border-radius: 0 14px 14px 0; }
+
+  .note {
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 18px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+  }
+  .note b { color: #9fb3d9; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">삼성전자 · 10/23(금) 종가 기준</div>
+      <h2>앱 표시와 실제 등락률, 부호가 반대였어요</h2>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>구분</th><th>종가</th><th>등락률</th></tr>
+      </thead>
+      <tbody>
+        <tr class="app">
+          <td class="label">앱 표시 (제가 캡처한 수치)</td>
+          <td>213,500원</td>
+          <td class="chg">-0.47%</td>
+        </tr>
+        <tr class="real">
+          <td class="label">실제 종가 (복수 매체 교차확인)</td>
+          <td>215,500원</td>
+          <td class="chg">+0.47%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      등락률 절댓값은 똑같이 0.47%인데 <b>부호만 정반대</b>였어요. 앱 표시 오류일 가능성이 있어 보이지만 원인은 못 찾았고요, 보유수량·평단가·평가손익 등 실제 수치는 그대로 두고 이 부분만 투명하게 밝혀둡니다.
+    </div>
+  </div>
+</body>
+</html>

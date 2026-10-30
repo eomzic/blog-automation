@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #0c2426 0%, #164f49 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 30px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #7fe3c9;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 27px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.4; }
+
+  .quote {
+    position: relative;
+    padding: 30px 34px;
+    border-left: 4px solid #5eead4;
+    background: rgba(94,234,212,0.08);
+    border-radius: 0 18px 18px 0;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #eafff8;
+    margin-bottom: 30px;
+  }
+  .quote .pct { color: #5eead4; }
+
+  .stats {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats .cell {
+    flex: 1;
+    padding: 24px 18px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats .cell:last-child { border-right: none; }
+  .stats .label { font-size: 17px; color: rgba(255,255,255,0.5); font-weight: 600; margin-bottom: 10px; }
+  .stats .prev { font-size: 17px; color: rgba(255,255,255,0.4); font-weight: 600; margin-bottom: 4px; }
+  .stats .now { font-size: 24px; font-weight: 800; color: #5eead4; }
+
+  .note {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.55);
+  }
+  .note b { color: #a7f3d0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">시간외 주가 +0.4% · 대신 움직인 건 목표주가</div>
+      <h2>실적은 터졌는데 왜 주가는 조용했나</h2>
+    </div>
+
+    <div class="quote">
+      이미 2026년 들어 <span class="pct">+250%</span>, 최근 1년으론 <span class="pct">+450%</span> 넘게 급등한 상태라 호실적이 상당 부분 선반영됐다는 평가가 많았어요.
+    </div>
+
+    <div class="stats">
+      <div class="cell">
+        <div class="label">Citi</div>
+        <div class="prev">1,150 →</div>
+        <div class="now">1,300달러</div>
+      </div>
+      <div class="cell">
+        <div class="label">Baird</div>
+        <div class="prev">1,280 →</div>
+        <div class="now">1,520달러</div>
+      </div>
+      <div class="cell">
+        <div class="label">D.A. Davidson</div>
+        <div class="prev">Buy 재확인 →</div>
+        <div class="now">2,000달러</div>
+      </div>
+    </div>
+
+    <div class="note">
+      다만 모닝스타는 <b>2029년 700달러까지 급락 가능</b>한 장기 비관론을 냈어요 — 소수 의견이지만 밝은 전망 일색은 아니었습니다.
+    </div>
+  </div>
+</body>
+</html>

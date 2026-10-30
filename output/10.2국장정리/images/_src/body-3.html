@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0e0e1a;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 64px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #9aa3ff;
+    background: rgba(154,163,255,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 26px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f3f3fa;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 48px;
+  }
+  .timeline { position: relative; padding-left: 36px; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px; top: 10px; bottom: 10px;
+    width: 3px;
+    background: rgba(154,163,255,0.3);
+  }
+  .step { position: relative; margin-bottom: 40px; }
+  .step:last-child { margin-bottom: 0; }
+  .step::before {
+    content: "";
+    position: absolute;
+    left: -36px; top: 6px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: #9aa3ff;
+    box-shadow: 0 0 0 6px rgba(154,163,255,0.18);
+  }
+  .step .when { font-size: 22px; color: #9a9dc2; font-weight: 600; margin-bottom: 8px; }
+  .step .what { font-size: 29px; color: #eef0ff; font-weight: 700; line-height: 1.4; }
+  .step .what b { color: #ff9b9b; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">수급 · 자사주 매입 일정</div>
+    <h2>코스피 밑단 받쳐온 55조, 10월 중순이면 끝난다</h2>
+    <div class="timeline">
+      <div class="step">
+        <div class="when">8.20 ~ 11.19</div>
+        <div class="what">SK하이닉스 <b>40조원</b> 매입 · 전량 소각 예정</div>
+      </div>
+      <div class="step">
+        <div class="when">8.24 ~ 11.21</div>
+        <div class="what">삼성전자 <b>15조원</b> 매입 · 임직원 주식보상 목적</div>
+      </div>
+      <div class="step">
+        <div class="when">10.7 전후</div>
+        <div class="what">삼성전자 매입 종료 예상</div>
+      </div>
+      <div class="step">
+        <div class="when">10.15~16 전후</div>
+        <div class="what">SK하이닉스 매입 종료 예상 — <b>수급 공백 우려 시작</b></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

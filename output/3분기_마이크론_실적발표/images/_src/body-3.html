@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #0c2426 0%, #164f49 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 32px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #7fe3c9;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.4; }
+
+  .callout {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(94,234,212,0.1);
+    border: 1px solid rgba(94,234,212,0.38);
+    border-radius: 18px;
+    padding: 20px 26px;
+    margin-bottom: 28px;
+  }
+  .callout .num {
+    font-size: 34px;
+    font-weight: 800;
+    color: #5eead4;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+  }
+  .callout .desc {
+    font-size: 19px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.5;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .seg {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 24px 26px;
+  }
+  .seg.main {
+    background: rgba(94,234,212,0.08);
+    border: 1px solid rgba(94,234,212,0.3);
+  }
+  .seg .name { font-size: 19px; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 12px; }
+  .seg.main .name { color: #a7f3d0; }
+  .seg .rev { font-size: 26px; font-weight: 800; margin-bottom: 6px; }
+  .seg .margin { font-size: 17px; color: rgba(255,255,255,0.45); font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">사업부문별 매출 (제품 유형이 아닌 사업부 기준)</div>
+      <h2>성장 엔진은 역시 HBM — Core Data Center 급성장</h2>
+    </div>
+
+    <div class="callout">
+      <div class="num">13.9% → 33.2%</div>
+      <div class="desc">Core Data Center가 전체 매출에서 차지하는 비중 — 전년동기 대비 11배 이상 성장</div>
+    </div>
+
+    <div class="grid">
+      <div class="seg main">
+        <div class="name">Core Data Center</div>
+        <div class="rev">180.0억달러</div>
+        <div class="margin">매출총이익률 90%</div>
+      </div>
+      <div class="seg">
+        <div class="name">Cloud Memory</div>
+        <div class="rev">162.8억달러</div>
+        <div class="margin">매출총이익률 83%</div>
+      </div>
+      <div class="seg">
+        <div class="name">Mobile and Client</div>
+        <div class="rev">131.1억달러</div>
+        <div class="margin">매출총이익률 90%</div>
+      </div>
+      <div class="seg">
+        <div class="name">Automotive and Embedded</div>
+        <div class="rev">68.2억달러</div>
+        <div class="margin">매출총이익률 84%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

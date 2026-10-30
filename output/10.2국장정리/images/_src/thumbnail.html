@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+  }
+  .grain {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.04) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    opacity: 0.5;
+  }
+  .glow {
+    position: absolute;
+    bottom: -220px;
+    left: -180px;
+    width: 680px;
+    height: 680px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,107,107,0.16) 0%, rgba(255,107,107,0.04) 55%, rgba(255,107,107,0) 75%);
+  }
+  .badge {
+    position: absolute;
+    top: 86px;
+    left: 72px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(154,163,255,0.32);
+    border-radius: 999px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #cfd4ff;
+    letter-spacing: -0.2px;
+  }
+  .badge .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #9aa3ff;
+  }
+  .badge .date { color: #8d90b8; font-weight: 500; }
+
+  .bignum {
+    position: absolute;
+    top: 170px;
+    right: 64px;
+    text-align: right;
+  }
+  .bignum .pct {
+    font-size: 58px;
+    font-weight: 800;
+    color: #ff6b6b;
+    letter-spacing: -1.5px;
+  }
+  .bignum .idx {
+    margin-top: 6px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #e8e9f7;
+  }
+  .bignum .lbl {
+    margin-top: 4px;
+    font-size: 21px;
+    color: #9a9dc2;
+    font-weight: 500;
+  }
+
+  .content {
+    position: absolute;
+    top: 420px;
+    left: 72px;
+    width: 660px;
+  }
+  .eyebrow {
+    font-size: 26px;
+    font-weight: 500;
+    color: #a9adcf;
+    margin-bottom: 20px;
+    letter-spacing: -0.2px;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 800;
+    color: #f3f3fa;
+    line-height: 1.32;
+    letter-spacing: -2px;
+  }
+  .sub {
+    margin-top: 28px;
+    font-size: 26px;
+    color: #b7bad8;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .sub b { color: #ff9b9b; font-weight: 700; }
+
+  .footerline {
+    position: absolute;
+    top: 918px;
+    left: 72px;
+    width: 936px;
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+  }
+  .footer {
+    position: absolute;
+    bottom: 68px;
+    left: 72px;
+    right: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 29px;
+    font-weight: 700;
+    color: #f0f0ee;
+  }
+  .brand .bar {
+    width: 32px;
+    height: 4px;
+    background: #9aa3ff;
+    border-radius: 2px;
+  }
+  .idx2 {
+    font-size: 23px;
+    color: #9a9dc2;
+    letter-spacing: -0.2px;
+  }
+  .idx2 b { color: #e8e9f7; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="grain"></div>
+    <div class="glow"></div>
+    <div class="badge"><span class="dot"></span>국장정리 · 시황 <span class="date">10.2</span></div>
+    <div class="bignum">
+      <div class="pct">+0.46%</div>
+      <div class="idx">7,003.74</div>
+      <div class="lbl">코스피 7000선 회복</div>
+    </div>
+    <div class="content">
+      <div class="eyebrow">자사주 매입 끝나면 어쩌나</div>
+      <h1>코스피 다시<br>7,003</h1>
+      <div class="sub">코스닥은 <b>-0.11%</b> 홀로 약보합</div>
+    </div>
+    <div class="footerline"></div>
+    <div class="footer">
+      <div class="brand"><span class="bar"></span>내일도 주린이</div>
+      <div class="idx2">코스닥 <b>893.29</b></div>
+    </div>
+  </div>
+</body>
+</html>

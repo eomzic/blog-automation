@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #170505;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #2a0d0d 0%, #402020 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e89466;
+    background: rgba(232,148,102,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7ede8;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .stock-card {
+    background: rgba(0,0,0,0.24);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 20px;
+    padding: 32px 30px;
+  }
+  .stock-card .name {
+    font-size: 27px;
+    font-weight: 700;
+    color: #f2e6e0;
+    margin-bottom: 14px;
+  }
+  .stock-card .pct {
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .stock-card .pct.up { color: #ff6f6f; }
+  .stock-card .reason {
+    font-size: 21px;
+    line-height: 1.5;
+    color: #cbb3a9;
+  }
+  .stock-card.hl {
+    border-color: rgba(255,111,111,0.4);
+    background: rgba(255,111,111,0.08);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">특징주 · 9.28</div>
+    <h2>HLB 상한가 vs 한화솔루션 급등, 온도차가 컸다</h2>
+    <div class="grid">
+      <div class="stock-card hl">
+        <div class="name">HLB</div>
+        <div class="pct up">+29.95%</div>
+        <div class="reason">美 자회사 통해 FDA 담관암 신약 '리큐피투' 품목허가 획득, 상한가 직행</div>
+      </div>
+      <div class="stock-card hl">
+        <div class="name">한화솔루션</div>
+        <div class="pct up">+15.07%</div>
+        <div class="reason">美 태양광 모듈가 약 40.7%↑ + 하나증권 매수 의견 겹쳐 급등</div>
+      </div>
+      <div class="stock-card">
+        <div class="name">삼성바이오로직스</div>
+        <div class="pct up">+2.49%</div>
+        <div class="reason">HLB발 바이오 업종 훈풍 동반</div>
+      </div>
+      <div class="stock-card">
+        <div class="name">LG에너지솔루션</div>
+        <div class="pct up">+3.56%</div>
+        <div class="reason">2차전지 업종 전반 강세</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

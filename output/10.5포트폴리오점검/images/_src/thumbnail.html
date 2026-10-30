@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body {
+    width: 1080px; height: 1080px;
+    font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif;
+  }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(155deg, #1e0a3c 0%, #3d1a5c 100%);
+  }
+  .glow-a {
+    position: absolute;
+    top: -180px; right: -160px;
+    width: 620px; height: 620px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(170,140,230,0.16) 0%, rgba(170,140,230,0) 70%);
+  }
+  .glow-b {
+    position: absolute;
+    bottom: -220px; left: -120px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(120,140,230,0.12) 0%, rgba(120,140,230,0) 70%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 78px 84px 64px;
+  }
+
+  .badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #d6c8f0;
+    letter-spacing: -0.2px;
+  }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #a98cf0; }
+  .badge .date { color: rgba(255,255,255,0.42); font-weight: 500; margin-left: 4px; }
+
+  .main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .left {
+    flex: 0 0 auto;
+    max-width: 480px;
+  }
+  .eyebrow {
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 20px;
+    letter-spacing: -0.2px;
+    line-height: 1.5;
+  }
+  .title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #f3eefc;
+    letter-spacing: -1px;
+    line-height: 1.32;
+    margin-bottom: 36px;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 999px;
+    padding: 15px 26px;
+  }
+  .chip .prev { font-size: 21px; font-weight: 600; color: rgba(255,255,255,0.4); }
+  .chip .arrow { font-size: 18px; color: rgba(255,255,255,0.28); }
+  .chip .now { font-size: 23px; font-weight: 800; color: #9db3ff; }
+
+  .right {
+    flex: 0 0 auto;
+    text-align: right;
+  }
+  .giant {
+    font-size: 150px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    line-height: 1;
+    background: linear-gradient(135deg, #c9d4ff 0%, #8fa0f0 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .giant-label {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: -0.2px;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+  }
+  .footer .brand .bar { width: 26px; height: 3px; background: #a98cf0; }
+  .footer .tag { font-size: 22px; color: rgba(255,255,255,0.36); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="glow-a"></div>
+    <div class="glow-b"></div>
+    <div class="content">
+      <div class="badge">
+        <span class="dot"></span>
+        포트폴리오 점검
+        <span class="date">10.5</span>
+      </div>
+
+      <div class="main">
+        <div class="left">
+          <div class="eyebrow">개천절 대체공휴일 휴장 속<br>실보유 6종목 점검</div>
+          <div class="title">손실<br>-39.1%로 확대</div>
+          <div class="chip">
+            <span class="prev">9/27 -38.1%</span>
+            <span class="arrow">→</span>
+            <span class="now">10/5 -39.1%</span>
+          </div>
+        </div>
+        <div class="right">
+          <div class="giant">-39.1<span style="font-size:88px;">%</span></div>
+          <div class="giant-label">누적 평가손익률</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="brand"><span class="bar"></span>내일도 주린이</div>
+        <div class="tag">국내 2종목 · 미국 4종목</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

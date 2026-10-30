@@ -1,0 +1,16 @@
+{
+  "editor_iframe": "iframe#mainFrame",
+  "title": ".se-title-text",
+  "body": ".se-component.se-text .se-text-paragraph",
+  "photo_button": ".se-image-toolbar-button",
+  "publish_open_button": "[class*=\"publish_btn__\"]",
+  "publish_confirm_button": "[class*=\"confirm_btn__\"]",
+  "category_dropdown_button": "[class*=\"selectbox_button__\"]",
+  "category_option_item": "li[class*=\"item__\"]",
+  "schedule_radio_label": "label[for=\"radio_time2\"]",
+  "schedule_date_input": "input[class*=\"input_date__\"]",
+  "schedule_hour_select": "select[class*=\"hour_option__\"]",
+  "schedule_minute_select": "select[class*=\"minute_option__\"]",
+  "calendar_next_month_button": ".ui-datepicker-next",
+  "calendar_day_cell": "td:not(.ui-state-disabled) button.ui-state-default"
+}

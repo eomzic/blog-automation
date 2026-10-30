@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1000px;
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #f4f5f7;
+    color: #1f2328;
+  }
+  .card {
+    width: 1000px;
+    padding: 56px 60px 60px;
+    background: #ffffff;
+  }
+  .label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+  }
+  .head {
+    margin-top: 14px;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .rows { margin-top: 44px; }
+  .row {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid #e5e7eb;
+  }
+  .row:last-child { border-bottom: 1px solid #e5e7eb; }
+  .who {
+    width: 200px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .bar-wrap {
+    flex: 1;
+    position: relative;
+    height: 30px;
+    margin: 0 28px;
+    background: #f1f2f4;
+    border-radius: 4px;
+  }
+  .bar-mid {
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    bottom: -6px;
+    width: 2px;
+    background: #9ca3af;
+  }
+  .bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 4px;
+  }
+  .bar.buy { left: 50%; background: #e5484d; }
+  .bar.sell { right: 50%; background: #3b82f6; }
+  .val {
+    width: 260px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .val.buy { color: #e5484d; }
+  .val.sell { color: #3b82f6; }
+  .foot {
+    margin-top: 34px;
+    font-size: 22px;
+    color: #6b7280;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">코스피 · 투자자별 순매수 (10/2 금)</div>
+  <div class="head">개인이 던지고, 기관이 받았다</div>
+  <div class="rows">
+    <div class="row">
+      <div class="who">기관</div>
+      <div class="bar-wrap"><div class="bar-mid"></div><div class="bar buy" style="width:11%"></div></div>
+      <div class="val buy">+3,814억</div>
+    </div>
+    <div class="row">
+      <div class="who">외국인</div>
+      <div class="bar-wrap"><div class="bar-mid"></div><div class="bar sell" style="width:4%"></div></div>
+      <div class="val sell">-1,438억</div>
+    </div>
+    <div class="row">
+      <div class="who">개인</div>
+      <div class="bar-wrap"><div class="bar-mid"></div><div class="bar sell" style="width:50%"></div></div>
+      <div class="val sell">-1조 7,206억</div>
+    </div>
+  </div>
+  <div class="foot">빨강 = 순매수 / 파랑 = 순매도 · 막대 길이는 금액 비례 (합성 데이터 그래픽)</div>
+</div>
+</body>
+</html>

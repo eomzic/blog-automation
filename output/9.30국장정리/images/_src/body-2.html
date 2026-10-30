@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1b1c;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #232526 0%, #303234 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f5c451;
+    background: rgba(245,196,81,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7f7f5;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 46px;
+  }
+  .rows { display: flex; flex-direction: column; gap: 40px; }
+  .row .label {
+    font-size: 25px;
+    font-weight: 600;
+    color: #cfd1d0;
+    margin-bottom: 14px;
+  }
+  .track {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 46px;
+  }
+  .half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+  .half.neg { justify-content: flex-end; gap: 14px; }
+  .half.pos { justify-content: flex-start; gap: 14px; }
+  .center {
+    flex-shrink: 0;
+    width: 2px;
+    align-self: stretch;
+    margin: -10px 0;
+    background: rgba(255,255,255,0.18);
+  }
+  .bar {
+    flex-shrink: 0;
+    height: 46px;
+    border-radius: 8px;
+  }
+  .bar.pos { background: linear-gradient(90deg, #ff8787, #ff6b6b); border-radius: 8px 10px 10px 8px; }
+  .bar.neg { background: linear-gradient(270deg, #82b4ff, #6ea8ff); border-radius: 10px 8px 8px 10px; }
+  .val {
+    flex-shrink: 0;
+    font-size: 26px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .val.pos { color: #ff6b6b; }
+  .val.neg { color: #6ea8ff; }
+  .note {
+    margin-top: 42px;
+    font-size: 24px;
+    color: #adb0b1;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">코스피 · 투자자별 순매매</div>
+    <h2>외국인 -2.27조 던지자, 개인 +1.45조 받아내며 방어</h2>
+    <div class="rows">
+      <div class="row">
+        <div class="label">개인</div>
+        <div class="track">
+          <div class="half neg"></div>
+          <div class="center"></div>
+          <div class="half pos">
+            <div class="bar pos" style="width:128px;"></div>
+            <span class="val pos">+1조 4,544억</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="label">외국인</div>
+        <div class="track">
+          <div class="half neg">
+            <span class="val neg">-2조 2,747억</span>
+            <div class="bar neg" style="width:200px;"></div>
+          </div>
+          <div class="center"></div>
+          <div class="half pos"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="label">기관</div>
+        <div class="track">
+          <div class="half neg">
+            <span class="val neg">-8,586억</span>
+            <div class="bar neg" style="width:76px;"></div>
+          </div>
+          <div class="center"></div>
+          <div class="half pos"></div>
+        </div>
+      </div>
+    </div>
+    <div class="note">개장 초엔 외국인도 158억원 순매수로 지수를 끌어올렸지만, 장 후반 매도로 완전히 뒤집히며 4거래일 연속 순매도 — 개인이 낙폭을 방어한 하루</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #241330 0%, #32184a 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 36px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #c3aef5;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.4; }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .stock {
+    flex: 1;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 30px 26px;
+  }
+  .stock .ticker { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
+  .stock .name { font-size: 16px; color: rgba(255,255,255,0.45); margin-bottom: 22px; }
+  .stock .row { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 18px; }
+  .stock .row .k { color: rgba(255,255,255,0.5); }
+  .stock .row .v { font-weight: 700; }
+  .stock .row .up { color: #ff8080; }
+  .stock .row .loss { color: #8fa8ff; }
+  .stock .row:last-child { margin-bottom: 0; }
+
+  .footline {
+    font-size: 19px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px;
+  }
+  .footline b { color: #d6c8f0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">RDW · NASA ETF</div>
+      <h2>스페이스X 발사에 우주 섹터 전체가 들썩</h2>
+    </div>
+
+    <div class="cards">
+      <div class="stock">
+        <div class="ticker">RDW</div>
+        <div class="name">Redwire · 5주</div>
+        <div class="row"><span class="k">마감가</span><span class="v">$10.72</span></div>
+        <div class="row"><span class="k">당일등락</span><span class="v up">+1.40%</span></div>
+        <div class="row"><span class="k">평가손익</span><span class="v loss">-$54.41 (-50.4%)</span></div>
+      </div>
+      <div class="stock">
+        <div class="ticker">NASA</div>
+        <div class="name">Tema Space Innovators ETF · 1주</div>
+        <div class="row"><span class="k">마감가</span><span class="v">$24.16</span></div>
+        <div class="row"><span class="k">당일등락</span><span class="v up">+1.21%</span></div>
+        <div class="row"><span class="k">평가손익</span><span class="v loss">-$10.95 (-31.2%)</span></div>
+      </div>
+    </div>
+
+    <div class="footline">
+      NASA ETF는 <b>스페이스X 23.85% · 로켓랩 10.5% · AST스페이스모바일 6.75%</b>를 최상위 비중으로 담아, 이날 섹터 랠리가 거의 그대로 반영됐어요.
+    </div>
+  </div>
+</body>
+</html>

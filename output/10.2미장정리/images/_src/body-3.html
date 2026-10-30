@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #140404;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #3a1010 0%, #210606 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffb17a;
+    background: rgba(255,177,122,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 26px;
+    letter-spacing: -0.2px;
+  }
+  .quote {
+    position: relative;
+    padding: 8px 0 8px 36px;
+    border-left: 4px solid #ff8a5c;
+    margin-bottom: 44px;
+  }
+  .quote .big {
+    font-size: 46px;
+    font-weight: 800;
+    color: #fff6f1;
+    line-height: 1.38;
+    letter-spacing: -1.2px;
+  }
+  .quote .big b { color: #ff9b6b; }
+  .quote .sub {
+    margin-top: 16px;
+    font-size: 24px;
+    color: #d8ab98;
+    font-weight: 500;
+  }
+  .chiplist {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 20px 28px;
+  }
+  .chip .nm { font-size: 25px; font-weight: 700; color: #fdf3ee; }
+  .chip .issue { font-size: 20px; color: #c99589; margin-top: 4px; }
+  .chip .pct { font-size: 28px; font-weight: 800; }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">특징주 · 마감</div>
+    <div class="quote">
+      <div class="big">엔비디아 시총 <b>5조 7,200억 달러</b> 돌파<br>장중 사상 최고가</div>
+      <div class="sub">테슬라도 3분기 인도 48만 6,532대로 컨센서스 상회, 주가 급등</div>
+    </div>
+    <div class="chiplist">
+      <div class="chip">
+        <div><div class="nm">테슬라(TSLA)</div><div class="issue">3분기 인도 컨센서스 상회</div></div>
+        <div class="pct up">+4~5%</div>
+      </div>
+      <div class="chip">
+        <div><div class="nm">나이키(NKE)</div><div class="issue">1분기 매출 예상치 하회</div></div>
+        <div class="pct down">-6%</div>
+      </div>
+      <div class="chip">
+        <div><div class="nm">ON세미컨덕터·시냅틱스</div><div class="issue">M&amp;A 조건 재협상 소식</div></div>
+        <div class="pct up">급등</div>
+      </div>
+      <div class="chip">
+        <div><div class="nm">인테그라 라이프사이언스</div><div class="issue">실적 가이던스 하향</div></div>
+        <div class="pct down">급락</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

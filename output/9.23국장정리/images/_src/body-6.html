@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #221012 0%, #2c1416 100%);
+    padding: 56px 60px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 30px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #ff9d6f;
+    margin-bottom: 10px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .quote {
+    border-left: 5px solid #ff9d6f;
+    padding: 6px 0 6px 28px;
+    margin-bottom: 38px;
+  }
+  .quote p {
+    font-size: 27px; font-weight: 700; line-height: 1.5;
+    color: rgba(255,255,255,0.94);
+  }
+  .quote p b { color: #ff9d6f; }
+
+  .cols {
+    display: flex; gap: 16px; margin-bottom: 34px;
+  }
+  .col {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 22px 20px;
+    text-align: center;
+  }
+  .col .name { font-size: 19px; color: rgba(255,255,255,0.55); font-weight: 600; margin-bottom: 10px; }
+  .col .amt { font-size: 25px; font-weight: 800; }
+  .col.buy .amt { color: #ff6b5e; }
+  .col.sell .amt { color: #6fa8dc; }
+
+  .fx {
+    background: linear-gradient(90deg, rgba(255,157,111,0.20), rgba(255,107,94,0.10));
+    border: 1px solid rgba(255,157,111,0.35);
+    border-radius: 16px;
+    padding: 28px 30px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .fx .l .t { font-size: 17px; color: #ffcbab; font-weight: 700; margin-bottom: 8px; }
+  .fx .l .n { font-size: 19px; color: rgba(255,255,255,0.75); font-weight: 500; }
+  .fx .r { font-size: 38px; font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">수급 &amp; 환율</div>
+      <h2>기관 홀로 저가 매수, 원화는 강세 전환</h2>
+    </div>
+
+    <div class="quote">
+      <p>추석 연휴를 앞두고 <b>외국인·개인이 차익 실현 물량</b>을 던졌고, 그걸 <b>기관이 홀로 저가 매수</b>로 받아낸 하루였어요.</p>
+    </div>
+
+    <div class="cols">
+      <div class="col buy">
+        <div class="name">기관</div>
+        <div class="amt">+3,170억</div>
+      </div>
+      <div class="col sell">
+        <div class="name">외국인</div>
+        <div class="amt">-5,101억</div>
+      </div>
+      <div class="col sell">
+        <div class="name">개인</div>
+        <div class="amt">-1조 4,397억</div>
+      </div>
+    </div>
+
+    <div class="fx">
+      <div class="l">
+        <div class="t">원·달러 환율</div>
+        <div class="n">전일 1,381원대 → 오늘 원화 강세 전환</div>
+      </div>
+      <div class="r">1,358.60원</div>
+    </div>
+  </div>
+</body>
+</html>

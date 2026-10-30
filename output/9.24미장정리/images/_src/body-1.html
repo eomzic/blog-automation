@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0f1012;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #202124 0%, #34373a 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e8b34d;
+    background: rgba(232,179,77,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #f5f6f7;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 36px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead th {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: #9a9da2;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  thead th:last-child, tbody td:last-child { text-align: right; }
+  tbody td {
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 30px;
+    color: #e7e8ea;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .name { font-weight: 700; }
+  .val { font-weight: 600; color: #b7bac0; font-size: 27px; }
+  .pct { font-weight: 800; font-size: 34px; }
+  .down { color: #6fb3ff; }
+  .up { color: #ff7b7b; }
+  .note {
+    margin-top: 36px;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #aeb1b6;
+  }
+  .note b { color: #f2c572; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">3대 지수 · 9.24 마감</div>
+    <h2>다우만 소폭 하락, S&P·나스닥은 사실상 보합</h2>
+    <table>
+      <thead>
+        <tr><th>지수</th><th>9/23 → 9/24</th><th>등락률</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">다우존스</td>
+          <td class="val">51,511.59 → 51,349.98</td>
+          <td class="pct down">-0.31%</td>
+        </tr>
+        <tr>
+          <td class="name">S&amp;P500</td>
+          <td class="val">7,706.03 → 7,704.13</td>
+          <td class="pct down">-0.02%</td>
+        </tr>
+        <tr>
+          <td class="name">나스닥종합</td>
+          <td class="val">26,936.04 → 26,939.37</td>
+          <td class="pct up">+0.01%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">장 초반 국채금리 충격으로 일제히 하락 출발했지만, 중동發 외교 소식에 낙폭을 대부분 되돌리며 <b>다우만 소폭 하락</b>, 나머지는 거의 플랫으로 마감했어요.</div>
+  </div>
+</body>
+</html>

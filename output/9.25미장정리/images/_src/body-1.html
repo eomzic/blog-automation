@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0c1615;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #101b1a 0%, #1c3330 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2dd4bf;
+    background: rgba(45,212,191,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #f2faf8;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 36px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead th {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: #9fc4bc;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  thead th:last-child, tbody td:last-child { text-align: right; }
+  tbody td {
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-size: 30px;
+    color: #e7f3f0;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .name { font-weight: 700; }
+  .val { font-weight: 600; color: #b6d5cd; font-size: 27px; }
+  .pct { font-weight: 800; font-size: 34px; }
+  .down { color: #6fb3ff; }
+  .up { color: #ff7b7b; }
+  .note {
+    margin-top: 36px;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #aecdc5;
+  }
+  .note b { color: #5eead4; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">3대 지수 · 9.25 마감</div>
+    <h2>파란불 없이 다우·S&amp;P·나스닥 전원 상승</h2>
+    <table>
+      <thead>
+        <tr><th>지수</th><th>9/24 → 9/25</th><th>등락률</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">다우존스</td>
+          <td class="val">51,349.98 → 51,828.62</td>
+          <td class="pct up">+0.93%</td>
+        </tr>
+        <tr>
+          <td class="name">S&amp;P500</td>
+          <td class="val">7,704.13 → 7,743.41</td>
+          <td class="pct up">+0.51%</td>
+        </tr>
+        <tr>
+          <td class="name">나스닥종합</td>
+          <td class="val">26,939.37 → 27,068.72</td>
+          <td class="pct up">+0.48%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">주간 기준으로도 다우 +0.3%·S&amp;P500 +1.2%·나스닥 +2.0%로 세 지수 모두 플러스였고, 다우는 이걸로 <b>3주 연속 주간 하락 흐름에서 벗어났어요.</b></div>
+  </div>
+</body>
+</html>

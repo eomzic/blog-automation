@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #221012 0%, #2c1416 100%);
+    padding: 56px 60px 52px;
+    color: #fff;
+  }
+  .head {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 40px;
+  }
+  .head .badge {
+    background: rgba(255,157,111,0.14);
+    color: #ff9d6f;
+    font-size: 20px; font-weight: 700;
+    padding: 8px 16px; border-radius: 999px;
+    border: 1px solid rgba(255,157,111,0.3);
+  }
+  .head h2 {
+    font-size: 30px; font-weight: 800; letter-spacing: -0.5px;
+  }
+
+  .flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 10px;
+  }
+  .flow::before {
+    content: '';
+    position: absolute;
+    top: 74px; left: 60px; right: 60px;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,0.18) 0 10px, transparent 10px 20px);
+    z-index: 0;
+  }
+  .step {
+    position: relative;
+    z-index: 1;
+    width: 205px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .step .dot {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: #3a1c1d;
+    border: 4px solid #ff6b5e;
+    margin-bottom: 18px;
+  }
+  .step.low .dot { border-color: #5a8fd6; }
+  .step.final .dot { border-color: #ff6b5e; background: #ff6b5e; }
+  .step .time {
+    font-size: 19px; color: rgba(255,255,255,0.5); font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .step .price {
+    font-size: 27px; font-weight: 800; letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .step .pct {
+    font-size: 22px; font-weight: 700;
+    color: #ff6b5e;
+    padding: 5px 14px;
+    background: rgba(255,107,94,0.12);
+    border-radius: 999px;
+    display: inline-block;
+  }
+  .step.low .pct {
+    color: #5a8fd6;
+    background: rgba(90,143,214,0.14);
+  }
+
+  .note {
+    margin-top: 44px;
+    padding: 24px 28px;
+    background: rgba(255,255,255,0.05);
+    border-left: 4px solid #ff9d6f;
+    border-radius: 8px;
+    font-size: 22px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.82);
+    font-weight: 500;
+  }
+  .note b { color: #ff9d6f; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <span class="badge">코스피 장중 흐름</span>
+      <h2>급등 출발 → 7,000선 위협 → 막판 반등</h2>
+    </div>
+
+    <div class="flow">
+      <div class="step">
+        <div class="dot"></div>
+        <div class="time">개장</div>
+        <div class="price">7,153.99</div>
+        <div class="pct">+1.94%</div>
+      </div>
+      <div class="step">
+        <div class="dot"></div>
+        <div class="time">오전 9시 37분</div>
+        <div class="price">7,105.72</div>
+        <div class="pct">+1.25%</div>
+      </div>
+      <div class="step low">
+        <div class="dot"></div>
+        <div class="time">장중 저점</div>
+        <div class="price">7,014.98</div>
+        <div class="pct">7,000선 위협</div>
+      </div>
+      <div class="step final">
+        <div class="dot"></div>
+        <div class="time">최종 마감</div>
+        <div class="price">7,080.92</div>
+        <div class="pct">+0.90%</div>
+      </div>
+    </div>
+
+    <div class="note">
+      추석 연휴를 앞둔 차익 실현 매물에 상승폭이 계속 줄며 <b>7,014.98까지 밀렸지만</b>, 장 막판 반도체 대형주와 기관 매수가 힘을 내며 <b>4거래일 연속 상승 마감</b>했어요.
+    </div>
+  </div>
+</body>
+</html>

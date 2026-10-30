@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px; height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .canvas {
+    position: relative;
+    width: 1080px; height: 1080px;
+    background: linear-gradient(150deg, #1c0606 0%, #2d0a0a 45%, #4a1414 100%);
+    overflow: hidden;
+  }
+  .glow {
+    position: absolute;
+    top: -200px; right: -180px;
+    width: 620px; height: 620px;
+    background: radial-gradient(circle, rgba(232,148,102,0.16) 0%, rgba(232,148,102,0) 70%);
+  }
+  .divider {
+    position: absolute;
+    top: 0; left: 660px;
+    width: 1px; height: 1080px;
+    background: rgba(255,255,255,0.10);
+  }
+  .panel-right-tint {
+    position: absolute;
+    top: 0; left: 660px;
+    width: 420px; height: 1080px;
+    background: rgba(0,0,0,0.16);
+  }
+
+  .badge {
+    position: absolute;
+    top: 80px; left: 80px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(232,148,102,0.30);
+    border-radius: 999px;
+  }
+  .badge .dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #e89466;
+  }
+  .badge span {
+    font-size: 26px;
+    font-weight: 600;
+    color: #e9d4c9;
+    letter-spacing: -0.3px;
+  }
+  .badge .date { color: #b99a8c; margin-left: 4px; }
+
+  .left-content {
+    position: absolute;
+    top: 370px; left: 80px;
+    width: 520px;
+  }
+  .eyebrow {
+    font-size: 28px;
+    font-weight: 600;
+    color: #cf9c86;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+  }
+  .title {
+    font-size: 78px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    color: #f7ede8;
+  }
+  .stat-line {
+    margin-top: 44px;
+    font-size: 27px;
+    font-weight: 500;
+    color: #cbb3a9;
+    letter-spacing: -0.2px;
+    line-height: 1.7;
+  }
+  .stat-line .down { color: #6fa3ff; font-weight: 700; }
+
+  .footer {
+    position: absolute;
+    bottom: 80px; left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .footer .bar {
+    width: 34px; height: 4px;
+    background: #e89466;
+    border-radius: 2px;
+  }
+  .footer .name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ecdcd4;
+    letter-spacing: -0.3px;
+  }
+
+  .right-col {
+    position: absolute;
+    top: 0; left: 660px;
+    width: 420px; height: 1080px;
+  }
+  .rc-label {
+    position: absolute;
+    top: 440px; left: 0; width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #cbb3a9;
+    letter-spacing: -0.2px;
+  }
+  .rc-num {
+    position: absolute;
+    top: 480px; left: 0; width: 100%;
+    text-align: center;
+    font-size: 104px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #7ba9ff;
+  }
+  .rc-sub {
+    position: absolute;
+    top: 618px; left: 0; width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #b99a8c;
+  }
+  .rc-divider {
+    position: absolute;
+    top: 700px; left: 110px;
+    width: 200px; height: 1px;
+    background: rgba(255,255,255,0.14);
+  }
+  .rc-mini {
+    position: absolute;
+    top: 750px; left: 0; width: 100%;
+    text-align: center;
+  }
+  .rc-mini .label {
+    font-size: 24px;
+    font-weight: 600;
+    color: #cbb3a9;
+    margin-bottom: 8px;
+  }
+  .rc-mini .val {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ff6f6f;
+    letter-spacing: -1px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="glow"></div>
+    <div class="panel-right-tint"></div>
+    <div class="divider"></div>
+
+    <div class="badge">
+      <div class="dot"></div>
+      <span>국장정리 · 시황<span class="date">  9.28</span></span>
+    </div>
+
+    <div class="left-content">
+      <div class="eyebrow">4일 만에 열린 장, 반도체가 발목 잡았다</div>
+      <div class="title">코스피<br>7000선 반납</div>
+      <div class="stat-line">
+        삼성전자 <span class="down">-5.43%</span><br>
+        SK하이닉스 <span class="down">-5.05%</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="name">내일도 주린이</div>
+    </div>
+
+    <div class="right-col">
+      <div class="rc-label">코스피 마감</div>
+      <div class="rc-num">-2.70%</div>
+      <div class="rc-sub">6,889.74</div>
+      <div class="rc-divider"></div>
+      <div class="rc-mini">
+        <div class="label">코스닥은 나홀로</div>
+        <div class="val">+0.25%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

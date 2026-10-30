@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1e33 0%, #202849 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 28px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #a9c0ff;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  thead tr { background: rgba(255,255,255,0.06); }
+  th {
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    padding: 16px 16px;
+  }
+  th.num, td.num { text-align: right; }
+  tbody tr {
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  td {
+    padding: 18px 16px;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  td.name { font-weight: 700; font-size: 20px; }
+  td .prev { color: rgba(255,255,255,0.42); font-weight: 500; font-size: 15px; display: block; margin-top: 3px;}
+  td.pct { font-weight: 800; font-size: 20px; }
+  .up { color: #ff8080; }
+  .loss { color: #8fa8ff; }
+  .loss .rate { font-size: 15px; font-weight: 600; opacity: 0.85; display: block; margin-top: 3px; }
+
+  .total {
+    margin-top: 28px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(143,168,255,0.10);
+    border: 1px solid rgba(143,168,255,0.22);
+  }
+  .total .cell {
+    flex: 1;
+    padding: 26px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .total .cell:last-child { border-right: none; }
+  .total .label {
+    font-size: 18px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .total .value {
+    font-size: 27px;
+    font-weight: 800;
+    color: #8fa8ff;
+    letter-spacing: -0.3px;
+  }
+  .total .value.big { color: #a9c0ff; font-size: 32px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">보유 6종목 전체 현황</div>
+      <h2>누적 평가손익 -38.1%</h2>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>종목</th>
+          <th class="num">마감가</th>
+          <th class="num">당일등락</th>
+          <th class="num">평가손익</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">삼성전자<span class="prev">25주 · 평단 371,500원</span></td>
+          <td class="num">286,500원</td>
+          <td class="num pct up">+3.62%</td>
+          <td class="num pct loss">-2,125,000원<span class="rate">-22.9%</span></td>
+        </tr>
+        <tr>
+          <td class="name">두산로보틱스<span class="prev">34주 · 평단 134,674원</span></td>
+          <td class="num">71,400원</td>
+          <td class="num pct up">+0.56%</td>
+          <td class="num pct loss">-2,151,316원<span class="rate">-47.0%</span></td>
+        </tr>
+        <tr>
+          <td class="name">PL(Planet Labs)<span class="prev">209주 · 평단 $42.64</span></td>
+          <td class="num">$17.48</td>
+          <td class="num pct loss">-0.80%</td>
+          <td class="num pct loss">-$5,258.61<span class="rate">-59.0%</span></td>
+        </tr>
+        <tr>
+          <td class="name">ORCL(오라클)<span class="prev">42.51주 · 평단 $178.75</span></td>
+          <td class="num">$137.04</td>
+          <td class="num pct loss">-1.79%</td>
+          <td class="num pct loss">-$1,773.09<span class="rate">-23.3%</span></td>
+        </tr>
+        <tr>
+          <td class="name">RDW(Redwire)<span class="prev">5주 · 평단 $21.60</span></td>
+          <td class="num">$11.62</td>
+          <td class="num pct up">+0.17%</td>
+          <td class="num pct loss">-$49.90<span class="rate">-46.2%</span></td>
+        </tr>
+        <tr>
+          <td class="name">NASA(Tema Space ETF)<span class="prev">1주 · 평단 $35.11</span></td>
+          <td class="num">$24.70</td>
+          <td class="num pct up">+1.52%</td>
+          <td class="num pct loss">-$10.41<span class="rate">-29.6%</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">
+      <div class="cell">
+        <div class="label">평가액</div>
+        <div class="value">22,548,641원</div>
+      </div>
+      <div class="cell">
+        <div class="label">누적 평가손익</div>
+        <div class="value">-13,887,975원</div>
+      </div>
+      <div class="cell">
+        <div class="label">전체 수익률</div>
+        <div class="value big">-38.1%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #140404;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #3a1010 0%, #210606 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffb17a;
+    background: rgba(255,177,122,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fdf3ee;
+    letter-spacing: -1px;
+    line-height: 1.38;
+    margin-bottom: 40px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px 24px;
+    text-align: center;
+  }
+  .box .name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffd9bd;
+    margin-bottom: 18px;
+  }
+  .box .pct {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+  }
+  .box .price {
+    font-size: 21px;
+    color: #c99589;
+  }
+  .up { color: #ff6b6b; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #d8ab98;
+    line-height: 1.6;
+  }
+  .note b { color: #ffb17a; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">3대 지수 · 마감</div>
+    <h2>다우·S&amp;P500·나스닥 일제히 상승, 나스닥 +1.19%로 가장 강세</h2>
+    <div class="row">
+      <div class="box">
+        <div class="name">다우존스</div>
+        <div class="pct up">+0.49%</div>
+        <div class="price">51,176.96</div>
+      </div>
+      <div class="box">
+        <div class="name">S&amp;P500</div>
+        <div class="pct up">+0.73%</div>
+        <div class="price">7,722.72</div>
+      </div>
+      <div class="box">
+        <div class="name">나스닥</div>
+        <div class="pct up">+1.19%</div>
+        <div class="price">27,190.86</div>
+      </div>
+    </div>
+    <div class="note">장중 나스닥은 전고점을 넘어 <b>신고가</b>를 썼지만, 주간 기준으론 나스닥만 플러스였고 다우·S&amp;P500은 주간으로 손실이었다</div>
+  </div>
+</body>
+</html>

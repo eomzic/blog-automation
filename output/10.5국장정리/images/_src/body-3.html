@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1000px;
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #f4f5f7;
+    color: #1f2328;
+  }
+  .card {
+    width: 1000px;
+    padding: 56px 60px 60px;
+    background: #ffffff;
+  }
+  .label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+  .head {
+    margin-top: 14px;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.25;
+  }
+  .flow { margin-top: 50px; }
+  .step {
+    display: flex;
+    align-items: stretch;
+  }
+  .dot-col {
+    width: 64px;
+    position: relative;
+  }
+  .dot {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #3a3d40;
+  }
+  .dot.hot { background: #e5484d; }
+  .line {
+    position: absolute;
+    left: 12px;
+    top: 36px;
+    bottom: -10px;
+    width: 2px;
+    background: #d1d5db;
+  }
+  .step:last-child .line { display: none; }
+  .body { padding-bottom: 36px; }
+  .t {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .d {
+    margin-top: 8px;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #4b5563;
+  }
+  .note {
+    margin-top: 16px;
+    padding: 22px 26px;
+    border-left: 5px solid #3a3d40;
+    background: #f3f4f6;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #374151;
+  }
+  .foot {
+    margin-top: 16px;
+    font-size: 22px;
+    color: #6b7280;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">OCI홀딩스 +7.01% · 정책 기대와 실적 사이</div>
+  <div class="head">정책 기대는 먼저 오고,<br>실적은 나중에 따라온다</div>
+  <div class="flow">
+    <div class="step">
+      <div class="dot-col"><div class="dot"></div><div class="line"></div></div>
+      <div class="body">
+        <div class="t">12월부터 미국 MIP 도입</div>
+        <div class="d">폴리실리콘·웨이퍼 수입에 최소 수입 가격 적용 예정</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot-col"><div class="dot"></div><div class="line"></div></div>
+      <div class="body">
+        <div class="t">판가 상승 기대 반영</div>
+        <div class="d">비중국산 공급가 kg당 16~18달러 → MIP 기준 kg당 21달러</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot-col"><div class="dot hot"></div><div class="line"></div></div>
+      <div class="body">
+        <div class="t">주가 23만 6,500원 (+7.01%)</div>
+        <div class="d">연휴 전 대비 +25.66%</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="dot-col"><div class="dot"></div><div class="line"></div></div>
+      <div class="body">
+        <div class="t">3분기 영업이익 742억원 추정</div>
+        <div class="d">전 분기 대비 -31%, 컨센서스 1,064억원 하회 전망</div>
+      </div>
+    </div>
+  </div>
+  <div class="note">정책 호재와 실적 괴리가 같이 있는 종목 — 추격보다 관망 구간으로 읽기</div>
+  <div class="foot">출처: 글로벌이코노믹 · 합성 데이터 그래픽</div>
+</div>
+</body>
+</html>

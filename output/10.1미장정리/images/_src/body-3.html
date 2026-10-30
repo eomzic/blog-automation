@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0e0e1c;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #241a3d 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff8f8f;
+    background: rgba(255,107,107,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 30px;
+    letter-spacing: -0.2px;
+  }
+  .quote {
+    position: relative;
+    padding: 8px 0 8px 36px;
+    border-left: 4px solid #a78bfa;
+    margin-bottom: 34px;
+  }
+  .quote p {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f6f5fb;
+    line-height: 1.38;
+    letter-spacing: -1px;
+  }
+  .quote .who {
+    margin-top: 16px;
+    font-size: 23px;
+    color: #a7a9ce;
+    font-weight: 600;
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .chip {
+    font-size: 21px;
+    font-weight: 600;
+    color: #eceaf6;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 999px;
+    padding: 12px 20px;
+  }
+  .chip .v { color: #ff6b6b; font-weight: 800; margin-left: 6px; }
+  .note {
+    font-size: 23px;
+    color: #a7a9ce;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">마이크론 · 실적 서프라이즈</div>
+    <div class="quote">
+      <p>"AI 메모리 수요는<br>여전히 매우 강하다"</p>
+      <div class="who">— 마이크론(MU), 4분기 실적 발표</div>
+    </div>
+    <div class="chips">
+      <span class="chip">4분기 실적<span class="v">예상 상회</span></span>
+      <span class="chip">1분기 가이던스<span class="v">상향</span></span>
+      <span class="chip">브로드컴(AVGO)<span class="v">동반 강세</span></span>
+      <span class="chip">시높시스(SNPS)<span class="v">+4.8%</span></span>
+    </div>
+    <div class="note">브로드컴-앤스로픽 420억 달러 컴퓨팅 인프라 조달 협상설까지 겹치며 "AI가 아니면 답이 없다"는 분위기가 짙어진 하루</div>
+  </div>
+</body>
+</html>

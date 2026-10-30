@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body {
+    width: 1080px; height: 1080px;
+    font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif;
+  }
+  .card {
+    width: 1080px; height: 1080px;
+    background: linear-gradient(165deg, #232526 0%, #2c2f31 45%, #3a3d40 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 80px 90px 170px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.05);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: rgba(255,255,255,0.82);
+  }
+  .badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #9aa7b0;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.32;
+    letter-spacing: -1px;
+    color: #ffffff;
+    margin-top: 40px;
+  }
+  .subtitle {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: -0.2px;
+  }
+
+  .compare {
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .compare .box {
+    text-align: center;
+    padding: 26px 36px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.10);
+    min-width: 230px;
+  }
+  .compare .box .lbl {
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 10px;
+  }
+  .compare .box .num {
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #9fb3d9;
+  }
+  .compare .box.now {
+    background: rgba(107,147,255,0.10);
+    border: 1px solid rgba(124,147,239,0.35);
+  }
+  .compare .box.now .num {
+    color: #7c93ef;
+    font-size: 54px;
+  }
+  .compare .arrow {
+    font-size: 30px;
+    color: rgba(255,255,255,0.3);
+    font-weight: 700;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 70px;
+    left: 90px;
+    right: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.55);
+  }
+  .footer .brand .line {
+    width: 26px; height: 2px;
+    background: rgba(255,255,255,0.4);
+  }
+  .footer .meta {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.35);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge"><span class="dot"></span>포트폴리오 점검 · 10/25</div>
+
+    <div class="title">손실률, 다시<br>확대됐어요</div>
+    <div class="subtitle">두산로보틱스 보호예수 해제 겹친 2주</div>
+
+    <div class="compare">
+      <div class="box">
+        <div class="lbl">10/11</div>
+        <div class="num">-38.4%</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="box now">
+        <div class="lbl">10/25</div>
+        <div class="num">-49.6%</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="brand"><span class="line"></span>내일도 주린이</div>
+      <div class="meta">실보유 6종목</div>
+    </div>
+  </div>
+</body>
+</html>

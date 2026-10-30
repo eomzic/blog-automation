@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body {
+    width: 1080px; height: 1080px;
+    font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif;
+  }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(155deg, #0f2027 0%, #134e4a 100%);
+  }
+  .dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.055) 1.6px, transparent 1.6px);
+    background-size: 28px 28px;
+    opacity: 0.5;
+  }
+  .glow-a {
+    position: absolute;
+    top: -200px; right: -180px;
+    width: 640px; height: 640px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(94,234,212,0.20) 0%, rgba(94,234,212,0) 70%);
+  }
+  .glow-b {
+    position: absolute;
+    bottom: -260px; left: -140px;
+    width: 560px; height: 560px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52,211,153,0.12) 0%, rgba(52,211,153,0) 70%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 84px 64px;
+  }
+
+  .badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 23px;
+    font-weight: 600;
+    color: #a7f3d0;
+    letter-spacing: -0.2px;
+  }
+  .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #5eead4; }
+  .badge .date { color: rgba(255,255,255,0.42); font-weight: 500; margin-left: 4px; }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .eyebrow {
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.58);
+    letter-spacing: -0.2px;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 800;
+    color: #f3fdf9;
+    letter-spacing: -1.5px;
+    line-height: 1.32;
+  }
+  .title .hl {
+    background: linear-gradient(135deg, #a7f3d0 0%, #5eead4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .stats {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+  }
+  .stat {
+    flex: 1;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 24px 24px;
+  }
+  .stat .label {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+  }
+  .stat .value {
+    font-size: 29px;
+    font-weight: 800;
+    color: #f3fdf9;
+    letter-spacing: -0.5px;
+  }
+  .stat .value.hl { color: #5eead4; }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+  }
+  .footer .brand .bar { width: 26px; height: 3px; background: #5eead4; }
+  .footer .tag { font-size: 22px; color: rgba(255,255,255,0.4); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="dots"></div>
+    <div class="glow-a"></div>
+    <div class="glow-b"></div>
+    <div class="content">
+      <div class="badge">
+        <span class="dot"></span>
+        실적발표 · 마이크론 FY2026 4Q
+        <span class="date">10.5</span>
+      </div>
+
+      <div class="main">
+        <div class="eyebrow">컨센서스를 다 뚫은 어닝 서프라이즈</div>
+        <div class="title">매출 <span class="hl">+379%</span> 폭증<br>국장 반도체도 들썩</div>
+        <div class="stats">
+          <div class="stat">
+            <div class="label">매출</div>
+            <div class="value">542.3억달러</div>
+          </div>
+          <div class="stat">
+            <div class="label">Non-GAAP EPS</div>
+            <div class="value hl">33.42달러</div>
+          </div>
+          <div class="stat">
+            <div class="label">매출총이익률</div>
+            <div class="value">87.0%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="brand"><span class="bar"></span>내일도 주린이</div>
+        <div class="tag">2026.10.05</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

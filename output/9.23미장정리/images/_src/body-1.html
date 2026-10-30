@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1b0a30 0%, #251142 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 30px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #d9a8ff;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  thead tr { background: rgba(255,255,255,0.06); }
+  th {
+    text-align: left;
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    padding: 18px 22px;
+  }
+  th.num, td.num { text-align: right; }
+  tbody tr {
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  tbody tr:nth-child(3) {
+    background: rgba(255,158,203,0.06);
+  }
+  td {
+    padding: 24px 22px;
+    font-size: 23px;
+    font-weight: 600;
+  }
+  td.name { font-weight: 700; font-size: 24px; }
+  td .prev { color: rgba(255,255,255,0.45); font-weight: 500; font-size: 19px; display: block; margin-top: 4px;}
+  td.pct { font-weight: 800; font-size: 27px; }
+  .down { color: #7fb0e8; }
+  .badge-high {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffb4e0;
+    background: rgba(255,180,224,0.14);
+    padding: 4px 10px;
+    border-radius: 999px;
+    vertical-align: middle;
+  }
+
+  .foot {
+    margin-top: 30px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.68);
+    font-weight: 500;
+  }
+  .foot b { color: #ffb4e0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">3대 지수 마감 · 9.23</div>
+      <h2>사상최고 랠리, 하루 만에 꺾였다</h2>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>지수</th>
+          <th class="num">9/22 → 9/23</th>
+          <th class="num">등락률</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">다우존스</td>
+          <td class="num">51,863.69 → 51,511.59</td>
+          <td class="num pct down">-0.68%</td>
+        </tr>
+        <tr>
+          <td class="name">S&amp;P500</td>
+          <td class="num">7,764.64 → 7,706.03</td>
+          <td class="num pct down">-0.75%</td>
+        </tr>
+        <tr>
+          <td class="name">나스닥종합<span class="badge-high">전일 사상최고</span></td>
+          <td class="num">27,244.28 → 26,936.04</td>
+          <td class="num pct down">-1.13%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="foot">
+      성장주·기술주 비중이 높을수록 금리 충격을 더 세게 맞으면서, <b>나스닥이 3대 지수 중 가장 크게</b> 빠졌어요.
+    </div>
+  </div>
+</body>
+</html>

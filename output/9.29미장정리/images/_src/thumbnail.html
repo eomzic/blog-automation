@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(160deg, #1a1a2e 0%, #241f3d 45%, #16213e 100%);
+  }
+  .glow {
+    position: absolute;
+    bottom: -220px;
+    left: -180px;
+    width: 620px;
+    height: 620px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139,122,219,0.28) 0%, rgba(139,122,219,0.07) 45%, rgba(139,122,219,0) 70%);
+  }
+  .watermark {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    font-size: 340px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.035);
+    letter-spacing: -10px;
+  }
+  .badge {
+    position: absolute;
+    top: 92px;
+    left: 96px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(167,139,250,0.4);
+    border-radius: 999px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #d8cef2;
+    letter-spacing: -0.2px;
+  }
+  .badge .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #a78bfa;
+  }
+  .badge .date { color: #8f84b3; font-weight: 500; }
+  .content {
+    position: absolute;
+    top: 290px;
+    left: 96px;
+    right: 96px;
+  }
+  .eyebrow {
+    font-size: 27px;
+    font-weight: 500;
+    color: #a99fd4;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h1 {
+    font-size: 80px;
+    font-weight: 800;
+    color: #f6f4fc;
+    line-height: 1.28;
+    letter-spacing: -2px;
+  }
+  .alert {
+    position: absolute;
+    top: 300px;
+    right: 96px;
+    text-align: right;
+    background: rgba(245,169,94,0.1);
+    border: 1px solid rgba(245,169,94,0.35);
+    border-radius: 16px;
+    padding: 16px 22px;
+    max-width: 260px;
+  }
+  .alert .l { font-size: 20px; color: #f0c793; font-weight: 600; margin-bottom: 6px; }
+  .alert .v { font-size: 34px; color: #ffd39a; font-weight: 800; letter-spacing: -0.5px; }
+  .stats {
+    position: absolute;
+    top: 660px;
+    left: 96px;
+    right: 96px;
+    display: flex;
+    gap: 18px;
+  }
+  .stat {
+    flex: 1;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 18px;
+    padding: 24px 22px;
+  }
+  .stat .label {
+    font-size: 22px;
+    color: #a99fd4;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .stat .val {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .footer {
+    position: absolute;
+    bottom: 84px;
+    left: 96px;
+    right: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #f6f4fc;
+  }
+  .brand .bar {
+    width: 34px;
+    height: 4px;
+    background: #a78bfa;
+    border-radius: 2px;
+  }
+  .idx { text-align: right; }
+  .idx .l { font-size: 22px; color: #a99fd4; margin-bottom: 6px; }
+  .idx .v { font-size: 32px; font-weight: 700; color: #f6f4fc; letter-spacing: -0.5px; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="watermark">09.29</div>
+    <div class="glow"></div>
+    <div class="badge"><span class="dot"></span>미장정리 · 시황 <span class="date">9.29</span></div>
+    <div class="content">
+      <div class="eyebrow">전일 급락 뒤, 낙폭 확 줄인 하루</div>
+      <h1>3대지수<br>조용한 하락</h1>
+    </div>
+    <div class="alert">
+      <div class="l">소비자심리 12년 최저</div>
+      <div class="v">81.9</div>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">다우</div>
+        <div class="val down">-0.25%</div>
+      </div>
+      <div class="stat">
+        <div class="label">S&amp;P500</div>
+        <div class="val down">-0.16%</div>
+      </div>
+      <div class="stat">
+        <div class="label">나스닥</div>
+        <div class="val down">-0.09%</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="brand"><span class="bar"></span>내일도 주린이</div>
+      <div class="idx">
+        <div class="l">美 10년물 국채금리</div>
+        <div class="v">5.26~5.28%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

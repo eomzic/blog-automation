@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1a2e 0%, #222b47 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 32px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb0ef;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; }
+
+  .quote {
+    position: relative;
+    background: rgba(124,147,239,0.08);
+    border-left: 4px solid #7c93ef;
+    border-radius: 0 18px 18px 0;
+    padding: 30px 34px;
+    margin-bottom: 30px;
+  }
+  .quote .mark { font-size: 40px; font-weight: 900; color: #7c93ef; line-height: 1; margin-bottom: 8px; }
+  .quote .txt { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; color: #f3f4fb; line-height: 1.4; }
+
+  .stats {
+    display: flex;
+    gap: 14px;
+  }
+  .stats .chip {
+    flex: 1;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 18px 20px;
+    text-align: center;
+  }
+  .stats .chip .k { font-size: 15px; color: rgba(255,255,255,0.45); font-weight: 600; margin-bottom: 8px; }
+  .stats .chip .v { font-size: 20px; font-weight: 800; }
+  .stats .chip .v.down { color: #7c93ef; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">RDW(Redwire) · Axiom Space 후속 계약</div>
+      <h2>호재는 분명했는데 섹터 약세를 못 이겼어요</h2>
+    </div>
+
+    <div class="quote">
+      <div class="mark">"</div>
+      <div class="txt">호재 나왔는데도 또 빠지네</div>
+    </div>
+
+    <div class="stats">
+      <div class="chip">
+        <div class="k">보유</div>
+        <div class="v">5주</div>
+      </div>
+      <div class="chip">
+        <div class="k">마감가</div>
+        <div class="v down">$10.64 (-2.21%)</div>
+      </div>
+      <div class="chip">
+        <div class="k">평가손익</div>
+        <div class="v down">-$54.80 (-50.7%)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0f1012;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #202124 0%, #34373a 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e8b34d;
+    background: rgba(232,179,77,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f5f6f7;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 36px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .item {
+    padding: 28px 30px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+  }
+  .item .name {
+    font-size: 27px;
+    font-weight: 700;
+    color: #e7e8ea;
+    margin-bottom: 10px;
+  }
+  .item .pct {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+  .item .up { color: #ff7b7b; }
+  .item .down { color: #6fb3ff; }
+  .item .desc {
+    font-size: 22px;
+    color: #9a9da2;
+    line-height: 1.5;
+  }
+  .foot {
+    margin-top: 32px;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #aeb1b6;
+  }
+  .foot b { color: #f2c572; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">특징주 · 9.24</div>
+    <h2>메타는 웃고, 반도체는 엇갈렸다</h2>
+    <div class="grid">
+      <div class="item">
+        <div class="name">메타</div>
+        <div class="pct up">+4%</div>
+        <div class="desc">AI 에이전트 &lsquo;뮤즈&rsquo; 수익화 계획 발표</div>
+      </div>
+      <div class="item">
+        <div class="name">MGM 리조트</div>
+        <div class="pct down">-10%</div>
+        <div class="desc">배리 딜러 인수 제안 철회</div>
+      </div>
+      <div class="item">
+        <div class="name">스티치 픽스</div>
+        <div class="pct down">-21.6%</div>
+        <div class="desc">오늘 개별 종목 중 최대 낙폭</div>
+      </div>
+      <div class="item">
+        <div class="name">엔비디아</div>
+        <div class="pct down">-0.4%</div>
+        <div class="desc">반도체 대형주 중 선방</div>
+      </div>
+    </div>
+    <div class="foot">암(-4%)·인텔(-3%)은 더 눌렸는데, <b>AI 인프라 자금조달 비용 부담</b>이 금리 상승과 맞물린 영향으로 보여요.</div>
+  </div>
+</body>
+</html>

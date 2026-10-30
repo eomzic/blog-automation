@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0c1615;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #101b1a 0%, #1c3330 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2dd4bf;
+    background: rgba(45,212,191,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f2faf8;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .flow { display: flex; flex-direction: column; }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+    padding: 26px 0;
+  }
+  .num {
+    flex: none;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: rgba(45,212,191,0.14);
+    border: 1px solid rgba(45,212,191,0.4);
+    color: #5eead4;
+    font-size: 26px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step-body { flex: 1; padding-top: 4px; }
+  .step-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #eef8f5;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .step-title .hl { color: #6fb3ff; }
+  .step-title .hl2 { color: #ff7b7b; }
+  .step-desc {
+    font-size: 24px;
+    color: #a9cbc2;
+    line-height: 1.55;
+  }
+  .arrow-line {
+    margin-left: 27px;
+    width: 2px;
+    height: 26px;
+    background: rgba(45,212,191,0.35);
+  }
+  .result {
+    margin-top: 14px;
+    padding: 28px 32px;
+    background: rgba(255,123,123,0.08);
+    border: 1px solid rgba(255,123,123,0.28);
+    border-radius: 18px;
+    font-size: 27px;
+    font-weight: 700;
+    color: #ffb3b3;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">인과관계 · 9.25 반등의 열쇠</div>
+    <h2>금리가 아니라 유가가 증시를 살렸다</h2>
+    <div class="flow">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="step-body">
+          <div class="step-title">이란, 호르무즈 해협 재개방 조건 제시</div>
+          <div class="step-desc">로이터 보도 — 해협 개방과 경제봉쇄 해제를 맞바꾸는 단계적 합의를 미국과 논의 중</div>
+        </div>
+      </div>
+      <div class="arrow-line"></div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="step-body">
+          <div class="step-title">유가 <span class="hl">2%대 급락</span></div>
+          <div class="step-desc">WTI 92.41달러(-2.33%) · 브렌트유 104.32달러(-2.14%)</div>
+        </div>
+      </div>
+      <div class="arrow-line"></div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="step-body">
+          <div class="step-title">10년물 금리, 전일 고점 대비 소폭 진정</div>
+          <div class="step-desc">5.225%(9/24 고점) → 5.16~5.20%대 — 여전히 역사적 고점권이지만 방향은 진정</div>
+        </div>
+      </div>
+      <div class="arrow-line"></div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="step-body">
+          <div class="step-title">금리 부담 상쇄 → <span class="hl2">3대 지수 전원 상승</span></div>
+          <div class="step-desc">유가 급락이 만든 여유를 증시가 반갑게 받아들인 하루</div>
+        </div>
+      </div>
+    </div>
+    <div class="result">"유가 하나가 금리 부담을 눌렀다" — 밀러타박 매트 맬리</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0a1614;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #0f2027 0%, #16332e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5eead4;
+    background: rgba(94,234,212,0.13);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f2faf7;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    text-align: center;
+    padding: 24px 12px;
+    font-size: 26px;
+  }
+  thead th {
+    color: #82a89e;
+    font-weight: 600;
+    font-size: 23px;
+    border-bottom: 2px solid rgba(255,255,255,0.12);
+  }
+  thead th:first-child { text-align: left; }
+  tbody td:first-child {
+    text-align: left;
+    color: #cdeee7;
+    font-weight: 700;
+  }
+  tbody tr { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody td { color: #eafaf5; font-weight: 600; }
+  .up { color: #ff6b6b; font-weight: 800; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #9fc4b9;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">지수 비교 · 장중 흐름</div>
+    <h2>저점 찍고 그대로 고점 마감 — 코스닥은 낙폭을 전부 되돌렸다</h2>
+    <table>
+      <thead>
+        <tr><th>구분</th><th>개장</th><th>장중 저점</th><th>마감</th><th>등락률</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>코스피</td><td>6,814.49</td><td>6,765.06</td><td>6,971.35</td><td class="up">+1.95%</td></tr>
+        <tr><td>코스닥</td><td>853.96</td><td>851.92</td><td>894.29</td><td class="up">+4.48%</td></tr>
+      </tbody>
+    </table>
+    <div class="note">둘 다 전일보다 낮게 출발했지만 상승폭을 빠르게 키웠고, 코스닥은 장중 고점과 같은 자리에서 그대로 마감</div>
+  </div>
+</body>
+</html>

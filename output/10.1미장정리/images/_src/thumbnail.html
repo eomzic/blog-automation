@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+  .grain {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.04) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    opacity: 0.5;
+  }
+  .glow {
+    position: absolute;
+    top: -200px;
+    left: -140px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(167,139,250,0.20) 0%, rgba(167,139,250,0.05) 55%, rgba(167,139,250,0) 75%);
+  }
+  .badge {
+    position: absolute;
+    top: 92px;
+    left: 72px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(167,139,250,0.35);
+    border-radius: 999px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #d9cffb;
+    letter-spacing: -0.2px;
+  }
+  .badge .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #a78bfa;
+  }
+  .badge .date { color: #8d8fb0; font-weight: 500; }
+
+  .yieldcall {
+    position: absolute;
+    top: 86px;
+    right: 72px;
+    text-align: right;
+  }
+  .yieldcall .lbl {
+    font-size: 21px;
+    font-weight: 600;
+    color: #e3c88a;
+    margin-bottom: 6px;
+    letter-spacing: -0.2px;
+  }
+  .yieldcall .num {
+    font-size: 54px;
+    font-weight: 800;
+    color: #f5c451;
+    letter-spacing: -1.5px;
+  }
+  .yieldcall .sub {
+    font-size: 19px;
+    color: #8d8fb0;
+    margin-top: 4px;
+  }
+
+  .content {
+    position: absolute;
+    top: 268px;
+    left: 72px;
+    width: 820px;
+  }
+  .eyebrow {
+    font-size: 27px;
+    font-weight: 500;
+    color: #a7a9ce;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h1 {
+    font-size: 80px;
+    font-weight: 800;
+    color: #f6f5fb;
+    line-height: 1.32;
+    letter-spacing: -2.5px;
+  }
+
+  .stats {
+    position: absolute;
+    top: 686px;
+    left: 72px;
+    right: 72px;
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 44px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 24px;
+  }
+  .stat { text-align: center; }
+  .stat:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding-right: 44px;
+  }
+  .stat .label {
+    font-size: 21px;
+    color: #a7a9ce;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.1px;
+  }
+  .stat .val {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+
+  .footer {
+    position: absolute;
+    bottom: 76px;
+    left: 72px;
+    right: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 29px;
+    font-weight: 700;
+    color: #f0f0ee;
+  }
+  .brand .bar {
+    width: 32px;
+    height: 4px;
+    background: #a78bfa;
+    border-radius: 2px;
+  }
+  .idx {
+    font-size: 24px;
+    color: #a7a9ce;
+    letter-spacing: -0.2px;
+  }
+  .idx b { color: #f6f5fb; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="grain"></div>
+    <div class="glow"></div>
+    <div class="badge"><span class="dot"></span>미장정리 · 시황 <span class="date">10.1</span></div>
+    <div class="yieldcall">
+      <div class="lbl">美 10년물 금리</div>
+      <div class="num">5.3%</div>
+      <div class="sub">24년 만의 최고치</div>
+    </div>
+    <div class="content">
+      <div class="eyebrow">금리 급등에 흔들리다 장 막판 숨 고르기</div>
+      <h1>AI가 지켜낸<br>소폭 반등 마감</h1>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">다우존스</div>
+        <div class="val up">+0.04%</div>
+      </div>
+      <div class="stat">
+        <div class="label">S&amp;P500</div>
+        <div class="val up">+0.19%</div>
+      </div>
+      <div class="stat">
+        <div class="label">나스닥</div>
+        <div class="val up">+0.04%</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="brand"><span class="bar"></span>내일도 주린이</div>
+      <div class="idx">나스닥 종가 <b>26,871.60</b></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(152deg, #232526 0%, #2b2d2f 45%, #3a3d40 100%);
+    color: #f2f2f2;
+    text-align: center;
+  }
+  .badge {
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 28px;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 6px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #c9cdd2;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .title {
+    position: absolute;
+    top: 260px;
+    left: 72px;
+    right: 72px;
+    font-size: 88px;
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -2px;
+  }
+  .sub {
+    position: absolute;
+    top: 630px;
+    left: 0;
+    right: 0;
+    font-size: 34px;
+    font-weight: 500;
+    color: #b7bcc3;
+  }
+  .sub b { color: #ffffff; font-weight: 700; }
+  .accent {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 6px;
+    border-radius: 3px;
+    background: #e5484d;
+  }
+  .date {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    font-size: 26px;
+    color: #8e949b;
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="badge">국장 정리 · 10/2 금요일 마감 · 10/5 휴장</div>
+  <div class="title">연휴 전 마지막 장<br>기관만 버틴 코스피</div>
+  <div class="sub">개인 <b>-1조 7,206억</b> · 기관 <b>+3,814억</b></div>
+  <div class="accent"></div>
+  <div class="date">2026.10.05</div>
+</div>
+</body>
+</html>

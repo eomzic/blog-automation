@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1414;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #241a1a 0%, #2f2020 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e0a458;
+    background: rgba(224,164,88,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7f2ef;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 52px;
+  }
+  .steps {
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+    margin-bottom: 44px;
+  }
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .step .num {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: #eadfd8;
+    margin-bottom: 20px;
+  }
+  .step.peak .num {
+    background: rgba(255,107,107,0.18);
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+  }
+  .connector {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.16);
+    z-index: -1;
+  }
+  .step .name {
+    font-size: 24px;
+    color: #c9ada2;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .step .val {
+    font-size: 44px;
+    font-weight: 800;
+    color: #ff6b6b;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  .step .tag2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff6b6b;
+    background: rgba(255,107,107,0.12);
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .note {
+    font-size: 24px;
+    color: #c9ada2;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">국채수익률 · 반등</div>
+    <h2>장기물로 갈수록 더 가팔랐던 금리 반등</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="connector"></div>
+        <div class="num">2Y</div>
+        <div class="name">2년물</div>
+        <div class="val">4.89%</div>
+      </div>
+      <div class="step peak">
+        <div class="connector"></div>
+        <div class="num">10Y</div>
+        <div class="name">10년물</div>
+        <div class="val">5.29%</div>
+        <div class="tag2">52주 최고</div>
+      </div>
+      <div class="step">
+        <div class="num">30Y</div>
+        <div class="name">30년물</div>
+        <div class="val">5.64%</div>
+      </div>
+    </div>
+    <div class="note">물가지표는 완화됐는데 장기 국채수익률은 오히려 반등. 강한 고용지표(ADP)와 재정적자 우려가 겹치며 마감 직전 다우·S&amp;P를 하락 전환시킨 계기가 됨</div>
+  </div>
+</body>
+</html>

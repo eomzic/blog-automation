@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0f1012;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1d2b30 0%, #2c3a3e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #7fd4c1;
+    background: rgba(127,212,193,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 26px;
+    letter-spacing: -0.2px;
+  }
+  .quote-box {
+    position: relative;
+    padding: 40px 44px 36px 48px;
+    background: rgba(0,0,0,0.22);
+    border-left: 6px solid #7fd4c1;
+    border-radius: 4px 20px 20px 4px;
+  }
+  .quote-mark {
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(127,212,193,0.5);
+    line-height: 1;
+    margin-bottom: 4px;
+    font-family: Georgia, serif;
+  }
+  .quote-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #f5f6f7;
+    line-height: 1.45;
+    letter-spacing: -0.5px;
+  }
+  .quote-src {
+    margin-top: 18px;
+    font-size: 23px;
+    color: #9db8b3;
+    font-weight: 600;
+  }
+  .rows {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+  }
+  .row {
+    flex: 1;
+    padding: 24px 26px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 16px;
+  }
+  .row .k {
+    font-size: 21px;
+    color: #8fa8a3;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .row .v {
+    font-size: 25px;
+    color: #e7e8ea;
+    font-weight: 600;
+    line-height: 1.45;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">중동 외교 · 유가</div>
+    <div class="quote-box">
+      <div class="quote-mark">&ldquo;</div>
+      <div class="quote-text">미국·이란 협상단, 중동 전쟁 종료 및 호르무즈 해협 재개통 논의 중</div>
+      <div class="quote-src">— 로이터 (야후파이낸스 라이브블로그 인용)</div>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <div class="k">시장 반응</div>
+        <div class="v">급등하던 유가 진정, 3대 지수 낙폭 방어</div>
+      </div>
+      <div class="row">
+        <div class="k">주의할 점</div>
+        <div class="v">타결 아닌 &ldquo;논의 중&rdquo; 단계 — 변동 가능성 있음</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

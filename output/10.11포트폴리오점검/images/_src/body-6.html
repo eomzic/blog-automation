@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1a2e 0%, #222b47 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 40px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb0ef;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .timeline {
+    position: relative;
+    padding-left: 34px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px; top: 10px; bottom: 10px;
+    width: 2px;
+    background: rgba(255,255,255,0.12);
+  }
+  .tl-item {
+    position: relative;
+    padding-bottom: 32px;
+  }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-dot {
+    position: absolute;
+    left: -34px; top: 4px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: #222b47;
+    border: 3px solid #5a6fc4;
+  }
+  .tl-item.up .tl-dot { border-color: #ff8585; }
+  .tl-date {
+    font-size: 17px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 8px;
+  }
+  .tl-body {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 22px 26px;
+  }
+  .tl-headline {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .tl-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+  .tl-pct { font-weight: 800; }
+  .tl-pct.down { color: #7c93ef; }
+  .tl-pct.up { color: #ff8585; }
+
+  .note {
+    margin-top: 28px;
+    font-size: 17px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">ORCL(오라클) · OpenAI 매출 논란</div>
+      <h2>하루 사이에 숫자가 뒤집혔어요</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">10/8 (목)</div>
+        <div class="tl-body">
+          <div class="tl-headline">FT·블룸버그, "OpenAI 연매출 500억 달러대" 보도</div>
+          <div class="tl-sub">애초 알려진 680억~700억 달러보다 크게 낮은 수치 &nbsp;→&nbsp; 오라클 <span class="tl-pct down">-5.48%</span></div>
+        </div>
+      </div>
+      <div class="tl-item up">
+        <div class="tl-dot"></div>
+        <div class="tl-date">10/9 (금)</div>
+        <div class="tl-body">
+          <div class="tl-headline">블룸버그, "연말까지 700억 달러 도달 가능" 완화 보도</div>
+          <div class="tl-sub">실제 정규장 종가 $141.40 기준 &nbsp;→&nbsp; 오라클 <span class="tl-pct up">+4.59%</span> 반등</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      같은 날은 주당 $0.50 배당의 배당기준일이기도 했어요. 보유 42.51주 · 평단 $178.75 · 평가손익 -$1,431.31 (-18.8%)
+    </div>
+  </div>
+</body>
+</html>

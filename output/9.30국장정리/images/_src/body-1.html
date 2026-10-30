@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1b1c;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #232526 0%, #303234 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f5c451;
+    background: rgba(245,196,81,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7f7f5;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 44px;
+  }
+  .chartwrap { position: relative; width: 100%; }
+  .ylabels {
+    position: absolute;
+    left: -66px;
+    top: 0;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #8a8d8f;
+    text-align: right;
+    width: 56px;
+  }
+  .peakcall {
+    position: absolute;
+    left: 218px;
+    top: -38px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #f5c451;
+    white-space: nowrap;
+  }
+  .xlabels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 21px;
+    color: #9a9d9f;
+    font-weight: 500;
+  }
+  .xlabels span:last-child { color: #cfd1d0; font-weight: 700; }
+  .vals {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .neutral { color: #d8d9d7; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #adb0b1;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">코스피 · 장중 흐름</div>
+    <h2>6,950 찍고 반나절 만에 반락, 6,838로 마감</h2>
+    <div class="chartwrap">
+      <div class="ylabels">
+        <span>6,970</span>
+        <span>6,880</span>
+        <span>6,800</span>
+      </div>
+      <div class="peakcall">▲ 장중 +1.17%</div>
+      <svg width="860" height="220" viewBox="0 0 860 220">
+        <defs>
+          <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f5c451" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#f5c451" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="0" y1="128" x2="860" y2="128" stroke="#8a8d8f" stroke-width="1.5" stroke-dasharray="6 8"/>
+        <polygon points="0,128.4 280,25.9 560,90.6 860,170.8 860,220 0,220" fill="url(#area)"/>
+        <polyline points="0,128.4 280,25.9 560,90.6 860,170.8" fill="none" stroke="#f5c451" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="0" cy="128.4" r="7" fill="#303234" stroke="#8a8d8f" stroke-width="3"/>
+        <circle cx="280" cy="25.9" r="8" fill="#f5c451"/>
+        <circle cx="560" cy="90.6" r="7" fill="#303234" stroke="#f5c451" stroke-width="3"/>
+        <circle cx="860" cy="170.8" r="9" fill="#6ea8ff"/>
+      </svg>
+      <div class="xlabels">
+        <span>전일 종가</span>
+        <span>9:15~35</span>
+        <span>10:00</span>
+        <span>마감</span>
+      </div>
+      <div class="vals">
+        <span class="neutral">6,870.81</span>
+        <span class="up">6,950선</span>
+        <span class="up">6,900선</span>
+        <span class="down">6,838.04</span>
+      </div>
+    </div>
+    <div class="note">개장 직후 "칠천피" 기대감에 6,950선까지 급등했지만, 외국인 수급이 오후 들어 급반전하며 상승분을 모두 반납 — 결국 -0.48%, 나흘 연속 하락 마감</div>
+  </div>
+</body>
+</html>

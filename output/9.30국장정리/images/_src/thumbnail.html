@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(152deg, #232526 0%, #2b2d2f 45%, #3a3d40 100%);
+  }
+  .grain {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.045) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    opacity: 0.5;
+  }
+  .glow {
+    position: absolute;
+    top: -220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 720px;
+    height: 480px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,196,81,0.16) 0%, rgba(245,196,81,0.04) 50%, rgba(245,196,81,0) 72%);
+  }
+  .badge {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(245,196,81,0.35);
+    border-radius: 999px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #e8dfc8;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+  }
+  .badge .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f5c451;
+  }
+  .badge .date { color: #9a9d9f; font-weight: 500; }
+  .content {
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    right: 60px;
+    text-align: center;
+  }
+  .eyebrow {
+    font-size: 27px;
+    font-weight: 500;
+    color: #b8bcbf;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h1 {
+    font-size: 76px;
+    font-weight: 800;
+    color: #f7f7f5;
+    line-height: 1.3;
+    letter-spacing: -2px;
+  }
+  .wave {
+    position: absolute;
+    top: 545px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+  }
+  .stats {
+    position: absolute;
+    top: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 46px;
+  }
+  .stat { text-align: center; min-width: 190px; }
+  .stat .label {
+    font-size: 23px;
+    color: #a9adaf;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: -0.1px;
+  }
+  .stat .val {
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+  }
+  .divider {
+    width: 1px;
+    height: 70px;
+    background: rgba(255,255,255,0.14);
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .footer {
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 29px;
+    font-weight: 700;
+    color: #f0f0ee;
+    margin-bottom: 16px;
+  }
+  .brand .bar {
+    width: 32px;
+    height: 4px;
+    background: #f5c451;
+    border-radius: 2px;
+  }
+  .idx {
+    font-size: 24px;
+    color: #9a9d9f;
+    letter-spacing: -0.2px;
+  }
+  .idx b { color: #d8d9d7; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="grain"></div>
+    <div class="glow"></div>
+    <div class="badge"><span class="dot"></span>국장정리 · 시황 <span class="date">9.30</span></div>
+    <div class="content">
+      <div class="eyebrow">코스피 나흘째 하락, 코스닥은 홀로 상승</div>
+      <h1>엇갈린 마감,<br>혼조세 하루</h1>
+    </div>
+    <svg class="wave" viewBox="0 0 560 90" fill="none">
+      <path d="M10 55 C 90 10, 150 8, 220 30 S 340 78, 420 60 S 520 20, 550 32" stroke="#f5c451" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="10" cy="55" r="7" fill="#3a3d40" stroke="#f5c451" stroke-width="3"/>
+      <circle cx="550" cy="32" r="8" fill="#6ea8ff"/>
+    </svg>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">코스피</div>
+        <div class="val down">-0.48%</div>
+      </div>
+      <div class="divider"></div>
+      <div class="stat">
+        <div class="label">코스닥</div>
+        <div class="val up">+0.72%</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="brand"><span class="bar"></span>내일도 주린이</div>
+      <div class="idx">코스피 종가 <b>6,838.04</b></div>
+    </div>
+  </div>
+</body>
+</html>

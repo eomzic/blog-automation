@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #232526 0%, #2f3234 55%, #3a3d40 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 34px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb3d9;
+    margin-bottom: 10px; letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 27px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .g-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 18px;
+    padding: 26px 28px;
+  }
+  .g-card .ticker {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 4px;
+  }
+  .g-card .name {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 18px;
+  }
+  .g-card .price {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .g-card .day {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff8585;
+    background: rgba(255,133,133,0.12);
+    padding: 4px 10px;
+    border-radius: 8px;
+  }
+  .g-card .cum {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+  }
+  .g-card .cum b { color: #7c93ef; font-weight: 800; }
+
+  .note {
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 18px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+  }
+  .note b { color: #9fb3d9; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">미국 보유 4종목 · 10/23(금) 종가</div>
+      <h2>메타·테슬라발 급락, 금요일엔 다같이 숨 돌렸어요</h2>
+    </div>
+
+    <div class="grid">
+      <div class="g-card">
+        <div class="ticker">PL</div>
+        <div class="name">Planet Labs · 209주</div>
+        <div class="price">$13.37</div>
+        <div class="day">+2.22%</div>
+        <div class="cum">누적 <b>-68.6%</b> (-$6,117.22)</div>
+      </div>
+      <div class="g-card">
+        <div class="ticker">ORCL</div>
+        <div class="name">오라클 · 42.51주</div>
+        <div class="price">$126.12</div>
+        <div class="day">+0.46%</div>
+        <div class="cum">누적 <b>-29.4%</b> (-$2,237.39)</div>
+      </div>
+      <div class="g-card">
+        <div class="ticker">RDW</div>
+        <div class="name">Redwire · 5주</div>
+        <div class="price">$8.34</div>
+        <div class="day">+2.46%</div>
+        <div class="cum">누적 <b>-61.4%</b> (-$66.30)</div>
+      </div>
+      <div class="g-card">
+        <div class="ticker">NASA</div>
+        <div class="name">Tema Space Innovators ETF · 1주</div>
+        <div class="price">$20.41</div>
+        <div class="day">+1.71%</div>
+        <div class="cum">누적 <b>약 -41.9%</b> (추정)</div>
+      </div>
+    </div>
+
+    <div class="note">
+      10/21(수) 장마감 후 나온 메타·테슬라의 capex 메시지가 10/22(목) AI 관련주 전반을 끌어내렸고, 10/23(금)엔 그중 일부가 반등했어요. 4종목 다 <b>개별 호재·악재 없이 섹터 전체가 같이</b> 움직인 쪽으로 보여요.
+    </div>
+  </div>
+</body>
+</html>

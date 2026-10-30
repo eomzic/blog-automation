@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #241330 0%, #32184a 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 36px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #c3aef5;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 20px;
+  }
+  thead th {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 14px;
+  }
+  tbody td {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    font-weight: 600;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .name { text-align: left; font-weight: 800; font-size: 22px; }
+  .neutral { color: rgba(255,255,255,0.5); }
+  .up { color: #ff8080; }
+  .loss { color: #8fa8ff; font-weight: 800; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">삼성전자 · 두산로보틱스</div>
+      <h2>10/2(금) 마감가 그대로, 평가손익 비교</h2>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left;">종목</th>
+          <th>보유수량</th>
+          <th>평단가</th>
+          <th>마감가</th>
+          <th>당일등락</th>
+          <th>평가손익(수익률)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">삼성전자</td>
+          <td>25주</td>
+          <td>371,500원</td>
+          <td>276,000원</td>
+          <td class="neutral">0.00%</td>
+          <td class="loss">-2,387,500원<br><span style="font-size:17px;">(-25.7%)</span></td>
+        </tr>
+        <tr>
+          <td class="name">두산로보틱스</td>
+          <td>34주</td>
+          <td>134,674원</td>
+          <td>73,100원</td>
+          <td class="up">+1.81%</td>
+          <td class="loss">-2,093,516원<br><span style="font-size:17px;">(-45.7%)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

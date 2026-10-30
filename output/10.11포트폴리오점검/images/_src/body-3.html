@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1a2e 0%, #222b47 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 36px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb0ef;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .point {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 26px 28px;
+  }
+  .point .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: rgba(124,147,239,0.2);
+    color: #aebcf2;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .point .label { font-size: 17px; color: rgba(255,255,255,0.5); font-weight: 600; margin-bottom: 8px; }
+  .point .val { font-size: 21px; font-weight: 700; line-height: 1.4; }
+  .point .val.down { color: #7c93ef; }
+
+  .footline {
+    font-size: 19px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .footline b { color: #b7c3f7; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">PL(Planet Labs) · 우주 섹터 매도세</div>
+      <h2>개별 이슈가 아니라 섹터 전체 흐름</h2>
+    </div>
+
+    <div class="grid">
+      <div class="point">
+        <div class="num">1</div>
+        <div class="label">보유 현황</div>
+        <div class="val">209주 · 평단 $42.64</div>
+      </div>
+      <div class="point">
+        <div class="num">2</div>
+        <div class="label">마감가 (10/9 실제)</div>
+        <div class="val down">$17.18 (-0.06%)</div>
+      </div>
+      <div class="point">
+        <div class="num">3</div>
+        <div class="label">매도세 배경</div>
+        <div class="val">스페이스X, 400억 달러<br>신규 부채로 AI칩 구매 추진</div>
+      </div>
+      <div class="point">
+        <div class="num">4</div>
+        <div class="label">평가손익</div>
+        <div class="val down">-$5,280.39 (-59.3%)</div>
+      </div>
+    </div>
+
+    <div class="footline">
+      자금이 <b>소형 우주기업에서 대형 플레이어로</b> 옮겨간 흐름이라, 섹터 전체가 흔들린 하루였어요.
+    </div>
+  </div>
+</body>
+</html>

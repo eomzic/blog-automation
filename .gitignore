@@ -1,1 +1,7 @@
 .DS_Store
+.auth/
+__pycache__/
+logs/
+scripts/editor_dump.json
+scripts/editor_screenshot.png
+scripts/last_fill_screenshot.png
