@@ -10,11 +10,11 @@
 
 ## 폴더 구조
 
-- `agents/` — 서브 에이전트 정의 (researcher, writer, image-maker, assembler, publisher)
+- `agents/` — 서브 에이전트 정의 (researcher, writer, image-maker, assembler. `publisher`는 2026-11-01부터 기본 흐름에서 빠짐 — 아래 "발행 방식" 절 참고)
 - `guides/` — 스타일/SEO/이미지 가이드 (style-guide.md, seo-guide.md, image-guide.md)
 - `output/[주제]/` — 주제별 산출물 (research.md, draft.md, images/, final.md, final.html)
-- `scripts/publish_naver.py` — final.html을 네이버 블로그에 자동 발행하는 Playwright 스크립트 (publisher가 호출)
-- `.auth/` — 네이버 로그인 세션 저장 (git에 커밋 금지, `.gitignore` 처리됨)
+- `scripts/publish_naver.py` — final.html을 네이버 블로그에 자동 발행하는 Playwright 스크립트. 더 이상 파이프라인이 자동으로 호출하지 않는다 — 사용자가 원하면 직접 실행하는 용도로만 남겨둠.
+- `.auth/` — 네이버 로그인 세션 저장 (git에 커밋 금지, `.gitignore` 처리됨). 자동 발행을 더 이상 안 쓰므로 사실상 쓸 일이 없어졌지만 코드는 남겨둠.
 
 ## 메인 에이전트(오케스트레이터) 역할
 
@@ -27,14 +27,20 @@
 1. `agents/researcher.md`를 따라 리서치 → `output/[주제]/research.md` 생성
 2. `agents/writer.md`를 따라 글쓰기 → `output/[주제]/draft.md` 생성
 3. `agents/image-maker.md`를 따라 이미지 생성 → `draft.md`의 마커를 이미지 경로로 치환
-4. `agents/assembler.md`를 따라 통합 → `final.md`, `final.html` 생성
-5. `agents/publisher.md`를 따라 네이버 블로그에 실제 발행 → 게시글 URL 확보 (카테고리 자동 분류 + 다음 정시로 예약 발행 포함)
+4. `agents/assembler.md`를 따라 통합 → `final.md`, `final.html` 생성 — **여기서 끝낸다.** 발행(네이버에 실제로 올리는 것)은 자동으로 하지 않는다.
 
-`final.html`은 더 이상 사용자가 직접 열어서 복사-붙여넣기 하는 최종 산출물이 아니라, publisher 단계가 자동으로 읽어서 발행까지 처리하는 중간 입력 파일이다. `.auth/chrome_profile/`(로그인 세션이 담긴 영속 브라우저 프로필)이 없거나 만료됐으면 publisher는 발행을 진행하지 않고 사용자에게 재로그인(`python3 blog/scripts/publish_naver.py --login`)을 요청한다.
+완료되면 `final.html` 경로를 사용자에게 알리고, 사용자가 직접 그 파일을 브라우저로 열어 복사-붙여넣기 하는 걸 전제로 끝낸다.
 
-**카테고리 자동 분류** (주제 폴더 이름 키워드 기준): 국장/미장 → 시황, 실적발표 → 실적발표, 포트폴리오 → 주식. 규칙은 `blog/scripts/publish_naver.py`의 `CATEGORY_RULES`에서 관리한다.
+## 발행 방식 — 자동 발행 중단, 수동 복붙으로 전환 (2026-11-01)
 
-**예약 발행**: 작성 완료(발행 스크립트 실행) 시점 기준 다음 정시로 올림해서 예약 발행한다 (예: 9:40 완료 → 10:00 예약, 정각에 완료되면 즉시 발행). 예약 대상 시각이 제출 시점과 45초 이내로 가까우면 즉시 발행으로 자동 전환된다. 사용자가 "N일 M시에 발행해줘"처럼 시각을 직접 지정하면 자동 계산 대신 `--at "YYYY-MM-DD HH:MM"` 옵션을 쓴다(분은 10의 배수여야 하고 현재 시각 이후여야 함).
+**경위**: `publish_naver.py`(Playwright 자동화 브라우저)로 네이버에 반복 로그인하다가 네이버 "ID 안전 조치"(비정상 로그인 탐지에 의한 보안 잠금, 비밀번호 변경 요구까지 이어짐)가 계속 재발했다. 자동화 흔적을 숨기는 수정(`navigator.webdriver` 마스킹 등, 2026-10-30~31)을 넣어봤지만 효과가 없었다 — 바로 다음 로그인에서도 똑같이 걸렸다(자세한 시행착오는 `blog/scripts/publish_naver.py`의 `ensure_login` 주석과 메모리 [[project-naver-session-cross-process-bug]] 참고). 사용자가 "로그인 때문에 자꾸 보안 이슈가 생기니, 양식만 만들면 내가 직접 블로그에 업로드하겠다"고 결정했다.
+
+**바뀐 것**:
+- 메인 파이프라인은 이제 **assembler(4단계)에서 끝난다.** `agents/publisher.md`와 `scripts/publish_naver.py --publish` 호출을 자동으로 하지 않는다.
+- 사용자가 `output/[주제]/final.html`을 자신의 평소 브라우저(이미 네이버에 정상 로그인된 세션)로 직접 열어서, 제목과 본문을 복사해 네이버 블로그 글쓰기 화면에 직접 붙여넣는다. 이 방식에서는 Claude가 만든 자동화 브라우저가 네이버에 아예 접속하지 않으므로, 애초에 이 문제의 원인이었던 "낯선 자동화 브라우저의 반복 로그인" 자체가 발생하지 않는다.
+- 카테고리/예약 발행 시각도 이제 사용자가 네이버 에디터에서 직접 고른다. 참고로 폴더명 키워드 기준 카테고리 매칭 규칙(국장/미장→시황, 실적발표→실적발표, 포트폴리오→주식, `scripts/publish_naver.py`의 `CATEGORY_RULES`에 정의돼 있음)은 참고용으로 완료 보고 때 "카테고리는 아마 OO일 것 같아요" 정도로 짧게 언급해줄 수 있다.
+- `scripts/publish_naver.py`와 `agents/publisher.md`는 삭제하지 않고 남겨뒀다 — 나중에 사용자가 다시 자동 발행을 원하면(계정 보안 조치가 안정되거나, 다른 방법을 찾으면) 바로 쓸 수 있게.
+- `scripts/auto_publish.sh`(국장/미장, launchd 평일 16:00/07:00)와 `scripts/auto_earnings.sh`(실적발표 감지, 평일 08:00)도 동일하게 바꿨다 — 이제 리서치~조립까지만 자동으로 하고, 끝나면 PushNotification으로 "OO 글 작성 완료, 직접 업로드해주세요" 알림만 보낸다. 발행 자체는 더 이상 자동 실행 안에서 시도하지 않는다.
 
 각 단계가 끝날 때마다 사용자에게 진행 상황을 짧게 알린다.
 

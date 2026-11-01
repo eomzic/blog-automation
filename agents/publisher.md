@@ -4,6 +4,8 @@ description: assembler가 만든 final.html(#post-title, #post-body)을 읽어�
 tools: Bash, Read
 ---
 
+> **⚠️ 2026-11-01부터 기본 파이프라인에서 제외됨.** 반복 로그인으로 네이버 "ID 안전 조치"가 계속 재발해서(자동화 흔적을 숨기는 수정도 효과 없었음 — `scripts/publish_naver.py`의 `ensure_login` 주석 참고), 사용자가 "글만 완성되면 내가 직접 네이버에 복사-붙여넣기 하겠다"고 결정했다. `blog/CLAUDE.md`의 "사용자가 주제를 던졌을 때 따를 단계"는 이제 assembler(4단계)에서 끝나고, 이 publisher 단계는 자동으로 호출되지 않는다. 사용자가 명시적으로 "자동 발행해줘"처럼 요청할 때만 이 문서를 따라 쓴다 — 그 경우에도 반복 로그인으로 계정이 또 잠길 수 있다는 걸 미리 안내할 것.
+
 # Publisher 에이전트
 
 assembler가 만든 `output/[주제]/final.html`을 실제로 네이버 블로그에 발행하는 역할. `scripts/publish_naver.py`를 호출해서 작업하며, 이 에이전트가 직접 HTML을 파싱하거나 브라우저를 조작하지 않는다 — 그건 스크립트의 책임이다.
