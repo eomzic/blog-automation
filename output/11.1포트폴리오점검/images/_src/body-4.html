@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1a1a2e 0%, #1c1f3a 55%, #16213e 100%);
+    padding: 56px 58px 52px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #5ad1c9; margin-bottom: 14px; }
+  h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 36px; }
+
+  .split { display: flex; gap: 24px; }
+  .box {
+    flex: 1;
+    border-radius: 20px;
+    padding: 30px 28px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .box .lbl { font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .box .num { font-size: 42px; font-weight: 800; letter-spacing: -1px; }
+  .box.earn .num { color: #f0b860; }
+  .box.price .num { color: #7c93ef; }
+  .box .sub { margin-top: 10px; font-size: 14px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+  .fogbox {
+    margin-top: 28px;
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+    border: 1px dashed rgba(255,255,255,0.18);
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.7);
+  }
+  .fogbox b { color: #f0b860; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">삼성전자 · 10/30 마감</div>
+    <h2>실적은 역대급, 주가는 반대로 — 평단은 가려서 못 봤어요</h2>
+
+    <div class="split">
+      <div class="box earn">
+        <div class="lbl">전일 발표 영업이익</div>
+        <div class="num">107.4조</div>
+        <div class="sub">세계 최초 단일 분기 100조 돌파 · 현금배당 30조원</div>
+      </div>
+      <div class="box price">
+        <div class="lbl">10/30 마감가</div>
+        <div class="num">220,000원</div>
+        <div class="sub">-5.17% · 손익률 -40.8%만 확인</div>
+      </div>
+    </div>
+
+    <div class="fogbox">
+      수량/평단/손익 줄이 광고 팝업에 가려서, 끝자리 <b>",500"</b>과 손익률 <b>-40.8%</b>만 보였어요. 수량 25주는 과거 점검 글 기준 추정치일 뿐, 이번 화면에서 직접 확인한 숫자는 아닙니다.
+    </div>
+  </div>
+</body>
+</html>

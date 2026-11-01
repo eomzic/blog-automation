@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1a1a2e 0%, #1c1f3a 55%, #16213e 100%);
+    padding: 56px 58px 52px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #5ad1c9; margin-bottom: 14px; }
+  h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 34px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 16px 14px; text-align: center; font-size: 17px; }
+  thead th {
+    color: rgba(255,255,255,0.5); font-weight: 600; font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  tbody td { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.name { text-align: left; font-weight: 700; }
+  td.chg { color: #7c93ef; font-weight: 800; }
+
+  .trigger {
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(90,209,201,0.08);
+    border: 1px solid rgba(90,209,201,0.3);
+  }
+  .trigger .icon {
+    font-size: 30px;
+  }
+  .trigger .txt { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.85); }
+  .trigger .txt b { color: #5ad1c9; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">PL · RDW · NASA · 10/30 마감</div>
+    <h2>아마존 "Leo 서비스 2026년 시작" 발표에 스페이스주 전체 급락</h2>
+
+    <table>
+      <thead>
+        <tr><th style="text-align:left;">종목</th><th>마감가</th><th>당일등락</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="name">PL (Planet Labs)</td><td>$13.50</td><td class="chg">-5.69%</td></tr>
+        <tr><td class="name">RDW (Redwire)</td><td>$8.33</td><td class="chg">-9.06%</td></tr>
+        <tr><td class="name">NASA (Tema Space Innovators ETF)</td><td>$20.54</td><td class="chg">-4.96%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="trigger">
+      <div class="icon">🛰️</div>
+      <div class="txt">같은 날 <b>AST SpaceMobile -4.9%~-9%대, 로켓랩 -5%대</b>까지 동반 급락 — 스페이스X 연계 종목 전체가 같은 트리거로 같이 흔들렸어요.</div>
+    </div>
+  </div>
+</body>
+</html>

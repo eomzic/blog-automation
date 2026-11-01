@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1a1a2e 0%, #1c1f3a 55%, #16213e 100%);
+    padding: 56px 58px 52px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #5ad1c9; margin-bottom: 14px; }
+  h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 36px; }
+
+  .stat-line {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+  .stat-line .px { font-size: 50px; font-weight: 800; letter-spacing: -1px; }
+  .stat-line .chg { font-size: 30px; font-weight: 800; color: #7c93ef; }
+  .stat-line .avg { font-size: 18px; color: rgba(255,255,255,0.4); margin-left: auto; }
+
+  .quote {
+    padding: 26px 28px;
+    border-left: 4px solid #5ad1c9;
+    background: rgba(255,255,255,0.045);
+    border-radius: 0 16px 16px 0;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 20px;
+  }
+  .quote b { color: #5ad1c9; }
+
+  .foot-note { font-size: 15px; color: rgba(255,255,255,0.4); line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">ORCL (오라클) · 10/30 마감</div>
+    <h2>AI 투자 부담 우려, 그래도 조달 한도는 스스로 묶었어요</h2>
+
+    <div class="stat-line">
+      <span class="px">$130.98</span>
+      <span class="chg">-6.15%</span>
+      <span class="avg">평단 $178.75 대비 -26.7%</span>
+    </div>
+
+    <div class="quote">
+      AI 수주는 시장을 놀라게 할 정도였지만, 현금흐름은 계속 적자 — 주가는 <b>고점 대비 약 49%</b> 낮은 자리에 머물러 있다는 지적.
+    </div>
+    <div class="foot-note">2030 회계연도까지 추가 자본 조달 규모를 약 200억 달러로 제한하겠다고 밝혀, 투자자 달래기용 신호로 해석됨.</div>
+  </div>
+</body>
+</html>

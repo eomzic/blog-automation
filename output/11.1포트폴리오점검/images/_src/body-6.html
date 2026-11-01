@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1a1a2e 0%, #1c1f3a 55%, #16213e 100%);
+    padding: 56px 58px 50px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #5ad1c9; margin-bottom: 14px; }
+  h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 30px; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  th, td { padding: 13px 10px; text-align: center; font-size: 15px; }
+  thead th {
+    color: rgba(255,255,255,0.5); font-weight: 600; font-size: 13px;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  tbody td { border-bottom: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.9); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.name { text-align: left; font-weight: 700; }
+  td.chg { color: #7c93ef; font-weight: 800; }
+  td.unk { color: rgba(255,255,255,0.35); font-style: italic; }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px 28px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .bottom .prev { font-size: 32px; font-weight: 700; color: rgba(255,255,255,0.4); text-decoration: line-through; }
+  .bottom .arrow { font-size: 24px; color: rgba(255,255,255,0.3); }
+  .bottom .now { font-size: 48px; font-weight: 800; color: #5ad1c9; letter-spacing: -1px; }
+  .bottom .lbl { margin-left: auto; font-size: 15px; color: rgba(255,255,255,0.5); text-align: right; line-height: 1.5; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">보유 6종목 전체 · 11/1 점검</div>
+    <h2>전종목 급락한 날인데, 손실률은 1.1%p 줄었어요</h2>
+
+    <table>
+      <thead>
+        <tr><th style="text-align:left;">종목</th><th>마감가</th><th>당일등락</th><th>수익률</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="name">삼성전자</td><td>220,000원</td><td class="chg">-5.17%</td><td class="unk">-40.8% (금액 미확인)</td></tr>
+        <tr><td class="name">두산로보틱스</td><td>53,600원</td><td class="chg">-6.78%</td><td class="chg">-60.2%</td></tr>
+        <tr><td class="name">PL</td><td>$13.50</td><td class="chg">-5.69%</td><td class="chg">-68.3%</td></tr>
+        <tr><td class="name">ORCL</td><td>$130.98</td><td class="chg">-6.15%</td><td class="chg">-26.7%</td></tr>
+        <tr><td class="name">RDW</td><td>$8.33</td><td class="chg">-9.06%</td><td class="chg">-61.4%</td></tr>
+        <tr><td class="name">NASA</td><td>$20.54</td><td class="chg">-4.96%</td><td class="unk">미확인</td></tr>
+      </tbody>
+    </table>
+
+    <div class="bottom">
+      <span class="prev">-49.6%</span>
+      <span class="arrow">→</span>
+      <span class="now">-48.5%</span>
+      <span class="lbl">직전 점검(10/25) 대비<br>전체 수익률 변화</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1a1a2e 0%, #1c1f3a 55%, #16213e 100%);
+    padding: 56px 58px 52px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #5ad1c9; margin-bottom: 14px; }
+  h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 34px; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+  th, td { padding: 16px 14px; text-align: center; font-size: 17px; }
+  thead th {
+    color: rgba(255,255,255,0.5); font-weight: 600; font-size: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  tbody td { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.name { text-align: left; font-weight: 700; }
+  td.chg { color: #7c93ef; font-weight: 800; }
+  tr.me td { color: #fff; }
+  tr.me td.name { color: #f0b860; }
+  tr.me td.chg { color: #f0b860; }
+
+  .note {
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+  }
+  .note b { color: #f0b860; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">로봇 관련주 · 10/30 동반 하락</div>
+    <h2>개별 악재는 없었는데, 로봇주 전체가 같이 빠졌어요</h2>
+
+    <table>
+      <thead>
+        <tr><th style="text-align:left;">종목</th><th>마감가</th><th>당일등락</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr class="me"><td class="name">두산로보틱스 (보유)</td><td>53,600원</td><td class="chg">-6.78%</td><td style="font-size:14px; color:rgba(255,255,255,0.5);">34주 보유</td></tr>
+        <tr><td class="name">레인보우로보틱스</td><td>359,500원</td><td class="chg">-4.89%</td><td style="font-size:14px; color:rgba(255,255,255,0.5);">코스닥</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      최근 휴머노이드 기대감에 가파르게 오른 로봇주 전체가 <b>차익실현 매물</b>에 같이 빠진 걸로 보여요. 두산로보틱스 마감가(53,600원)는 같은 시각 보도된 "장중 저가"와 같은 숫자라, 실제 종가까지 조금 더 밀렸을 가능성으로 추정했어요.
+    </div>
+  </div>
+</body>
+</html>
