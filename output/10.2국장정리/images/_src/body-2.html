@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0e0e1a;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #2a1440 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffb3b3;
+    background: rgba(255,107,107,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 30px;
+    letter-spacing: -0.2px;
+  }
+  .quote {
+    font-size: 46px;
+    font-weight: 800;
+    color: #f3f3fa;
+    line-height: 1.4;
+    letter-spacing: -1px;
+    margin-bottom: 36px;
+  }
+  .quote .pct { color: #ff6b6b; }
+  .row {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .pill {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 24px 26px;
+  }
+  .pill .lbl {
+    font-size: 21px;
+    color: #c9a9ff;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .pill .val {
+    font-size: 27px;
+    color: #f0eaff;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">특징주 · OCI홀딩스</div>
+    <div class="quote">연휴 전 대비 <span class="pct">+25.66%</span><br>美 태양광 MIP 도입 기대</div>
+    <div class="row">
+      <div class="pill">
+        <div class="lbl">오늘 종가</div>
+        <div class="val">23만 6,500원<br><span style="color:#ff6b6b">+7.01%</span></div>
+      </div>
+      <div class="pill">
+        <div class="lbl">3분기 영업이익 추정</div>
+        <div class="val">742억원<br><span style="color:#c9a9ff">컨센서스 하회</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

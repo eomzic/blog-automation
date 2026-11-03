@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1e33 0%, #202849 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 34px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #a9c0ff;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .points {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .point {
+    display: flex;
+    gap: 22px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 26px 28px;
+    align-items: flex-start;
+  }
+  .point .num {
+    flex: 0 0 auto;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(143,168,255,0.16);
+    color: #a9c0ff;
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .point .body h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .point .body p {
+    font-size: 20px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.66);
+    font-weight: 500;
+  }
+  .point .body .tag {
+    font-weight: 800;
+    color: #a9c0ff;
+  }
+
+  .foot-row {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+  }
+  .foot-row .chip {
+    flex: 1;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 20px 22px;
+    text-align: center;
+  }
+  .foot-row .chip .name { font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 600; margin-bottom: 8px; }
+  .foot-row .chip .pct { font-size: 25px; font-weight: 800; color: #ff8080; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">RDW(Redwire)·NASA ETF · 우주 섹터 소식</div>
+      <h2>계약 훈풍에도 반등은 짧았다</h2>
+    </div>
+
+    <div class="points">
+      <div class="point">
+        <div class="num">1</div>
+        <div class="body">
+          <h3>NITE-STAR 계약 선정</h3>
+          <p>9/24 미 우주군 우주시스템사령부 계약에 <span class="tag">15개 벤더 중 하나</span>로 선정. 총 규모 9.8억 달러는 여러 업체가 나눠 경쟁하는 한도액이에요.</p>
+        </div>
+      </div>
+      <div class="point">
+        <div class="num">2</div>
+        <div class="body">
+          <h3>같은 날 이사 대량 매도 공시</h3>
+          <p>이사 한 명이 평균 <span class="tag">$11.34에 92만 9,435주</span>를 매도했다는 공시가 겹쳐서 호재감이 다소 희석됐어요.</p>
+        </div>
+      </div>
+      <div class="point">
+        <div class="num">3</div>
+        <div class="body">
+          <h3>9/25엔 잔잔하게 마감</h3>
+          <p>별다른 동요 없이 소폭 플러스로 마무리. RDW는 5주, NASA는 1주라 비중은 작지만 손실률은 여전히 큽니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-row">
+      <div class="chip">
+        <div class="name">RDW $11.62</div>
+        <div class="pct">+0.17%</div>
+      </div>
+      <div class="chip">
+        <div class="name">NASA ETF $24.70</div>
+        <div class="pct">+1.52%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

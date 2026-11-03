@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #14101f;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #2d1b54 100%);
+    border-radius: 28px;
+    position: relative;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #c4b5fd;
+    background: rgba(167,139,250,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 30px;
+    letter-spacing: -0.2px;
+  }
+  .quote {
+    border-left: 6px solid #6ea8ff;
+    padding: 8px 0 8px 36px;
+    margin-bottom: 40px;
+  }
+  .quote .num {
+    font-size: 96px;
+    font-weight: 800;
+    color: #f6f4fc;
+    letter-spacing: -2px;
+    line-height: 1.1;
+  }
+  .quote .num span { color: #6ea8ff; }
+  .quote .label {
+    margin-top: 14px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #cabdf0;
+  }
+  .compare {
+    display: flex;
+    gap: 18px;
+  }
+  .box {
+    flex: 1;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 18px;
+    padding: 26px 24px;
+  }
+  .box .l { font-size: 22px; color: #a99fd4; margin-bottom: 10px; font-weight: 500; }
+  .box .v { font-size: 32px; font-weight: 800; color: #f6f4fc; letter-spacing: -0.5px; }
+  .box .s { margin-top: 8px; font-size: 20px; color: #8f84b3; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">국채금리 · 어제보다 더 올랐다</div>
+    <div class="quote">
+      <div class="num">美 10년물 <span>5.26~5.28%</span></div>
+      <div class="label">2007년 이후 최고 수준에 근접</div>
+    </div>
+    <div class="compare">
+      <div class="box">
+        <div class="l">10년물 국채금리</div>
+        <div class="v">5.236% → 5.26~5.28%</div>
+        <div class="s">9/28 → 9/29</div>
+      </div>
+      <div class="box">
+        <div class="l">30년물 국채금리</div>
+        <div class="v">5.50~5.56% → 5.585%</div>
+        <div class="s">2004년 이후 최고 수준</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

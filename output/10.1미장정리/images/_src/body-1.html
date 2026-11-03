@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0e0e1c;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #241a3d 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e3c88a;
+    background: rgba(245,196,81,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f6f5fb;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    text-align: center;
+    padding: 22px 10px;
+    font-size: 24px;
+  }
+  thead th {
+    color: #a7a9ce;
+    font-weight: 600;
+    font-size: 22px;
+    border-bottom: 2px solid rgba(255,255,255,0.12);
+  }
+  thead th:first-child { text-align: left; }
+  tbody td:first-child {
+    text-align: left;
+    color: #d9cffb;
+    font-weight: 700;
+  }
+  tbody tr { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody td { color: #eceaf6; font-weight: 600; }
+  .up { color: #ff6b6b; font-weight: 800; }
+  .note {
+    margin-top: 36px;
+    font-size: 23px;
+    color: #a7a9ce;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">국채금리·유가 · 비교</div>
+    <h2>10년물 5.3%, 유가 +42% — 금리를 밀어올린 두 축</h2>
+    <table>
+      <thead>
+        <tr><th>지표</th><th>수치</th><th>포인트</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10년물 국채금리</td><td class="up">5.3%대(장중)</td><td>2002년 이후 최고</td></tr>
+        <tr><td>30년물 국채금리</td><td class="up">5.64~5.66%</td><td>7개월 연속 상승</td></tr>
+        <tr><td>브렌트유</td><td class="up">6월말 대비 +42%</td><td>인플레 우려 자극</td></tr>
+      </tbody>
+    </table>
+    <div class="note">유가 급등과 미·이란 지정학 리스크가 금리를 끌어올렸지만, PCE 둔화·GDP 상향 소식에 고점에서 되밀리며 증시도 반등 체력을 얻었다</div>
+  </div>
+</body>
+</html>

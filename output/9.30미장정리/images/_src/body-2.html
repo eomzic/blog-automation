@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1414;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #241a1a 0%, #2f2020 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e0a458;
+    background: rgba(224,164,88,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7f2ef;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .stat {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 20px;
+    padding: 30px 26px;
+    text-align: center;
+  }
+  .stat.highlight {
+    background: rgba(255,107,107,0.10);
+    border: 1px solid rgba(255,107,107,0.4);
+  }
+  .stat .label {
+    font-size: 23px;
+    color: #c9ada2;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .stat .val {
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  .stat .sub {
+    font-size: 19px;
+    color: #a08e86;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #c9ada2;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">3대 지수 · 9/30 마감</div>
+    <h2>다우·S&amp;P 하락, 나스닥만 홀로 상승</h2>
+    <div class="grid">
+      <div class="stat">
+        <div class="label">다우존스30</div>
+        <div class="val down">-0.86%</div>
+        <div class="sub">50,906.05</div>
+      </div>
+      <div class="stat">
+        <div class="label">S&amp;P500</div>
+        <div class="val down">-0.25%</div>
+        <div class="sub">7,651.54</div>
+      </div>
+      <div class="stat highlight">
+        <div class="label">나스닥종합</div>
+        <div class="val up">+0.24%</div>
+        <div class="sub">26,861.06</div>
+      </div>
+    </div>
+    <div class="note">장 초반 S&amp;P500 한때 +0.7%까지 올랐지만 마감 직전 한 시간 사이 상승분을 반납. 3분기 전체로도 다우만 유일하게 손실(-2.7%)</div>
+  </div>
+</body>
+</html>

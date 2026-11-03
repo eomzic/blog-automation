@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face {
+    font-family: 'Pretendard';
+    src: local('AppleSDGothicNeo-Bold');
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body {
+    width: 1080px; height: 1080px;
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+  }
+  .canvas {
+    width: 1080px; height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(150deg, #1e0a3c 0%, #2a1150 52%, #3d1a5c 100%);
+  }
+  .glow-1 {
+    position: absolute;
+    top: -200px; right: -180px;
+    width: 620px; height: 620px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,127,255,0.20) 0%, rgba(184,127,255,0) 70%);
+  }
+  .glow-2 {
+    position: absolute;
+    bottom: -240px; left: -160px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(217,88,142,0.20) 0%, rgba(217,88,142,0) 70%);
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 84px 64px;
+  }
+
+  .badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #e3c6ff;
+    letter-spacing: -0.2px;
+  }
+  .badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #ff9ecb;
+  }
+  .badge .date { color: rgba(255,255,255,0.55); font-weight: 500; margin-left: 4px; }
+
+  .mid-row {
+    margin-top: 96px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+  }
+
+  .left-col {
+    flex: 1.35;
+  }
+  .left-col .sub {
+    font-size: 27px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+  }
+  .left-col h1 {
+    font-size: 66px;
+    line-height: 1.32;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1.5px;
+    text-align: left;
+  }
+  .left-col h1 .accent {
+    color: #ffb4e0;
+  }
+
+  .right-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+  .right-col .giant {
+    font-size: 108px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+    background: linear-gradient(135deg, #ffd6ef 0%, #c9a8ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .right-col .giant-label {
+    margin-top: 18px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+  }
+  .right-col .giant-tag {
+    margin-top: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    color: rgba(255,158,203,0.9);
+  }
+
+  .stat-strip {
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.20);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .stat-strip .cell {
+    flex: 1;
+    padding: 28px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat-strip .cell:last-child { border-right: none; }
+  .stat-strip .label {
+    font-size: 21px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .stat-strip .value {
+    font-size: 34px;
+    font-weight: 800;
+    color: #7fb0e8;
+    letter-spacing: -0.5px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 26px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+  }
+  .footer .brand .bar {
+    width: 26px; height: 3px; background: #ffb4e0;
+  }
+  .footer .tag {
+    font-size: 22px;
+    color: rgba(255,255,255,0.38);
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+    <div class="content">
+      <div class="badge">
+        <span class="dot"></span>
+        미장정리 · 시황
+        <span class="date">9.23</span>
+      </div>
+
+      <div class="mid-row">
+        <div class="left-col">
+          <div class="sub">사상최고 랠리, 하루 만에</div>
+          <h1>나스닥 랠리<br><span class="accent">하루 만에 꺾였다</span></h1>
+        </div>
+        <div class="right-col">
+          <div class="giant">5.135%</div>
+          <div class="giant-label">10년물 국채금리</div>
+          <div class="giant-tag">2007년 7월 이후 최고</div>
+        </div>
+      </div>
+
+      <div class="stat-strip">
+        <div class="cell">
+          <div class="label">다우존스</div>
+          <div class="value">-0.68%</div>
+        </div>
+        <div class="cell">
+          <div class="label">S&amp;P500</div>
+          <div class="value">-0.75%</div>
+        </div>
+        <div class="cell">
+          <div class="label">나스닥</div>
+          <div class="value">-1.13%</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="brand"><span class="bar"></span>내일도 주린이</div>
+        <div class="tag">국채금리 19년래 최고</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

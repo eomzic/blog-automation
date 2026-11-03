@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1e33 0%, #202849 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 32px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #a9c0ff;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .quote-box {
+    position: relative;
+    background: rgba(143,168,255,0.08);
+    border-left: 5px solid #8fa8ff;
+    border-radius: 14px;
+    padding: 36px 40px 32px;
+  }
+  .quote-box .mark {
+    font-size: 54px;
+    font-weight: 800;
+    color: rgba(143,168,255,0.4);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .quote-box .text {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: #eef1ff;
+  }
+  .quote-box .who {
+    margin-top: 18px;
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .trend {
+    margin-top: 34px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .trend .cell {
+    flex: 1;
+    padding: 24px 22px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .trend .cell:last-child { border-right: none; }
+  .trend .date {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .trend .price {
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .trend .pct {
+    font-size: 20px;
+    font-weight: 800;
+    color: #8fa8ff;
+  }
+
+  .foot {
+    margin-top: 28px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.68);
+    font-weight: 500;
+  }
+  .foot b { color: #a9c0ff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">ORCL(오라클) · "프로젝트 주피터" 이슈</div>
+      <h2>3거래일 연속 하락, 누적 -8%대</h2>
+    </div>
+
+    <div class="quote-box">
+      <div class="mark">"</div>
+      <div class="text">임대 해지나 프로젝트 포기 의도는 없다</div>
+      <div class="who">— 오라클 측 공식 입장</div>
+    </div>
+
+    <div class="trend">
+      <div class="cell">
+        <div class="date">9/23(화)</div>
+        <div class="price">$144.56</div>
+        <div class="pct">-3.11%</div>
+      </div>
+      <div class="cell">
+        <div class="date">9/24(목)</div>
+        <div class="price">$139.54</div>
+        <div class="pct">-3.47%</div>
+      </div>
+      <div class="cell">
+        <div class="date">9/25(금)</div>
+        <div class="price">$137.04</div>
+        <div class="pct">-1.79%</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      뉴멕시코 데이터센터 불가항력 통지가 알려지며 낙폭이 컸지만, <b>9/25엔 하락폭이 -1.79%로 줄어든</b> 게 그나마 위안이에요.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0c1615;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #101b1a 0%, #1c3330 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2dd4bf;
+    background: rgba(45,212,191,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f2faf8;
+    letter-spacing: -1px;
+    line-height: 1.32;
+    margin-bottom: 40px;
+  }
+  .compare {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .box {
+    flex: 1;
+    padding: 34px 28px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .box.today {
+    background: rgba(111,179,255,0.10);
+    border: 1px solid rgba(111,179,255,0.30);
+  }
+  .box.week {
+    background: rgba(255,123,123,0.10);
+    border: 1px solid rgba(255,123,123,0.30);
+  }
+  .box .lbl { font-size: 24px; font-weight: 600; color: #a9cbc2; margin-bottom: 12px; }
+  .box .val { font-size: 56px; font-weight: 800; letter-spacing: -1px; }
+  .box.today .val { color: #6fb3ff; }
+  .box.week .val { color: #ff7b7b; }
+  .quote {
+    padding: 30px 34px;
+    background: rgba(45,212,191,0.08);
+    border-left: 4px solid #2dd4bf;
+    border-radius: 12px;
+    font-size: 26px;
+    line-height: 1.65;
+    color: #d7ece7;
+  }
+  .quote b { color: #5eead4; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">메타플랫폼스 · 헷갈리지 마세요</div>
+    <h2>오늘만 보면 하락, 이번 주로 보면 여전히 급등</h2>
+    <div class="compare">
+      <div class="box today">
+        <div class="lbl">당일 등락률</div>
+        <div class="val">-3.33%</div>
+      </div>
+      <div class="box week">
+        <div class="lbl">주간 등락률</div>
+        <div class="val">+13%</div>
+      </div>
+    </div>
+    <div class="quote">자체 AI 에이전트 <b>'뮤즈(Muse)'</b> 기대감으로 급등했던 상승분 중 일부를 되돌린 하루 — 당일 수치만 보면 오해하기 쉬워요.</div>
+  </div>
+</body>
+</html>

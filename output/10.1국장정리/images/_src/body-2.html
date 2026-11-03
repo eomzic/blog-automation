@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #130f05;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1c3330 0%, #0f2027 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f5c451;
+    background: rgba(245,196,81,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f2faf7;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 32px 34px;
+  }
+  .box .name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #cdeee7;
+    margin-bottom: 16px;
+  }
+  .box .pct {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+  }
+  .box .price {
+    font-size: 23px;
+    color: #82a89e;
+  }
+  .up { color: #ff6b6b; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #9fc4b9;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">반도체 대형주 · 등락률</div>
+    <h2>마이크론 훈풍에 삼성전자·SK하이닉스 동반 강세</h2>
+    <div class="grid">
+      <div class="box">
+        <div class="name">삼성전자</div>
+        <div class="pct up">+2.79%</div>
+        <div class="price">276,000원</div>
+      </div>
+      <div class="box">
+        <div class="name">SK하이닉스</div>
+        <div class="pct up">+3.21%</div>
+        <div class="price">1,833,000원</div>
+      </div>
+      <div class="box">
+        <div class="name">삼성전자우</div>
+        <div class="pct up">+4.76%</div>
+        <div class="price">-</div>
+      </div>
+      <div class="box">
+        <div class="name">삼성전기</div>
+        <div class="pct up">+3.17%</div>
+        <div class="price">-</div>
+      </div>
+    </div>
+    <div class="note">보통주보다 우선주(삼성전자우)가 더 크게 뛴 건 매수세가 업종 전반에 고르게 퍼졌다는 신호</div>
+  </div>
+</body>
+</html>

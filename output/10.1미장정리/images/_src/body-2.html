@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0e0e1c;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #1d2550 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #a78bfa;
+    background: rgba(167,139,250,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f6f5fb;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px 24px;
+  }
+  .box .name {
+    font-size: 23px;
+    font-weight: 700;
+    color: #d9cffb;
+    margin-bottom: 16px;
+  }
+  .box .pct {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+  .box .price {
+    font-size: 20px;
+    color: #a7a9ce;
+  }
+  .up { color: #ff6b6b; }
+  .note {
+    margin-top: 36px;
+    font-size: 23px;
+    color: #a7a9ce;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">美 3대 지수 · 마감</div>
+    <h2>숫자는 작아도 3대 지수 모두 플러스 마감</h2>
+    <div class="grid">
+      <div class="box">
+        <div class="name">다우존스</div>
+        <div class="pct up">+0.04%</div>
+        <div class="price">50,926.56</div>
+      </div>
+      <div class="box">
+        <div class="name">S&amp;P500</div>
+        <div class="pct up">+0.19%</div>
+        <div class="price">7,666.45</div>
+      </div>
+      <div class="box">
+        <div class="name">나스닥</div>
+        <div class="pct up">+0.04%</div>
+        <div class="price">26,871.60</div>
+      </div>
+    </div>
+    <div class="note">지수는 웃었지만 속은 고르지 못했다 — NYSE 하락 종목이 상승 종목의 1.66배, 다우 30개 중 22개가 하락 마감</div>
+  </div>
+</body>
+</html>

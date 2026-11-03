@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(135deg, #2d0a0a 0%, #3a0f0f 45%, #4a1414 100%);
+  }
+  .grain {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.04) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    opacity: 0.5;
+  }
+  .glow {
+    position: absolute;
+    top: -180px;
+    right: -160px;
+    width: 620px;
+    height: 620px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(224,164,88,0.18) 0%, rgba(224,164,88,0.05) 55%, rgba(224,164,88,0) 75%);
+  }
+  .badge {
+    position: absolute;
+    top: 84px;
+    left: 80px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(224,164,88,0.4);
+    border-radius: 999px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #f0ded0;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+  }
+  .badge .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #e0a458;
+  }
+  .badge .date { color: #d3a99a; font-weight: 500; }
+  .content {
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    width: 520px;
+  }
+  .eyebrow {
+    font-size: 27px;
+    font-weight: 500;
+    color: #ddb9ab;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h1 {
+    font-size: 74px;
+    font-weight: 800;
+    color: #fbf3ee;
+    line-height: 1.32;
+    letter-spacing: -2px;
+  }
+  .ticker-label {
+    position: absolute;
+    top: 468px;
+    right: 80px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #b98c7e;
+    letter-spacing: -0.1px;
+  }
+  .tickers {
+    position: absolute;
+    top: 516px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+  }
+  .ticker {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+    width: 320px;
+  }
+  .ticker .name {
+    font-size: 26px;
+    font-weight: 600;
+    color: #e7cfc3;
+    margin-bottom: 10px;
+  }
+  .ticker .pct {
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .footer {
+    position: absolute;
+    bottom: 84px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 29px;
+    font-weight: 700;
+    color: #f5ece5;
+  }
+  .brand .bar {
+    width: 32px;
+    height: 4px;
+    background: #e0a458;
+    border-radius: 2px;
+  }
+  .idx {
+    font-size: 24px;
+    color: #cf9d8d;
+    letter-spacing: -0.2px;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="grain"></div>
+    <div class="glow"></div>
+    <div class="badge"><span class="dot"></span>미장정리 · 시황 <span class="date">9.30</span></div>
+    <div class="content">
+      <div class="eyebrow">3분기 마지막 거래일, 다우·S&amp;P 하락</div>
+      <h1>PCE는 웃고,<br>금리는 울렸다</h1>
+    </div>
+    <div class="ticker-label">3분기 마지막 거래일 등락률</div>
+    <div class="tickers">
+      <div class="ticker">
+        <div class="name">다우존스</div>
+        <div class="pct down">-0.86%</div>
+      </div>
+      <div class="ticker">
+        <div class="name">S&amp;P500</div>
+        <div class="pct down">-0.25%</div>
+      </div>
+      <div class="ticker" style="border-bottom:none; padding-bottom:0;">
+        <div class="name">나스닥</div>
+        <div class="pct up">+0.24%</div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="brand"><span class="bar"></span>내일도 주린이</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #150a08;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #0f2027 0%, #1a2e28 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff8f8f;
+    background: rgba(255,107,107,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f2faf7;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 44px;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .row:last-child { margin-bottom: 0; }
+  .name {
+    width: 190px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #cdeee7;
+    flex-shrink: 0;
+  }
+  .barwrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .bar {
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff6b6b 0%, #ff9b7a 100%);
+    flex-shrink: 0;
+  }
+  .val {
+    font-size: 27px;
+    font-weight: 800;
+    color: #ff6b6b;
+    white-space: nowrap;
+    flex-shrink: 0;
+    width: 130px;
+  }
+  .note {
+    margin-top: 40px;
+    font-size: 24px;
+    color: #9fc4b9;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">코스닥 반도체 소부장 · 등락률</div>
+    <h2>장비·소부장주가 대형주보다 더 뜨겁게 뛰었다</h2>
+    <div class="row">
+      <div class="name">리노공업</div>
+      <div class="barwrap"><div class="bar" style="width:528px"></div><div class="val">+10.90%</div></div>
+    </div>
+    <div class="row">
+      <div class="name">원익IPS</div>
+      <div class="barwrap"><div class="bar" style="width:442px"></div><div class="val">+9.13%</div></div>
+    </div>
+    <div class="row">
+      <div class="name">이오테크닉스</div>
+      <div class="barwrap"><div class="bar" style="width:410px"></div><div class="val">+8.46%</div></div>
+    </div>
+    <div class="row">
+      <div class="name">HPSP</div>
+      <div class="barwrap"><div class="bar" style="width:403px"></div><div class="val">+8.32%</div></div>
+    </div>
+    <div class="row">
+      <div class="name">심텍</div>
+      <div class="barwrap"><div class="bar" style="width:303px"></div><div class="val">+6.25%</div></div>
+    </div>
+    <div class="note">다섯 종목 모두 6% 넘게 오르며 반도체 밸류체인 전체가 들썩인 하루</div>
+  </div>
+</body>
+</html>

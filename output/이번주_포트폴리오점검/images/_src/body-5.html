@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #232526 0%, #2f3234 55%, #3a3d40 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 28px; display: flex; align-items: flex-end; justify-content: space-between; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb3d9;
+    margin-bottom: 10px; letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 27px; font-weight: 800; letter-spacing: -0.5px; }
+  .head .change {
+    text-align: right;
+    flex-shrink: 0;
+    padding-left: 20px;
+  }
+  .head .change .row {
+    font-size: 17px; font-weight: 700; color: rgba(255,255,255,0.4);
+  }
+  .head .change .row b { color: #7c93ef; font-size: 22px; }
+  .head .change .delta {
+    margin-top: 4px;
+    font-size: 15px; font-weight: 700; color: #e8b84b;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 26px;
+  }
+  thead th {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    padding: 0 14px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  thead th:not(:first-child), tbody td:not(:first-child) { text-align: right; }
+  tbody td {
+    font-size: 17px;
+    font-weight: 700;
+    padding: 17px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td.name { color: rgba(255,255,255,0.85); font-weight: 700; }
+  tbody td.sub { color: rgba(255,255,255,0.4); font-weight: 500; font-size: 14px; }
+  tbody td.day.up { color: #ff8585; }
+  tbody td.day.down { color: #7c93ef; }
+  tbody td.ret { color: #7c93ef; }
+
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px;
+    border-radius: 18px;
+    background: rgba(124,147,239,0.08);
+    border: 1px solid rgba(124,147,239,0.3);
+  }
+  .total .lbl { font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.7); }
+  .total .val { font-size: 34px; font-weight: 800; color: #7c93ef; letter-spacing: -0.6px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div>
+        <div class="eyebrow">보유 6종목 전체 현황 · 10/23(금) 기준</div>
+        <h2>직전 점검(10/11) 대비 손실률 변화</h2>
+      </div>
+      <div class="change">
+        <div class="row">10/11 -38.4% → <b>-49.6%</b></div>
+        <div class="delta">11.2%p 확대</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>종목</th><th>평단가</th><th>10/23 종가</th><th>당일등락</th><th>평가손익(수익률)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">삼성전자</td>
+          <td>371,500원</td>
+          <td>213,500원 <span class="sub">(앱 표시)</span></td>
+          <td class="day down">-0.47%</td>
+          <td class="ret">-3,950,000원 (-42.5%)</td>
+        </tr>
+        <tr>
+          <td class="name">두산로보틱스</td>
+          <td>134,674원</td>
+          <td>56,000원</td>
+          <td class="day down">-3.78%</td>
+          <td class="ret">-2,674,916원 (-58.4%)</td>
+        </tr>
+        <tr>
+          <td class="name">PL</td>
+          <td>$42.64</td>
+          <td>$13.37</td>
+          <td class="day up">+2.22%</td>
+          <td class="ret">-$6,117.22 (-68.6%)</td>
+        </tr>
+        <tr>
+          <td class="name">ORCL</td>
+          <td>$178.75</td>
+          <td>$126.12</td>
+          <td class="day up">+0.46%</td>
+          <td class="ret">-$2,237.39 (-29.4%)</td>
+        </tr>
+        <tr>
+          <td class="name">RDW</td>
+          <td>$21.60대</td>
+          <td>$8.34</td>
+          <td class="day up">+2.46%</td>
+          <td class="ret">-$66.30 (-61.4%)</td>
+        </tr>
+        <tr>
+          <td class="name">NASA</td>
+          <td>$35.11</td>
+          <td>$20.41</td>
+          <td class="day up">+1.71%</td>
+          <td class="ret">약 -$14.70 (-41.9%, 추정)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">
+      <div class="lbl">누적 평가손익 -17,798,618원 · 평가액 18,118,783원</div>
+      <div class="val">-49.6%</div>
+    </div>
+  </div>
+</body>
+</html>

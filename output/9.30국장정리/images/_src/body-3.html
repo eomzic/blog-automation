@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1b1c;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #232526 0%, #303234 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f5c451;
+    background: rgba(245,196,81,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7f7f5;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .stat {
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 20px;
+    padding: 30px 32px;
+  }
+  .stat .label {
+    font-size: 23px;
+    color: #a9adaf;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .stat .val {
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+  }
+  .stat .sub {
+    font-size: 21px;
+    color: #8a8d8f;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .flat { color: #f5c451; }
+  .note {
+    margin-top: 36px;
+    font-size: 24px;
+    color: #adb0b1;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">밤사이 지표 · 금리 &amp; 유가</div>
+    <h2>금리는 24년 만에 최고, 유가는 거꾸로 급락</h2>
+    <div class="grid">
+      <div class="stat">
+        <div class="label">美 30년물 국채금리</div>
+        <div class="val up">5.621%</div>
+        <div class="sub">2002년 이후 최고</div>
+      </div>
+      <div class="stat">
+        <div class="label">美 10년물 국채금리</div>
+        <div class="val up">5.293%</div>
+        <div class="sub">장중 기준</div>
+      </div>
+      <div class="stat">
+        <div class="label">국제유가(WTI)</div>
+        <div class="val down">-3.48%</div>
+        <div class="sub">배럴당 89.38달러</div>
+      </div>
+      <div class="stat">
+        <div class="label">美 8월 PCE 물가지수</div>
+        <div class="val flat">3.7%</div>
+        <div class="sub">전년 대비, 시장 예상치 부합</div>
+      </div>
+    </div>
+    <div class="note">사우디 아람코 송유관 재가동에 유가는 엿새 만에 90달러 아래로. 내일 새벽 마이크론 실적과 PCE 결과가 겹치며 반도체·통화정책 향방을 가를 핵심 변수로 꼽혔다</div>
+  </div>
+</body>
+</html>

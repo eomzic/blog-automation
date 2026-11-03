@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #17181a;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #1c1d1f 0%, #33373b 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #9db4cc;
+    background: rgba(111,168,255,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f3f5f6;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 36px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    text-align: left;
+    font-size: 22px;
+    font-weight: 600;
+    color: #a7b0b7;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  thead th:last-child, tbody td:last-child { text-align: right; }
+  tbody td {
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 29px;
+    color: #e7ebed;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .name { font-weight: 700; }
+  .val { font-weight: 800; font-size: 34px; color: #6fa8ff; }
+  .note-col { font-weight: 500; color: #a7b0b7; font-size: 24px; }
+  .note {
+    margin-top: 36px;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #c2cad0;
+  }
+  .note b { color: #9db4cc; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">美 국채금리 · 9.28 마감</div>
+    <h2>10년물 5.236%, 30년물 5.50~5.56% — 나란히 최고치 경신</h2>
+    <table>
+      <thead>
+        <tr><th>구분</th><th>수치</th><th>비고</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">美 10년물</td>
+          <td class="val">5.236%</td>
+          <td class="note-col">전일 대비 +6.9bp, 2007년 이후 최고</td>
+        </tr>
+        <tr>
+          <td class="name">美 30년물</td>
+          <td class="val">5.50~5.56%</td>
+          <td class="note-col">2004년 이후 최고</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">어제 코스피를 2.70% 끌어내린 그 금리가, <b>미국 정규장에서 한 번 더 최고치를 경신</b>하며 태평양 건너까지 그대로 영향을 미쳤어요.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1414;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #241a1a 0%, #2f2020 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e0a458;
+    background: rgba(224,164,88,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #f7f2ef;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 36px;
+  }
+  .quote {
+    position: relative;
+    padding: 40px 44px;
+    background: rgba(255,107,107,0.08);
+    border: 1px solid rgba(255,107,107,0.35);
+    border-left: 6px solid #ff6b6b;
+    border-radius: 18px;
+    margin-bottom: 36px;
+  }
+  .quote .qlabel {
+    font-size: 22px;
+    color: #e8a6a6;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .quote .qval {
+    font-size: 64px;
+    font-weight: 800;
+    color: #ff6b6b;
+    letter-spacing: -1.5px;
+    margin-bottom: 8px;
+  }
+  .quote .qsub {
+    font-size: 23px;
+    color: #ecd8d8;
+  }
+  .chips {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    flex: 1;
+    min-width: 260px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 16px;
+    padding: 22px 24px;
+  }
+  .chip .name {
+    font-size: 22px;
+    color: #c9ada2;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .chip .pct {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ff6b6b;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">AI·반도체 특징주</div>
+    <h2>9월 한 달, 반도체 레버리지 ETF 홀로 폭등</h2>
+    <div class="quote">
+      <div class="qlabel">SOXL (반도체 3배 레버리지 ETF) · 9월 누적</div>
+      <div class="qval">+31%</div>
+      <div class="qsub">엔비디아·AMD 등 주요 반도체주도 나란히 강세</div>
+    </div>
+    <div class="chips">
+      <div class="chip">
+        <div class="name">알파벳(GOOGL)</div>
+        <div class="pct">+3.2%</div>
+      </div>
+      <div class="chip">
+        <div class="name">HP</div>
+        <div class="pct">+3.9%</div>
+      </div>
+      <div class="chip">
+        <div class="name">몽고DB(MDB)</div>
+        <div class="pct">+3.4%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

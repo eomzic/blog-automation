@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1a2e 0%, #222b47 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 30px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #9fb0ef;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .summary {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 26px 30px;
+    margin-bottom: 28px;
+  }
+  .summary .big {
+    font-size: 48px;
+    font-weight: 800;
+    color: #7c93ef;
+    letter-spacing: -1px;
+  }
+  .summary .big-label {
+    font-size: 15px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+  .summary .sep { width: 1px; align-self: stretch; background: rgba(255,255,255,0.1); }
+  .summary .chip-row { display: flex; gap: 14px; flex: 1; }
+  .summary .chip { flex: 1; }
+  .summary .chip .k { font-size: 14px; color: rgba(255,255,255,0.45); font-weight: 600; margin-bottom: 6px; }
+  .summary .chip .v { font-size: 20px; font-weight: 800; }
+  .summary .chip .v.prev { color: rgba(255,255,255,0.4); font-size: 18px; }
+
+  table { width: 100%; border-collapse: collapse; margin-bottom: 18px; }
+  thead th {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.45);
+    padding: 0 10px 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  thead th:first-child { padding-left: 0; }
+  tbody td {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 15px 10px 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  tbody td:first-child { font-weight: 700; padding-left: 0; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.up { color: #ff8585; }
+  td.down { color: #7c93ef; }
+  td.loss { color: #9fb0ef; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">실보유 6종목 전체 현황</div>
+      <h2>누적 -38.4%, 직전보다 소폭 줄었어요</h2>
+    </div>
+
+    <div class="summary">
+      <div>
+        <div class="big">-38.4%</div>
+        <div class="big-label">전체 수익률</div>
+      </div>
+      <div class="sep"></div>
+      <div class="chip-row">
+        <div class="chip">
+          <div class="k">평가액</div>
+          <div class="v">22,320,876원</div>
+        </div>
+        <div class="chip">
+          <div class="k">누적 평가손익</div>
+          <div class="v">-13,924,557원</div>
+        </div>
+        <div class="chip">
+          <div class="k">직전 점검(10/5)</div>
+          <div class="v prev">-39.1% → -38.4%</div>
+        </div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>종목</th><th>보유수량</th><th>평단가</th><th>마감가</th><th>당일등락</th><th>평가손익(수익률)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>삼성전자</td><td>25주</td><td>371,500원</td><td>262,500원</td>
+          <td class="down">-2.23%</td><td class="loss">-2,725,000원 (-29.3%)</td>
+        </tr>
+        <tr>
+          <td>두산로보틱스</td><td>34주</td><td>134,674원</td><td>73,100원</td>
+          <td class="up">+1.81%</td><td class="loss">-2,093,516원 (-45.7%)</td>
+        </tr>
+        <tr>
+          <td>PL (Planet Labs)</td><td>209주</td><td>$42.64</td><td>$17.38</td>
+          <td class="down">-0.71%</td><td class="loss">-$5,280.39 (-59.3%)</td>
+        </tr>
+        <tr>
+          <td>ORCL (오라클)</td><td>42.51주</td><td>$178.75</td><td>$145.08</td>
+          <td class="up">+1.95%</td><td class="loss">-$1,431.31 (-18.8%)</td>
+        </tr>
+        <tr>
+          <td>RDW (Redwire)</td><td>5주</td><td>$21.60대</td><td>$10.64</td>
+          <td class="down">-2.21%</td><td class="loss">-$54.80 (-50.7%)</td>
+        </tr>
+        <tr>
+          <td>NASA ETF</td><td>1주</td><td>$35.11</td><td>$25.27</td>
+          <td class="up">+1.08%</td><td class="loss">-$9.84 (-28.0%)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

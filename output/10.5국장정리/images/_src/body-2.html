@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1000px;
+    font-family: 'Pretendard', 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #f4f5f7;
+    color: #1f2328;
+  }
+  .card {
+    width: 1000px;
+    padding: 56px 60px 60px;
+    background: #ffffff;
+  }
+  .label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+  .head {
+    margin-top: 14px;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .list { margin-top: 44px; }
+  .item {
+    display: flex;
+    align-items: center;
+    height: 96px;
+    border-bottom: 1px solid #eceef1;
+  }
+  .name {
+    width: 260px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .track {
+    flex: 1;
+    position: relative;
+    height: 36px;
+  }
+  .axis {
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    bottom: -8px;
+    width: 2px;
+    background: #9ca3af;
+  }
+  .seg {
+    position: absolute;
+    top: 0;
+    height: 36px;
+    border-radius: 4px;
+  }
+  .seg.up { left: 50%; background: #e5484d; }
+  .seg.dn { right: 50%; background: #3b82f6; }
+  .pct {
+    width: 170px;
+    text-align: right;
+    font-size: 30px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  .pct.up { color: #e5484d; }
+  .pct.dn { color: #3b82f6; }
+  .foot {
+    margin-top: 34px;
+    font-size: 22px;
+    color: #6b7280;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="label">10/2 금요일 대형주 등락률</div>
+  <div class="head">지수는 올랐지만, 상승은 다른 얼굴</div>
+  <div class="list">
+    <div class="item">
+      <div class="name">LG에너지솔루션</div>
+      <div class="track"><div class="axis"></div><div class="seg up" style="width:29%"></div></div>
+      <div class="pct up">+2.91%</div>
+    </div>
+    <div class="item">
+      <div class="name">삼성전기</div>
+      <div class="track"><div class="axis"></div><div class="seg up" style="width:13%"></div></div>
+      <div class="pct up">+1.28%</div>
+    </div>
+    <div class="item">
+      <div class="name">KB금융</div>
+      <div class="track"><div class="axis"></div><div class="seg up" style="width:8%"></div></div>
+      <div class="pct up">+0.84%</div>
+    </div>
+    <div class="item">
+      <div class="name">SK하이닉스</div>
+      <div class="track"><div class="axis"></div><div class="seg up" style="width:4%"></div></div>
+      <div class="pct up">+0.44%</div>
+    </div>
+    <div class="item">
+      <div class="name">삼성전자</div>
+      <div class="track"><div class="axis"></div></div>
+      <div class="pct" style="color:#6b7280">보합</div>
+    </div>
+    <div class="item">
+      <div class="name">삼성바이오로직스</div>
+      <div class="track"><div class="axis"></div><div class="seg dn" style="width:45%"></div></div>
+      <div class="pct dn">-4.51%</div>
+    </div>
+  </div>
+  <div class="foot">빨강 = 상승 / 파랑 = 하락 (한국 증시 표기 관례) · 막대 길이는 등락률 비례 (합성 데이터 그래픽)</div>
+</div>
+</body>
+</html>

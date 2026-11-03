@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #170505;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #2a0d0d 0%, #402020 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e89466;
+    background: rgba(232,148,102,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7ede8;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .steps { display: flex; flex-direction: column; }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+    padding: 26px 0;
+  }
+  .step .num {
+    flex: 0 0 auto;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: rgba(123,169,255,0.16);
+    border: 1px solid rgba(123,169,255,0.35);
+    color: #7ba9ff;
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .step .body { padding-top: 4px; }
+  .step .stitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f2e6e0;
+    margin-bottom: 8px;
+  }
+  .step .sdesc {
+    font-size: 23px;
+    line-height: 1.55;
+    color: #cbb3a9;
+  }
+  .connector {
+    width: 1px;
+    height: 24px;
+    margin-left: 25px;
+    background: rgba(255,255,255,0.16);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">왜 이렇게 빠졌나 · 4단계로 보기</div>
+    <h2>美 금리 급등이 반도체 대형주 급락으로 이어진 흐름</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="body">
+          <div class="stitle">美 장기금리 급등</div>
+          <div class="sdesc">10년물 장중 5.2%대, 30년물 한때 5.519%까지 (2004년 6월 이후 최고)</div>
+        </div>
+      </div>
+      <div class="connector"></div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="body">
+          <div class="stitle">오라클 AI 데이터센터 '불가항력' 통보</div>
+          <div class="sdesc">전력 공급 차질을 이유로 일부 개발사에 통보, AI 밸류체인 투자심리 위축</div>
+        </div>
+      </div>
+      <div class="connector"></div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="body">
+          <div class="stitle">솔리다임 IPO 추진설까지 겹침</div>
+          <div class="sdesc">SK하이닉스 美 손자회사, 독립 상장 시 기존 주주 지분가치 희석 우려</div>
+        </div>
+      </div>
+      <div class="connector"></div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="body">
+          <div class="stitle">반도체 대형주 밸류에이션 부담 → 매물 출회</div>
+          <div class="sdesc">삼성전자 -5.43%, SK하이닉스 -5.05%로 지수 전체를 끌어내림</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

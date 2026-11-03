@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1a1e33 0%, #202849 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 40px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #a9c0ff;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .steps {
+    display: flex;
+    align-items: stretch;
+  }
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .step .date {
+    font-size: 19px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 14px;
+  }
+  .step .dot {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 3px solid #6a7bb8;
+    margin-bottom: 14px;
+  }
+  .step.up .dot { border-color: #ff8080; }
+  .step.down .dot { border-color: #8fa8ff; }
+  .step .price {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .step .pct {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+  }
+  .step.up .pct { color: #ff8080; }
+  .step.down .pct { color: #8fa8ff; }
+
+  .arrow {
+    flex: 0 0 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.22);
+    font-size: 26px;
+    padding-top: 33px;
+  }
+
+  .summary {
+    margin-top: 42px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .summary .cell {
+    flex: 1;
+    padding: 26px 24px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .summary .cell:last-child { border-right: none; }
+  .summary .label {
+    font-size: 19px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .summary .value {
+    font-size: 27px;
+    font-weight: 800;
+    color: #8fa8ff;
+    letter-spacing: -0.3px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">PL(Planet Labs) · 최근 5거래일</div>
+      <h2>구글 "선캐처" 훈풍에도 여전히 -59%</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step down">
+        <div class="date">9/22(월)</div>
+        <div class="dot"></div>
+        <div class="price">$16.91</div>
+        <div class="pct">-0.94%</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step down">
+        <div class="date">9/23(화)</div>
+        <div class="dot"></div>
+        <div class="price">$16.38</div>
+        <div class="pct">-3.13%</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step up">
+        <div class="date">9/24(목)</div>
+        <div class="dot"></div>
+        <div class="price">$17.62</div>
+        <div class="pct">+7.57%</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step down">
+        <div class="date">9/25(금)</div>
+        <div class="dot"></div>
+        <div class="price">$17.48</div>
+        <div class="pct">-0.80%</div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="cell">
+        <div class="label">평단가</div>
+        <div class="value">$42.64</div>
+      </div>
+      <div class="cell">
+        <div class="label">평가손익률</div>
+        <div class="value">-59.0%</div>
+      </div>
+      <div class="cell">
+        <div class="label">평가액(209주)</div>
+        <div class="value">$3,653.15</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1b0a30 0%, #251142 100%);
+    padding: 54px 58px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 32px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #d9a8ff;
+    margin-bottom: 10px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .grid {
+    display: flex; gap: 18px;
+  }
+  .pt {
+    flex: 1;
+    border-radius: 18px;
+    padding: 28px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  .pt .name { font-size: 23px; font-weight: 800; color: rgba(255,255,255,0.95); }
+  .pt .tag { font-size: 16px; color: rgba(255,255,255,0.55); font-weight: 500; line-height: 1.5; min-height: 48px; }
+  .pt .pct { font-size: 34px; font-weight: 800; margin-top: 4px; }
+  .up { color: #ff9d9d; }
+  .down { color: #7fb0e8; }
+
+  .foot {
+    margin-top: 32px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+  .foot b { color: #ffb4e0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">특징주 · 실적이 좋아도 안 통한 날</div>
+      <h2>마이크론 나 홀로 강세</h2>
+    </div>
+
+    <div class="grid">
+      <div class="pt" style="background:rgba(255,157,157,0.16)">
+        <div class="name">마이크론</div>
+        <div class="tag">9/30 4분기 실적 발표 앞둔 기대감 매수</div>
+        <div class="pct up">+5.00%</div>
+      </div>
+      <div class="pt" style="background:rgba(127,176,232,0.14)">
+        <div class="name">KB Home</div>
+        <div class="tag">실적 예상 상회에도 하락</div>
+        <div class="pct down">-3%</div>
+      </div>
+      <div class="pt" style="background:rgba(255,255,255,0.06)">
+        <div class="name">General Mills</div>
+        <div class="tag">실적 호조에도 성장 전망 하향</div>
+        <div class="pct up">+1%</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      마이크론은 <b>1,096.16달러</b>까지 오르며 나 홀로 5% 강세. "실적이 좋아도 시장이 안 받아주는 날"이었어요.
+    </div>
+  </div>
+</body>
+</html>

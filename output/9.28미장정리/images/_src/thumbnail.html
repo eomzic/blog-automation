@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px; height: 1080px;
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    overflow: hidden;
+  }
+  .canvas {
+    position: relative;
+    width: 1080px; height: 1080px;
+    background: linear-gradient(135deg, #232526 0%, #2c2f33 55%, #3a3d40 100%);
+    overflow: hidden;
+  }
+  .glow {
+    position: absolute;
+    bottom: -220px; left: -160px;
+    width: 640px; height: 640px;
+    background: radial-gradient(circle, rgba(148,163,184,0.14) 0%, rgba(148,163,184,0) 70%);
+  }
+
+  .badge {
+    position: absolute;
+    top: 80px; left: 80px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(148,163,184,0.30);
+    border-radius: 999px;
+  }
+  .badge .dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #6fa8ff;
+  }
+  .badge span {
+    font-size: 26px;
+    font-weight: 600;
+    color: #dbe2e8;
+    letter-spacing: -0.3px;
+  }
+  .badge .date { color: #9aa5ad; margin-left: 4px; }
+
+  .content {
+    position: absolute;
+    top: 372px; left: 80px;
+    width: 760px;
+  }
+  .eyebrow {
+    font-size: 28px;
+    font-weight: 600;
+    color: #a9b6c0;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+  }
+  .title {
+    font-size: 84px;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -1.5px;
+    color: #f3f5f6;
+  }
+  .stat-line {
+    margin-top: 46px;
+    font-size: 29px;
+    font-weight: 500;
+    color: #b7c0c7;
+    letter-spacing: -0.2px;
+    line-height: 1.7;
+  }
+  .stat-line .down { color: #6fa8ff; font-weight: 700; }
+  .stat-line .sep { color: #5a6268; margin: 0 14px; }
+
+  .footer {
+    position: absolute;
+    bottom: 80px; left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .footer .bar {
+    width: 34px; height: 4px;
+    background: #6fa8ff;
+    border-radius: 2px;
+  }
+  .footer .name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e6eaed;
+    letter-spacing: -0.3px;
+  }
+
+  .corner-stat {
+    position: absolute;
+    bottom: 76px; right: 80px;
+    text-align: right;
+  }
+  .corner-stat .label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #939da4;
+    margin-bottom: 10px;
+  }
+  .corner-stat .val {
+    font-size: 52px;
+    font-weight: 800;
+    color: #6fa8ff;
+    letter-spacing: -1px;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="glow"></div>
+
+    <div class="badge">
+      <div class="dot"></div>
+      <span>미장정리 · 시황<span class="date">  9.28</span></span>
+    </div>
+
+    <div class="content">
+      <div class="eyebrow">국장 이어 미국도, 금리가 발목 잡았다</div>
+      <div class="title">3대지수<br>동반 하락 마감</div>
+      <div class="stat-line">
+        다우 <span class="down">-0.67%</span><span class="sep">·</span>S&amp;P500 <span class="down">-0.77%</span><span class="sep">·</span>나스닥 <span class="down">-0.92%</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="bar"></div>
+      <div class="name">내일도 주린이</div>
+    </div>
+
+    <div class="corner-stat">
+      <div class="label">美 10년물 국채금리</div>
+      <div class="val">5.236%</div>
+    </div>
+  </div>
+</body>
+</html>

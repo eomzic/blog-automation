@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0a1614;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #0f2027 0%, #16332e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5eead4;
+    background: rgba(94,234,212,0.13);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+    letter-spacing: -0.2px;
+  }
+  .quote {
+    position: relative;
+    border-left: 4px solid #5eead4;
+    padding: 6px 0 6px 36px;
+    margin-bottom: 40px;
+  }
+  .quote .q {
+    font-size: 46px;
+    font-weight: 800;
+    color: #f2faf7;
+    line-height: 1.4;
+    letter-spacing: -1px;
+  }
+  .quote .q .hl { color: #ff6b6b; }
+  .quote .q .cool { color: #6ea8ff; }
+  .strip {
+    display: flex;
+    gap: 16px;
+  }
+  .pill {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 26px 24px;
+    text-align: center;
+  }
+  .pill .name {
+    font-size: 22px;
+    color: #9fc4b9;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .pill .v {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">특징주 · 종목 온도차</div>
+    <div class="quote">
+      <div class="q">2차전지는 <span class="cool">눌러앉고</span>,<br>HLB는 <span class="hl">확 튀었다</span></div>
+    </div>
+    <div class="strip">
+      <div class="pill">
+        <div class="name">에코프로</div>
+        <div class="v down">-2.08%</div>
+      </div>
+      <div class="pill">
+        <div class="name">에코프로비엠</div>
+        <div class="v down">-2.88%</div>
+      </div>
+      <div class="pill">
+        <div class="name">HLB (장중)</div>
+        <div class="v up">+7.93%</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #17181a;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1c1d1f 0%, #33373b 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #9db4cc;
+    background: rgba(111,168,255,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #f3f5f6;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .row { display: flex; gap: 20px; margin-bottom: 28px; }
+  .box {
+    flex: 1;
+    padding: 32px 24px;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(111,168,255,0.08);
+    border: 1px solid rgba(111,168,255,0.26);
+  }
+  .box .lbl { font-size: 23px; font-weight: 600; color: #a7b0b7; margin-bottom: 14px; }
+  .box .val { font-size: 46px; font-weight: 800; letter-spacing: -1px; color: #6fa8ff; }
+  .box .sub { margin-top: 10px; font-size: 20px; color: #8b949b; }
+  .note {
+    font-size: 25px;
+    line-height: 1.65;
+    color: #c2cad0;
+  }
+  .note b { color: #9db4cc; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">3대 지수 · 9.28 마감</div>
+    <h2>다우·S&amp;P500·나스닥 일제히 하락, 나스닥100은 -1.08%</h2>
+    <div class="row">
+      <div class="box">
+        <div class="lbl">다우존스30</div>
+        <div class="val">-0.67%</div>
+        <div class="sub">51,481.51</div>
+      </div>
+      <div class="box">
+        <div class="lbl">S&amp;P500</div>
+        <div class="val">-0.77%</div>
+        <div class="sub">7,683.69</div>
+      </div>
+      <div class="box">
+        <div class="lbl">나스닥종합</div>
+        <div class="val">-0.92%</div>
+        <div class="sub">26,820.38</div>
+      </div>
+    </div>
+    <div class="note">이란 휴전 제안 거부로 유가가 뛰고, 이게 인플레이션 우려로 이어지며 금리를 다시 자극했어요. 10월 FOMC 추가 인상 확률도 <b>57.6% → 70.3%</b>로 뛰었습니다.</div>
+  </div>
+</body>
+</html>

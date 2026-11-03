@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #0c2426 0%, #164f49 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 40px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #7fe3c9;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.4; }
+
+  .steps {
+    display: flex;
+    align-items: stretch;
+  }
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 14px;
+    border-radius: 18px;
+  }
+  .step.plain {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .step.highlight {
+    background: rgba(94,234,212,0.12);
+    border: 1px solid rgba(94,234,212,0.42);
+  }
+  .step .tag {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 14px;
+  }
+  .step.highlight .tag { color: #5eead4; }
+  .step .big {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+  .step .status {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.6);
+    line-height: 1.4;
+  }
+  .step.highlight .status { color: #a7f3d0; background: rgba(94,234,212,0.14); }
+
+  .arrow {
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.22);
+    font-size: 24px;
+    padding-top: 70px;
+  }
+
+  .note {
+    margin-top: 32px;
+    padding: 24px 28px;
+    border-radius: 18px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 20px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.74);
+  }
+  .note b { color: #a7f3d0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">마이크론 회계연도 vs 캘린더 분기</div>
+      <h2>"3분기 실적"이 아니라 "FY2026 4분기"입니다</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step plain">
+        <div class="tag">흔히 부르는 표기</div>
+        <div class="big">캘린더<br>3분기 (7~9월)</div>
+        <div class="status">오해하기 쉬운 범위</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step highlight">
+        <div class="tag">실제 공식 표기</div>
+        <div class="big">FY2026<br>4분기</div>
+        <div class="status">9/3 마감 분기</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step plain">
+        <div class="tag">발표일</div>
+        <div class="big">2026.9.30<br>장마감 후</div>
+        <div class="status">FY 연간실적 동시발표</div>
+      </div>
+    </div>
+
+    <div class="note">
+      마이크론 회계연도는 <b>8월 말~9월 초 결산</b>이라 캘린더 분기와 한 분기씩 어긋나요. 이번 글에서는 숫자보다 먼저 이 표기 문제부터 밝히고, "FY2026 4분기"로 통일해서 씁니다.
+    </div>
+  </div>
+</body>
+</html>

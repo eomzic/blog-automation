@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #241330 0%, #32184a 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 34px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #c3aef5;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; line-height:1.4; }
+
+  .quote {
+    position: relative;
+    padding: 34px 36px 34px 44px;
+    border-left: 4px solid #a98cf0;
+    background: rgba(169,140,240,0.08);
+    border-radius: 0 18px 18px 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #f0e9fc;
+    margin-bottom: 32px;
+  }
+
+  .stats {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats .cell {
+    flex: 1;
+    padding: 26px 20px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats .cell:last-child { border-right: none; }
+  .stats .label { font-size: 18px; color: rgba(255,255,255,0.5); font-weight: 500; margin-bottom: 10px; }
+  .stats .value { font-size: 25px; font-weight: 800; }
+  .stats .up { color: #ff8080; }
+  .stats .loss { color: #8fa8ff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">PL(Planet Labs) · 10/1 스페이스X 발사</div>
+      <h2>위성 20기 중엔 구글 TPU 실증위성도 포함</h2>
+    </div>
+
+    <div class="quote">
+      "구글이 TPU 칩 4개를 실어 AI모델 '젬마'를 궤도에서 돌려본다" — 창사 이래 40번째 발사, 신형 초분광 위성 Tanager-2도 함께 실렸다.
+    </div>
+
+    <div class="stats">
+      <div class="cell">
+        <div class="label">마감가</div>
+        <div class="value up">$16.36 (+1.36%)</div>
+      </div>
+      <div class="cell">
+        <div class="label">평단가</div>
+        <div class="value">$42.64</div>
+      </div>
+      <div class="cell">
+        <div class="label">평가손익(수익률)</div>
+        <div class="value loss">-$5,492.52 (-61.6%)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

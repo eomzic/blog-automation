@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1b0a30 0%, #2c1150 100%);
+    padding: 54px 58px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 32px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #d9a8ff;
+    margin-bottom: 10px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .asset {
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    padding: 24px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .asset .left .name { font-size: 21px; font-weight: 700; color: rgba(255,255,255,0.92); }
+  .asset .left .note { font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.5); margin-top: 6px; }
+  .asset .right { font-size: 28px; font-weight: 800; text-align: right; white-space: nowrap; }
+  .down { color: #7fb0e8; }
+  .up { color: #ff9d9d; }
+
+  .foot {
+    margin-top: 30px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+  .foot b { color: #ffb4e0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">안전자산도 예외 없었다</div>
+      <h2>금 · 비트코인 · 달러 · 모기지 금리 동반 흔들</h2>
+    </div>
+
+    <div class="grid2">
+      <div class="asset">
+        <div class="left">
+          <div class="name">금(Gold)</div>
+          <div class="note">매파적 연준 코멘트 여파</div>
+        </div>
+        <div class="right down">하락</div>
+      </div>
+      <div class="asset">
+        <div class="left">
+          <div class="name">비트코인</div>
+          <div class="note">위험자산 회피 심리</div>
+        </div>
+        <div class="right down">-2.31%</div>
+      </div>
+      <div class="asset">
+        <div class="left">
+          <div class="name">달러인덱스</div>
+          <div class="note">7/30 이후 최고 수준</div>
+        </div>
+        <div class="right up">강세</div>
+      </div>
+      <div class="asset">
+        <div class="left">
+          <div class="name">30년 모기지 금리</div>
+          <div class="note">1년래 최고</div>
+        </div>
+        <div class="right up">7.26%</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      국채금리가 5%를 넘어가자 국채 자체가 <b>"무위험으로 5% 주는 자산"</b>이 되면서, 금이든 주식이든 다른 자산의 매력이 상대적으로 떨어졌어요.
+    </div>
+  </div>
+</body>
+</html>

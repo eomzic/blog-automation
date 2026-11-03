@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0a1614;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #0f2027 0%, #16332e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5eead4;
+    background: rgba(94,234,212,0.13);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f2faf7;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+  }
+  .grid {
+    display: flex;
+    gap: 24px;
+  }
+  .box {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 32px 30px;
+  }
+  .box .idx {
+    font-size: 27px;
+    font-weight: 700;
+    color: #cdeee7;
+    margin-bottom: 24px;
+  }
+  .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .line:last-child { border-bottom: none; }
+  .who {
+    font-size: 23px;
+    color: #9fc4b9;
+    font-weight: 500;
+  }
+  .amt {
+    font-size: 22px;
+    font-weight: 800;
+    text-align: right;
+    letter-spacing: -0.3px;
+  }
+  .up { color: #ff6b6b; }
+  .down { color: #6ea8ff; }
+  .note {
+    margin-top: 34px;
+    font-size: 24px;
+    color: #9fc4b9;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">투자자별 순매매 · 코스피 vs 코스닥</div>
+    <h2>코스피는 기관이, 코스닥은 외국인·기관이 지수를 받쳤다</h2>
+    <div class="grid">
+      <div class="box">
+        <div class="idx">코스피</div>
+        <div class="line"><span class="who">개인</span><span class="amt down">-1.4조~1.7조</span></div>
+        <div class="line"><span class="who">외국인</span><span class="amt down">-3,379억~5,485억</span></div>
+        <div class="line"><span class="who">기관</span><span class="amt up">+3,343억~4,290억</span></div>
+      </div>
+      <div class="box">
+        <div class="idx">코스닥</div>
+        <div class="line"><span class="who">개인</span><span class="amt down">-7,761억~8,788억</span></div>
+        <div class="line"><span class="who">외국인</span><span class="amt up">+2,278억~3,246억</span></div>
+        <div class="line"><span class="who">기관</span><span class="amt up">+5,682억~5,708억</span></div>
+      </div>
+    </div>
+    <div class="note">코스피는 개인·외국인이 팔고 기관이 받아냈고, 코스닥은 반대로 외국인·기관이 동반 매수하며 급등을 이끌었다</div>
+  </div>
+</body>
+</html>

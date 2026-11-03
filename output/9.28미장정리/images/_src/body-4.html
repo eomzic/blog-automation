@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #17181a;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #1c1d1f 0%, #33373b 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #9db4cc;
+    background: rgba(111,168,255,0.12);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f3f5f6;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 34px;
+  }
+  .subhead {
+    font-size: 23px;
+    font-weight: 700;
+    color: #a7b0b7;
+    margin: 0 0 14px;
+    letter-spacing: -0.2px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 28px;
+    margin-bottom: 30px;
+  }
+  .grid .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+  }
+  .grid .item .nm { font-size: 25px; font-weight: 700; color: #e7ebed; }
+  .grid .item .pc { font-size: 27px; font-weight: 800; color: #6fa8ff; }
+  .divider { height: 1px; background: rgba(255,255,255,0.10); margin: 6px 0 28px; }
+  .note { font-size: 24px; line-height: 1.6; color: #c2cad0; }
+  .note b { color: #9db4cc; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">빅테크·반도체 · 9.28</div>
+    <h2>엔비디아 빼고 전부 약세, 인텔 -5.67%</h2>
+
+    <div class="subhead">매그니피센트7</div>
+    <div class="grid">
+      <div class="item"><span class="nm">메타</span><span class="pc">-4.79%</span></div>
+      <div class="item"><span class="nm">테슬라</span><span class="pc">-3.94%</span></div>
+      <div class="item"><span class="nm">마이크로소프트</span><span class="pc">-1.35%</span></div>
+      <div class="item"><span class="nm">애플</span><span class="pc">-0.78%</span></div>
+    </div>
+
+    <div class="subhead">반도체 대형주</div>
+    <div class="grid">
+      <div class="item"><span class="nm">인텔</span><span class="pc">-5.67%</span></div>
+      <div class="item"><span class="nm">AMD</span><span class="pc">-3.61%</span></div>
+      <div class="item"><span class="nm">마이크론</span><span class="pc">-2.61%</span></div>
+      <div class="item"><span class="nm">SK하이닉스 ADR</span><span class="pc">-5.03%</span></div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="note">필라델피아반도체지수 <b>-1.61%</b>, SK하이닉스 ADR -5.03%는 국내 정규장 낙폭(-5.05%)과 거의 판박이였어요. 금리發 약세가 국내외 가릴 것 없이 번지는 모습입니다.</div>
+  </div>
+</body>
+</html>

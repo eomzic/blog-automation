@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #221012 0%, #2c1416 100%);
+    padding: 56px 60px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 34px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #ff9d6f;
+    margin-bottom: 10px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .grid {
+    display: flex; flex-wrap: wrap; gap: 18px;
+  }
+  .pt {
+    width: calc((100% - 36px) / 3);
+    border-radius: 16px;
+    padding: 26px 22px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .pt .name { font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.92); }
+  .pt .tag { font-size: 16px; color: rgba(255,255,255,0.55); font-weight: 500; }
+  .pt .pct { font-size: 32px; font-weight: 800; margin-top: 4px; }
+
+  .foot {
+    margin-top: 34px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+  .foot b { color: #ff9d6f; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">반도체 소재·부품·장비</div>
+      <h2>대형주 넘어 소부장까지 — 9%대 급등 잇따라</h2>
+    </div>
+
+    <div class="grid">
+      <div class="pt" style="background:rgba(255,107,94,0.30)">
+        <div class="name">파두</div>
+        <div class="tag">79,200원</div>
+        <div class="pct">+9.54%</div>
+      </div>
+      <div class="pt" style="background:rgba(255,107,94,0.29)">
+        <div class="name">동진쎄미켐</div>
+        <div class="tag">반도체 소재</div>
+        <div class="pct">+9.20%</div>
+      </div>
+      <div class="pt" style="background:rgba(255,107,94,0.28)">
+        <div class="name">솔브레인</div>
+        <div class="tag">반도체 소재</div>
+        <div class="pct">+9.05%</div>
+      </div>
+      <div class="pt" style="background:rgba(255,107,94,0.18)">
+        <div class="name">원익IPS</div>
+        <div class="tag">139,200원</div>
+        <div class="pct">+6.83%</div>
+      </div>
+      <div class="pt" style="background:rgba(255,107,94,0.12)">
+        <div class="name">한솔케미칼</div>
+        <div class="tag">반도체 소재</div>
+        <div class="pct">+5.33%</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      CXL(컴퓨트 익스프레스 링크) 관련주도 함께 움직였고, 양자보안 테마주 엑스게이트는 장중 <b>+15% 이상</b> 뛰기도 했어요.
+    </div>
+  </div>
+</body>
+</html>

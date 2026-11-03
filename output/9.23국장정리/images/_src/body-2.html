@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #221012 0%, #2c1416 100%);
+    padding: 56px 60px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 38px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #ff9d6f;
+    margin-bottom: 10px; letter-spacing: 0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .rows { display: flex; flex-direction: column; gap: 22px; }
+  .row {
+    display: flex; align-items: center; gap: 20px;
+  }
+  .row .name {
+    width: 170px;
+    font-size: 23px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .row .price {
+    width: 130px;
+    font-size: 18px; color: rgba(255,255,255,0.45); font-weight: 500;
+    flex-shrink: 0;
+  }
+  .row .bar-wrap {
+    flex: 1;
+    height: 30px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .row .bar {
+    height: 100%;
+    background: linear-gradient(90deg, #c73a30, #ff6b5e);
+    border-radius: 8px;
+  }
+  .row .pct {
+    width: 150px;
+    text-align: right;
+    font-size: 22px; font-weight: 800; color: #ff6b5e;
+    flex-shrink: 0;
+  }
+
+  .foot {
+    margin-top: 40px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+  .foot b { color: #ff9d6f; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">반도체 대형주</div>
+      <h2>삼성전자·SK하이닉스, 지수를 끝까지 지켰다</h2>
+    </div>
+
+    <div class="rows">
+      <div class="row">
+        <div class="name">삼성전자</div>
+        <div class="price">285,500원</div>
+        <div class="bar-wrap"><div class="bar" style="width:70%"></div></div>
+        <div class="pct">+3.07~3.25%</div>
+      </div>
+      <div class="row">
+        <div class="name">삼성전자우</div>
+        <div class="price">-</div>
+        <div class="bar-wrap"><div class="bar" style="width:92%"></div></div>
+        <div class="pct">+4.02~4.26%</div>
+      </div>
+      <div class="row">
+        <div class="name">SK하이닉스</div>
+        <div class="price">1,862,000원</div>
+        <div class="bar-wrap"><div class="bar" style="width:42%"></div></div>
+        <div class="pct">+1.20~1.90%</div>
+      </div>
+      <div class="row">
+        <div class="name">SK스퀘어</div>
+        <div class="price">-</div>
+        <div class="bar-wrap"><div class="bar" style="width:96%"></div></div>
+        <div class="pct">+3.27~4.41%</div>
+      </div>
+      <div class="row">
+        <div class="name">SK</div>
+        <div class="price">-</div>
+        <div class="bar-wrap"><div class="bar" style="width:84%"></div></div>
+        <div class="pct">+3.91%</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      미국 AI 반도체주 강세와 메모리 공급 부족 기대감을 등에 업고 <b>반도체 관련주가 나란히 강세</b>를 보이며 오늘 지수 방어의 핵심 역할을 했어요.
+    </div>
+  </div>
+</body>
+</html>

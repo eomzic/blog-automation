@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #1a1414;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #241a1a 0%, #2f2020 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #e0a458;
+    background: rgba(224,164,88,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f7f2ef;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 48px;
+  }
+  .row {
+    margin-bottom: 40px;
+  }
+  .row:last-of-type { margin-bottom: 0; }
+  .row-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+  }
+  .row-head .name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #eadfd8;
+  }
+  .row-head .hit {
+    font-size: 21px;
+    font-weight: 600;
+    color: #8fd4a8;
+  }
+  .bar-line {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+  }
+  .bar-line .label {
+    width: 84px;
+    font-size: 21px;
+    color: #b89b90;
+    flex-shrink: 0;
+  }
+  .bar-track {
+    position: relative;
+    height: 34px;
+    flex-grow: 1;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 16px;
+  }
+  .bar-fill.expected { background: rgba(255,255,255,0.16); }
+  .bar-fill.actual { background: linear-gradient(90deg, #c97c3f 0%, #e0a458 100%); }
+  .bar-fill .val {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fbf3ee;
+  }
+  .note {
+    margin-top: 40px;
+    font-size: 23px;
+    color: #c9ada2;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">물가지표 · 8월 PCE</div>
+    <h2>헤드라인·핵심 PCE 모두 예상치 하회</h2>
+
+    <div class="row">
+      <div class="row-head">
+        <div class="name">헤드라인 PCE (전년비)</div>
+        <div class="hit">예상 하회</div>
+      </div>
+      <div class="bar-line">
+        <div class="label">예상</div>
+        <div class="bar-track"><div class="bar-fill expected" style="width:444px;"><span class="val">3.7%</span></div></div>
+      </div>
+      <div class="bar-line">
+        <div class="label">실제</div>
+        <div class="bar-track"><div class="bar-fill actual" style="width:408px;"><span class="val">3.4%</span></div></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="row-head">
+        <div class="name">핵심 PCE (전년비)</div>
+        <div class="hit">예상 하회</div>
+      </div>
+      <div class="bar-line">
+        <div class="label">예상</div>
+        <div class="bar-track"><div class="bar-fill expected" style="width:396px;"><span class="val">3.3%</span></div></div>
+      </div>
+      <div class="bar-line">
+        <div class="label">실제</div>
+        <div class="bar-track"><div class="bar-fill actual" style="width:360px;"><span class="val">3.0%</span></div></div>
+      </div>
+    </div>
+
+    <div class="note">두 지표 다 예상보다 낮게 나오며 10월 추가 금리인상 확률이 70%대에서 37%로 급락. 단, BEA의 가격 측정방식 변경 효과가 일부 섞였다는 단서도 있음</div>
+  </div>
+</body>
+</html>

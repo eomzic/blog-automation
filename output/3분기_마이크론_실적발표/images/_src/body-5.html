@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #0c2426 0%, #164f49 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 36px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #7fe3c9;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 29px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.4; }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .stock {
+    flex: 1;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 28px 26px;
+  }
+  .stock .ticker { font-size: 23px; font-weight: 800; margin-bottom: 20px; }
+  .stock .row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; font-size: 17px; }
+  .stock .row .k { color: rgba(255,255,255,0.5); }
+  .stock .row .v { font-weight: 700; font-size: 19px; }
+  .stock .row.now .v { font-size: 23px; }
+  .stock .row .up { color: #ff6b6b; }
+  .stock .row:last-child { margin-bottom: 0; }
+
+  .footline {
+    font-size: 19px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.65;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px;
+  }
+  .footline b { color: #a7f3d0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">마이크론 발표가 한국 정규장 마감 후 나와 하루 늦게 반영</div>
+      <h2>국장 반응 — 삼성전자 +2.79%, SK하이닉스 +3.21%</h2>
+    </div>
+
+    <div class="cards">
+      <div class="stock">
+        <div class="ticker">삼성전자</div>
+        <div class="row"><span class="k">9/30 (발표 전)</span><span class="v">268,500원 <span style="color:#6b9aff">-1.47%</span></span></div>
+        <div class="row now"><span class="k">10/1 (실적 반영)</span><span class="v up">276,000원 +2.79%</span></div>
+      </div>
+      <div class="stock">
+        <div class="ticker">SK하이닉스</div>
+        <div class="row"><span class="k">9/30 (발표 전)</span><span class="v">1,776,000원 <span style="color:#ff6b6b">+0.62%</span></span></div>
+        <div class="row now"><span class="k">10/1 (실적 반영)</span><span class="v up">1,833,000원 +3.21%</span></div>
+      </div>
+    </div>
+
+    <div class="footline">
+      에프앤가이드 집계로 3개월 전 대비 영업이익 전망치가 <b>삼성전자 +5%, SK하이닉스 +2%</b> 상향됐지만, 양사 모두 자사주 매입이 10월 중순 끝날 예정이라 수급 버팀목이 빠지는 건 변수로 남아 있어요.
+    </div>
+  </div>
+</body>
+</html>

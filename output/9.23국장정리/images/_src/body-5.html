@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #221012 0%, #2c1416 100%);
+    padding: 56px 60px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 34px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #ff9d6f;
+    margin-bottom: 10px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .lc {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,107,94,0.28);
+    border-radius: 16px;
+    padding: 24px 26px;
+  }
+  .lc .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .lc .name { font-size: 23px; font-weight: 700; }
+  .lc .cap {
+    font-size: 15px; font-weight: 800; color: #ff6b5e;
+    background: rgba(255,107,94,0.14);
+    padding: 4px 10px; border-radius: 999px;
+  }
+  .lc .pct { font-size: 30px; font-weight: 800; color: #ff6b5e; margin-bottom: 8px; }
+  .lc .tag { font-size: 16px; color: rgba(255,255,255,0.5); font-weight: 500; }
+
+  .highlight {
+    margin-top: 18px;
+    background: linear-gradient(90deg, rgba(255,157,111,0.22), rgba(255,107,94,0.14));
+    border: 1px solid rgba(255,157,111,0.4);
+    border-radius: 16px;
+    padding: 26px 30px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .highlight .l .t { font-size: 16px; color: #ffcbab; font-weight: 700; margin-bottom: 6px; }
+  .highlight .l .n { font-size: 24px; font-weight: 800; }
+  .highlight .r { font-size: 40px; font-weight: 800; color: #ff9d6f; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">코스닥 개별 종목 잔치</div>
+      <h2>상한가 4종목, 신규상장은 장중 +277%</h2>
+    </div>
+
+    <div class="grid2">
+      <div class="lc">
+        <div class="top"><div class="name">HT로보틱스</div><div class="cap">상한가</div></div>
+        <div class="pct">+29.95%</div>
+        <div class="tag">거래량 1,283만주</div>
+      </div>
+      <div class="lc">
+        <div class="top"><div class="name">우리넷</div><div class="cap">상한가</div></div>
+        <div class="pct">+29.90%</div>
+        <div class="tag">5G SA 수혜</div>
+      </div>
+      <div class="lc">
+        <div class="top"><div class="name">티엔엔터테인먼트</div><div class="cap">상한가</div></div>
+        <div class="pct">+30.00%</div>
+        <div class="tag">양자컴퓨팅</div>
+      </div>
+      <div class="lc">
+        <div class="top"><div class="name">파이온엑스</div><div class="cap">상한가</div></div>
+        <div class="pct">+29.96%</div>
+        <div class="tag">관리종목</div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <div class="l">
+        <div class="t">신규상장</div>
+        <div class="n">와이즈플래닛컴퍼니</div>
+      </div>
+      <div class="r">+277%</div>
+    </div>
+  </div>
+</body>
+</html>

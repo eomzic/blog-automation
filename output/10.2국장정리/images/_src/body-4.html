@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #0e0e1a;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 60px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #1f2a4e 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #9aa3ff;
+    background: rgba(154,163,255,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 26px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f3f3fa;
+    letter-spacing: -1px;
+    line-height: 1.35;
+    margin-bottom: 40px;
+  }
+  .grid { display: flex; gap: 24px; }
+  .pcard {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,107,107,0.28);
+    border-radius: 20px;
+    padding: 30px 28px;
+  }
+  .pcard .name { font-size: 30px; font-weight: 800; color: #f3f3fa; margin-bottom: 6px; }
+  .pcard .badge2 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff6b6b;
+    background: rgba(255,107,107,0.14);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .pcard .why { font-size: 24px; color: #c6c9e8; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">코스닥 특징주</div>
+    <h2>지수는 약보합이어도 테마는 뜨거웠다</h2>
+    <div class="grid">
+      <div class="pcard">
+        <div class="name">에스제이그룹</div>
+        <div class="badge2">상한가</div>
+        <div class="why">자사주 매입 소식에 장 초반 상한가 진입</div>
+      </div>
+      <div class="pcard">
+        <div class="name">머큐리</div>
+        <div class="badge2">상한가</div>
+        <div class="why">AI 데이터센터 투자 확대 기대, 광통신주 동반 강세</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

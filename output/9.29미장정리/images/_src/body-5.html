@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif;
+    background: #14101f;
+  }
+  .card {
+    width: 1000px;
+    padding: 64px 68px 56px;
+    background: linear-gradient(150deg, #1a1a2e 0%, #2d1b54 100%);
+    border-radius: 28px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #c4b5fd;
+    background: rgba(167,139,250,0.14);
+    padding: 8px 18px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+    letter-spacing: -0.2px;
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #f6f4fc;
+    letter-spacing: -1px;
+    line-height: 1.3;
+    margin-bottom: 34px;
+  }
+  .item {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .item:last-child { border-bottom: none; padding-bottom: 0; }
+  .item:first-child { padding-top: 0; }
+  .badge2 {
+    flex-shrink: 0;
+    width: 96px;
+    height: 96px;
+    border-radius: 16px;
+    background: rgba(167,139,250,0.14);
+    border: 1px solid rgba(167,139,250,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 800;
+    color: #c4b5fd;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .item .h { font-size: 28px; font-weight: 700; color: #f6f4fc; margin-bottom: 8px; }
+  .item .d { font-size: 23px; color: #b9aede; line-height: 1.55; }
+  .item .d b { color: #ffd39a; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="tag">AI 빅뉴스 · 하루 요약</div>
+    <h2>AMD, 82억 달러에 World Labs 인수</h2>
+    <div class="item">
+      <div class="badge2">AMD</div>
+      <div>
+        <div class="h">World Labs 82억 달러 전액 주식 인수</div>
+        <div class="d">페이페이 리 합류, <b>역대 2번째 규모 M&amp;A</b>(자일링스 약 500억 달러 이후)</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="badge2">NVDA</div>
+      <div>
+        <div class="h">자사주 매입 1,500억 달러로 확대</div>
+        <div class="d">당일 등락률은 소스마다 상이(+1.68%/+0.59%)해 확정 수치는 유보</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="badge2">ANTH<br>ROPIC</div>
+      <div>
+        <div class="h">10월 IPO, 최대 2조 달러 밸류에이션 추진설</div>
+        <div class="d">성사 시 <b>사상 최대 규모 IPO</b> 전망</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

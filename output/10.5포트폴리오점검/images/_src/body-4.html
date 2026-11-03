@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #241330 0%, #32184a 100%);
+    padding: 54px 58px 50px;
+    color: #fff;
+  }
+  .head { margin-bottom: 36px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #c3aef5;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+  .point {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 26px 28px;
+  }
+  .point .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: rgba(169,140,240,0.18);
+    color: #c3aef5;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .point .label { font-size: 17px; color: rgba(255,255,255,0.5); font-weight: 600; margin-bottom: 8px; }
+  .point .val { font-size: 21px; font-weight: 700; line-height: 1.4; }
+
+  .footline {
+    font-size: 19px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.6;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px;
+  }
+  .footline b { color: #9db3ff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">ORCL(오라클) · 10/2 상승 재료</div>
+      <h2>텐센트, AI칩 10만 개 5년치 통째로 리스</h2>
+    </div>
+
+    <div class="grid">
+      <div class="point">
+        <div class="num">1</div>
+        <div class="label">계약 상대</div>
+        <div class="val">텐센트</div>
+      </div>
+      <div class="point">
+        <div class="num">2</div>
+        <div class="label">규모</div>
+        <div class="val">AI 칩 약 10만 개<br>5년 리스 · 약 70억 달러</div>
+      </div>
+      <div class="point">
+        <div class="num">3</div>
+        <div class="label">위치</div>
+        <div class="val">동남아 소재<br>오라클 데이터센터</div>
+      </div>
+      <div class="point">
+        <div class="num">4</div>
+        <div class="label">용도</div>
+        <div class="val">훈윈(Hunyuan) 모델<br>훈련 → 추론 서빙</div>
+      </div>
+    </div>
+
+    <div class="footline">
+      <b>$140.12 (+1.48%)</b> · 평단 $178.75 대비 -21.6% (평가손익 -$1,642.16) — GF Value 기준 26% 넘게 저평가라는 분석도 함께 나왔어요.
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1a1a2e 0%, #1c1f3a 55%, #16213e 100%);
+    padding: 56px 58px 52px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #5ad1c9; margin-bottom: 14px; }
+  h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 38px; }
+
+  .compare {
+    display: flex;
+    gap: 24px;
+  }
+  .box {
+    flex: 1;
+    border-radius: 20px;
+    padding: 34px 30px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.10);
+    text-align: center;
+  }
+  .box .lbl { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+  .box .num { font-size: 56px; font-weight: 800; letter-spacing: -1px; }
+  .box.a .num { color: rgba(255,255,255,0.55); }
+  .box.b .num { color: #7c93ef; }
+  .box .sub { margin-top: 10px; font-size: 15px; color: rgba(255,255,255,0.4); }
+
+  .vs {
+    display:flex; align-items:center; justify-content:center;
+    font-size: 24px; font-weight: 700; color: rgba(255,255,255,0.3);
+    width: 50px;
+  }
+
+  .note {
+    margin-top: 36px;
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 18px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.72);
+  }
+  .note b { color: #5ad1c9; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">포트폴리오 앱 · 집계 불일치</div>
+    <h2>"내 보유 5건" 표시인데, 실제 종목은 6개</h2>
+
+    <div class="compare">
+      <div class="box a">
+        <div class="lbl">화면 표시</div>
+        <div class="num">5건</div>
+        <div class="sub">앱 상단 집계 숫자</div>
+      </div>
+      <div class="vs">vs</div>
+      <div class="box b">
+        <div class="lbl">실제 나열된 종목</div>
+        <div class="num">6개</div>
+        <div class="sub">삼성전자·두산로보틱스·PL·ORCL·RDW·NASA</div>
+      </div>
+    </div>
+
+    <div class="note">
+      왜 1개가 차이 나는지는 확정할 근거가 없어요. <b>화면에 더 있었을 가능성</b>도, <b>집계 기준 자체가 다를 가능성</b>도 있는데, 추측하지 않고 실제 들고 있는 6종목 전부를 세서 점검을 진행했습니다.
+    </div>
+  </div>
+</body>
+</html>

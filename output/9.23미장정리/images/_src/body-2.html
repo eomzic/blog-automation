@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(160deg, #1b0a30 0%, #2c1150 100%);
+    padding: 54px 58px 52px;
+    color: #fff;
+  }
+  .head { margin-bottom: 36px; }
+  .head .eyebrow {
+    font-size: 20px; font-weight: 700; color: #d9a8ff;
+    margin-bottom: 10px;
+  }
+  .head h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+
+  .flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .step .num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.10);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 19px; font-weight: 800;
+    color: #ffb4e0;
+  }
+  .step .label {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+  }
+  .step .value {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.35;
+    color: #ffffff;
+  }
+  .step .value.hot { color: #ff9d9d; }
+  .step .value.up { color: #ff9d9d; }
+  .step .value.down { color: #7fb0e8; }
+
+  .arrow-col {
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: rgba(255,255,255,0.28);
+    padding-top: 60px;
+  }
+
+  .foot {
+    margin-top: 40px;
+    font-size: 21px; line-height: 1.6;
+    color: rgba(255,255,255,0.68);
+    font-weight: 500;
+    padding-top: 26px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+  }
+  .foot b { color: #ffb4e0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="head">
+      <div class="eyebrow">금리 급등의 배경</div>
+      <h2>PMI 서프라이즈 → 매파 발언 → 국채금리 5%대</h2>
+    </div>
+
+    <div class="flow">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="label">제조업 PMI 예비치</div>
+        <div class="value hot">57.0<br><span style="font-size:17px;font-weight:600;color:rgba(255,255,255,0.5)">예상 53.7 상회</span></div>
+      </div>
+      <div class="arrow-col">→</div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="label">연준 바르 이사</div>
+        <div class="value">"추가 정책<br>조정 필요"</div>
+      </div>
+      <div class="arrow-col">→</div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="label">10년물 국채금리</div>
+        <div class="value hot">5.135%<br><span style="font-size:17px;font-weight:600;color:rgba(255,255,255,0.5)">2007년 이후 최고</span></div>
+      </div>
+      <div class="arrow-col">→</div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="label">나스닥 마감</div>
+        <div class="value down">-1.13%<br><span style="font-size:17px;font-weight:600;color:rgba(255,255,255,0.5)">랠리 하루 만에 종료</span></div>
+      </div>
+    </div>
+
+    <div class="foot">
+      "경기가 너무 좋아서 오히려 금리가 뛰는" 얄궂은 조합. <b>10월·12월 연속 금리 인상 확률</b>이 50%를 넘어섰어요.
+    </div>
+  </div>
+</body>
+</html>
