@@ -63,17 +63,30 @@ PROMPT="주제:
   # 발행 성공/실패와 무관하게 실행 — 실패한 경우에도 그때까지 만든 research.md/draft.md
   # 등은 백업해둘 가치가 있다. git 작업 실패(네트워크 등)는 로그만 남기고 넘어간다
   # (다음 실행 때 변경사항이 누적돼서 같이 올라간다).
+  #
+  # 안전장치 (2026-11-03 추가): 2026-11-03 국장 정리 실행 중 원인 불명으로 output/ 아래
+  # 기존 글 전체(887개 파일)가 디스크에서 사라졌는데, 이 블록이 그걸 그대로 커밋+푸시해서
+  # 원격 저장소까지 데이터 유실이 반영된 사고가 있었다(바로 git checkout으로 복구함).
+  # 그래서 "삭제된 파일 수가 비정상적으로 많으면" 커밋하지 않고 멈춘다 — 정상적인 글 1편
+  # 작업은 삭제가 거의 없거나 많아야 몇 개(예: 이미지 재생성 중 지워진 파일) 수준이다.
   cd "$PROJECT_DIR/blog" || exit 1
   if [ -n "$(git status --porcelain)" ]; then
-    git add -A
-    if git commit -m "auto: ${TOPIC} ($(date '+%Y-%m-%d %H:%M'))" --quiet; then
-      if git push origin master --quiet; then
-        echo "git push 완료"
-      else
-        echo "git push 실패 (네트워크/인증 문제일 수 있음) — 커밋은 로컬에 남아있고 다음 실행 때 같이 올라감"
-      fi
+    DELETED_COUNT=$(git diff --diff-filter=D --name-only -- output/ | wc -l | tr -d ' ')
+    if [ "$DELETED_COUNT" -gt 20 ]; then
+      echo "⚠️ 경고: output/ 아래 파일이 ${DELETED_COUNT}개나 삭제된 상태로 감지됐습니다 — 비정상적인 대량 삭제로 보여서 자동 커밋/푸시를 하지 않고 중단합니다."
+      echo "working tree는 그대로 남겨뒀습니다 — blog/ 에서 'git status'로 확인 후, 삭제가 의도한 게 맞으면 직접 커밋하고, 아니면 'git checkout HEAD -- output/'로 복구하세요."
+      osascript -e 'display notification "blog/output/에서 대량 삭제가 감지돼 자동 커밋을 건너뛰었습니다 - 확인 필요" with title "블로그 자동화 경고" sound name "Basso"' 2>/dev/null || true
     else
-      echo "git commit 실패"
+      git add -A
+      if git commit -m "auto: ${TOPIC} ($(date '+%Y-%m-%d %H:%M'))" --quiet; then
+        if git push origin master --quiet; then
+          echo "git push 완료"
+        else
+          echo "git push 실패 (네트워크/인증 문제일 수 있음) — 커밋은 로컬에 남아있고 다음 실행 때 같이 올라감"
+        fi
+      else
+        echo "git commit 실패"
+      fi
     fi
   else
     echo "git에 새로 반영할 변경 없음"

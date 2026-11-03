@@ -45,17 +45,27 @@ PROMPT="이 요청은 launchd로 자동 실행된 무인(비대화형) 실행이
   echo "=== $(date '+%Y-%m-%d %H:%M:%S') auto_earnings.sh end (exit=$?) ==="
 
   # 산출물이 생겼으면 자동으로 커밋·푸시한다 (auto_publish.sh와 동일한 방식).
+  # 안전장치(2026-11-03 추가, auto_publish.sh와 동일): output/ 아래 대량 삭제가
+  # 감지되면 자동 커밋/푸시를 건너뛰고 경고만 남긴다 — 원인 불명의 대량 삭제를
+  # 그대로 원격까지 밀어넣은 사고가 있었다.
   cd "$PROJECT_DIR/blog" || exit 1
   if [ -n "$(git status --porcelain)" ]; then
-    git add -A
-    if git commit -m "auto: 실적발표 감지 ($(date '+%Y-%m-%d %H:%M'))" --quiet; then
-      if git push origin master --quiet; then
-        echo "git push 완료"
-      else
-        echo "git push 실패 (네트워크/인증 문제일 수 있음) — 커밋은 로컬에 남아있고 다음 실행 때 같이 올라감"
-      fi
+    DELETED_COUNT=$(git diff --diff-filter=D --name-only -- output/ | wc -l | tr -d ' ')
+    if [ "$DELETED_COUNT" -gt 20 ]; then
+      echo "⚠️ 경고: output/ 아래 파일이 ${DELETED_COUNT}개나 삭제된 상태로 감지됐습니다 — 비정상적인 대량 삭제로 보여서 자동 커밋/푸시를 하지 않고 중단합니다."
+      echo "working tree는 그대로 남겨뒀습니다 — blog/ 에서 'git status'로 확인 후, 삭제가 의도한 게 맞으면 직접 커밋하고, 아니면 'git checkout HEAD -- output/'로 복구하세요."
+      osascript -e 'display notification "blog/output/에서 대량 삭제가 감지돼 자동 커밋을 건너뛰었습니다 - 확인 필요" with title "블로그 자동화 경고" sound name "Basso"' 2>/dev/null || true
     else
-      echo "git commit 실패"
+      git add -A
+      if git commit -m "auto: 실적발표 감지 ($(date '+%Y-%m-%d %H:%M'))" --quiet; then
+        if git push origin master --quiet; then
+          echo "git push 완료"
+        else
+          echo "git push 실패 (네트워크/인증 문제일 수 있음) — 커밋은 로컬에 남아있고 다음 실행 때 같이 올라감"
+        fi
+      else
+        echo "git commit 실패"
+      fi
     fi
   else
     echo "git에 새로 반영할 변경 없음"
