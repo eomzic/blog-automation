@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1e0a3c 0%, #2a1050 55%, #3d1a5c 100%);
+    padding: 54px 56px 48px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #e8a9ff; margin-bottom: 14px; }
+  h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 38px; }
+
+  .compare {
+    display: flex;
+    gap: 24px;
+  }
+  .box {
+    flex: 1;
+    border-radius: 20px;
+    padding: 32px 28px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.10);
+    text-align: center;
+  }
+  .box .lbl { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .box .num { font-size: 52px; font-weight: 800; letter-spacing: -1px; color: #7ba4ff; }
+  .box .sub { margin-top: 10px; font-size: 15px; color: rgba(255,255,255,0.4); }
+
+  .vs {
+    display:flex; align-items:center; justify-content:center;
+    font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.3);
+    width: 48px;
+  }
+
+  .note {
+    margin-top: 34px;
+    padding: 22px 26px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 18px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.78);
+  }
+  .note b { color: #e8a9ff; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">보유 6종목 전체 · 11/1 점검 대비</div>
+    <h2>미국 4종목 다 올랐는데 전체는 더 나빠졌어요</h2>
+
+    <div class="compare">
+      <div class="box">
+        <div class="lbl">11/1 점검</div>
+        <div class="num">-48.5%</div>
+        <div class="sub">평가액 18,577,857원</div>
+      </div>
+      <div class="vs">→</div>
+      <div class="box">
+        <div class="lbl">오늘(11/9)</div>
+        <div class="num">-54.4%</div>
+        <div class="sub">평가액 16,560,267원</div>
+      </div>
+    </div>
+
+    <div class="note">
+      5.9%p 더 벌어졌어요. 그 사이 끼어있던 11/5~11/6 급락 구간(AI 데이터센터 규제 공포 + 코스피 서킷브레이커)의 타격이, 그 뒤 며칠간의 반등으로도 다 메워지지 않은 걸로 보여요.
+    </div>
+  </div>
+</body>
+</html>

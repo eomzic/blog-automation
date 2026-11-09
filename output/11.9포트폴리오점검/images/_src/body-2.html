@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Apple SD Gothic Neo', 'Pretendard', sans-serif; }
+  .card {
+    width: 1000px;
+    background: linear-gradient(155deg, #1e0a3c 0%, #2a1050 55%, #3d1a5c 100%);
+    padding: 54px 56px 48px;
+    color: #fff;
+  }
+  .eyebrow { font-size: 20px; font-weight: 700; color: #e8a9ff; margin-bottom: 14px; }
+  h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.4; margin-bottom: 40px; }
+
+  .steps {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 14px;
+  }
+  .step .date { font-size: 16px; font-weight: 700; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+  .step .circle {
+    width: 84px; height: 84px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 800;
+    border: 2px solid rgba(255,255,255,0.18);
+    margin-bottom: 16px;
+  }
+  .step.down .circle { color: #7ba4ff; background: rgba(123,164,255,0.12); }
+  .step.up .circle { color: #ff6b6b; background: rgba(255,107,107,0.12); }
+  .step .label { font-size: 18px; font-weight: 700; line-height: 1.4; }
+  .step .desc { margin-top: 8px; font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+  .arrow {
+    display: flex; align-items: center; justify-content: center;
+    width: 46px;
+    font-size: 26px;
+    color: rgba(255,255,255,0.3);
+    padding-top: 42px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">RDW · 최근 며칠 흐름</div>
+    <h2>실적 쇼크로 급락했다가 계약 호재로 다시 올라탔어요</h2>
+
+    <div class="steps">
+      <div class="step down">
+        <div class="date">11/5(목)</div>
+        <div class="circle">-19.8%</div>
+        <div class="label">3분기 실적 쇼크</div>
+        <div class="desc">예상치 하회, 장중 급락</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step up">
+        <div class="date">11/6(금)</div>
+        <div class="circle">+14~16%</div>
+        <div class="label">계약 호재 + 섹터 랠리</div>
+        <div class="desc">2,000만 달러 테스트 계약</div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="step up">
+        <div class="date">오늘</div>
+        <div class="circle">+4.36%</div>
+        <div class="label">SpaceX IPO 소식</div>
+        <div class="desc">우주주 전반 랠리 지속</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
